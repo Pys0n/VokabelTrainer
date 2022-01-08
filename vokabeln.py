@@ -1,9 +1,27 @@
 from collections import namedtuple
 
-# Neue Vokabeln IMMER nach oben!!!s
+# Neue Vokabeln IMMER nach oben!!!
 
 Vokabel = namedtuple("Vokabel", ["de","en","date","cat"])
 dictionary = [
+    Vokabel(['Theaterstück'],'play','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['besitzen'],'own','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['Eigentümer'],'landlord','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['bitten um'],'ask for','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['Land'],'land','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['bezahlen'],'pay','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['umziehen'],'move (house)','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['Bauarbeiter'],'builder','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['tragen', 'befördern'],'carry','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['wichtig', 'einflussreich'],'important','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['von'],'by','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['als'],'as','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['treffen', 'schlagen'],'hit','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['brennen'],'be on fire','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['verletzen'],'hurt','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['schwer', 'stark'],'heavy','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['Hilfe'],'help','2022.01.08',['','Unit 3','Kl. 6']),
+    Vokabel(['also'],'right','2022.01.08',['','Unit 3','Kl. 6']),
     Vokabel(['Kaufhaus'],'department store','2021.12.30',['Station 2','Unit 3','Kl. 6']),
     Vokabel(['Schlussverkauf', 'Ausverkauf'],'sale','2021.12.30',['Station 2','Unit 3','Kl. 6']),
     Vokabel(['Top', 'Oberteil'],'top','2021.12.30',['Station 2','Unit 3','Kl. 6']),
