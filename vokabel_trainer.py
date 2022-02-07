@@ -2,6 +2,19 @@ from time import sleep
 from vokabeln import *
 import os
 
+class Color:
+    UNDERLINE = '\033[4m'
+    BLACK  = '\33[30m'
+    RED    = '\33[31m'
+    GREEN  = '\33[32m'
+    YELLOW = '\33[33m'
+    BLUE   = '\33[34m'
+    VIOLET = '\33[35m'
+    CYAN   = '\33[36m'
+    WHITE  = '\33[37m'
+    RESET  = '\033[0m' #RESET COLOR
+
+
 def print_list(liste):
     # Diese Funktion gibt die Deutsche(n) Vokabel(n) aus
     for x in range(len(liste)):
@@ -15,7 +28,8 @@ def abfragen_untermenu(dictionary):
     print('2. Nach Datum    ')
     print('3. Nach Kategorie')
     print()
-    auswahl = input()
+    auswahl = input(Color.YELLOW)
+    print(Color.RESET, end='')
     os.system('clear')
     if auswahl == '1':
         return dictionary
@@ -50,18 +64,26 @@ def abfragen_en(gefilterte_liste):
     for i in range(0, len(gefilterte_liste)):
         vokabel = gefilterte_liste[i]
         print('Deutsch: ', end='')
+        print(Color.GREEN, end='')
         print_list(vokabel.de)
+        print(Color.RESET, end='')
         print(f'                                {beantwortet}/{len(gefilterte_liste)}')
         print()
-        print('Englisch:                                        0.Beenden')
-        auswahl = input()
+        print(f'Englisch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
+        auswahl = input(Color.YELLOW)
+        print(Color.RESET, end='')
         if auswahl == vokabel.en:
+            print(Color.GREEN, end='')
             print('Richtig/Right')
+            print(Color.RESET, end='')
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
         elif auswahl == '':
-            print(vokabel.en, 'wäre Richtig gewesen')
+            print(Color.GREEN, end='')
+            print(vokabel.en, end='')
+            print(' wäre Richtig gewesen')
+            print(Color.RESET, end='')
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
@@ -69,8 +91,11 @@ def abfragen_en(gefilterte_liste):
             os.system('clear')
             break
         else:
+            print(Color.RED, end='')
             print('Falsch/Wrong:')
+            print(Color.GREEN, end='')
             print(vokabel.en)
+            print(Color.RESET, end='')
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
@@ -81,7 +106,7 @@ def abfragen_en(gefilterte_liste):
     print('Fragen falsch beantwortet :', falsch)
     print('Fragen nicht Gewusst      :', nichtGewusst)
     print('Fragen beantwortet        :', beantwortet,'/',len(gefilterte_liste))
-    input("Weiter mit Enter...")
+    input(f"{Color.CYAN}Weiter mit Enter...{Color.RESET}")
     os.system('clear')
     
 
@@ -94,18 +119,26 @@ def abfragen_de(gefilterte_liste):
 
     for vokabel in gefilterte_liste:
         print('Englisch: ', end='')
-        print(f"{vokabel.en:30}        {beantwortet}/{len(gefilterte_liste)}")
+        print(Color.GREEN, end='')
+        print(f"{vokabel.en:30}",end='')
+        print(Color.RESET, end='')
+        print(f"        {beantwortet}/{len(gefilterte_liste)}")
         print()     
-        print('Deutsch:                                        0.Beenden')
-        auswahl = input()
+        print(f'Deutsch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
+        auswahl = input(Color.YELLOW)
+        print(Color.RESET, end='')
         if auswahl in vokabel.de:
+            print(Color.GREEN, end='')
             print('Richtig/Right')
+            print(Color.RESET, end='')
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
         elif auswahl == '':
+            print(Color.GREEN, end='')
             print_list(vokabel.de)
             print(' wäre Richtig gewesen')
+            print(Color.RESET, end='')
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
@@ -113,8 +146,11 @@ def abfragen_de(gefilterte_liste):
             os.system('clear')
             break
         else:
+            print(Color.RED, end='')
             print('Falsch/Wrong:')
-            print(vokabel.de)
+            print(Color.GREEN, end='')
+            print_list(vokabel.de)
+            print(Color.RESET, end='')
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
@@ -125,23 +161,24 @@ def abfragen_de(gefilterte_liste):
     print('Fragen falsch beantwortet :', falsch)
     print('Fragen nicht Gewusst      :', nichtGewusst)
     print('Fragen beantwortet        :', beantwortet,'/',len(gefilterte_liste))
-    input("Weiter mit Enter...")
+    print(f'{Color.CYAN}0 Beenden{Color.RESET}')
     os.system('clear')
 
 
 def main():
     os.system('clear')
     while True:
-        print('    Vokabelprogramm - Study          Ersteller: Jason Krüger')
+        print(f'    {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}          {Color.VIOLET}Ersteller{Color.RESET}: Jason Krüger')
         print()
-        print('    1 Englische Vokabeln abfragen')
-        print('    2 Deutsche Vokabeln abfragen')
+        print('    1 - Englische Vokabeln abfragen')
+        print('    2 - Deutsche Vokabeln abfragen')
         print()
-        print('    5 Vokabeln eingeben')
-        print('    6 Statistik')
+        print('    5 - Vokabeln eingeben')
+        print('    6 - Statistik')
         print()
-        print('    0 Beenden')
-        auswahl = int(input())
+        print(f'    {Color.CYAN}0 - Beenden{Color.RESET}')
+        auswahl = int(input("\n"+Color.YELLOW))
+        print(Color.RESET, end='')
         os.system('clear')
         if auswahl == 1: 
             gefilterte_liste = abfragen_untermenu(dictionary)
