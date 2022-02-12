@@ -1,6 +1,14 @@
+from os import system
+from os.path import exists
+import pathlib
 from time import sleep
-from vokabeln import *
-import os
+from collections import namedtuple
+
+Vokabel = namedtuple("Vokabel", ["de","en","date","cat"])
+FILENAME = 'vokabeln.dat'
+PATH = str(pathlib.Path(__file__).parent.absolute())
+FILE = PATH+"/"+FILENAME
+
 
 class Color:
     UNDERLINE = '\033[4m'
@@ -30,14 +38,14 @@ def abfragen_untermenu(dictionary):
     print()
     auswahl = input(Color.YELLOW)
     print(Color.RESET, end='')
-    os.system('clear')
+    system('clear')
     if auswahl == '1':
         return dictionary
     elif auswahl == '2':
         dict_datum = []
         print('Bitte geben Sie das gewünschte Datum ein:')
         auswahl = input()
-        os.system('clear')
+        system('clear')
         for vokabel in dictionary:
             if vokabel.date == auswahl:
                 dict_datum.append(vokabel)
@@ -46,7 +54,7 @@ def abfragen_untermenu(dictionary):
         dict_cat = []
         print('Bitte geben Sie die gewünschte Kategorie ein:')
         auswahl = input()
-        os.system('clear')
+        system('clear')
         for vokabel in dictionary:
             if auswahl in vokabel.cat:
                 dict_cat.append(vokabel)
@@ -88,7 +96,7 @@ def abfragen_en(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
         elif auswahl == '0':
-            os.system('clear')
+            system('clear')
             break
         else:
             print(Color.RED, end='')
@@ -99,7 +107,7 @@ def abfragen_en(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-        os.system('clear')
+        system('clear')
 
     # Auswertung
     print('Fragen richtig beantwortet:', richtig)
@@ -107,7 +115,7 @@ def abfragen_en(gefilterte_liste):
     print('Fragen nicht Gewusst      :', nichtGewusst)
     print('Fragen beantwortet        :', beantwortet,'/',len(gefilterte_liste))
     input(f"{Color.CYAN}Weiter mit Enter...{Color.RESET}")
-    os.system('clear')
+    system('clear')
     
 
 def abfragen_de(gefilterte_liste):
@@ -143,7 +151,7 @@ def abfragen_de(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
         elif auswahl == '0':
-            os.system('clear')
+            system('clear')
             break
         else:
             print(Color.RED, end='')
@@ -154,7 +162,7 @@ def abfragen_de(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-        os.system('clear')
+        system('clear')
 
     # Auswertung
     print('Fragen richtig beantwortet:', richtig)
@@ -162,11 +170,54 @@ def abfragen_de(gefilterte_liste):
     print('Fragen nicht Gewusst      :', nichtGewusst)
     print('Fragen beantwortet        :', beantwortet,'/',len(gefilterte_liste))
     print(f'{Color.CYAN}0 Beenden{Color.RESET}')
-    os.system('clear')
+    system('clear')
 
 
-def main():
-    os.system('clear')
+def save_dictionary(dictionary):
+    with open(FILE, 'w') as file:
+        for vokabel in dictionary:
+            vokabel_de = ""
+            for w in vokabel.de:
+                vokabel_de += w + '|'
+            vokabel_de = vokabel_de.rstrip('|')
+
+            vokabel_cat = ""
+            for w in vokabel.cat:
+                vokabel_cat += w + '|'
+            vokabel_cat = vokabel_cat.rstrip('|')
+
+            file.write(f"{vokabel_de};{vokabel.en};{vokabel.date};{vokabel_cat}\n")
+
+
+def load_dictionary():
+    if not exists(FILE):
+        print("Datei kann nicht geöffnet werden")
+        exit()
+
+    Vokabel = namedtuple("Vokabel", ["de","en","date","cat"])
+    dictionary = []
+    parsed_lines = []
+    with open(FILE,'r') as file:
+        for line in file:
+            line = line.rstrip()
+            parsed_lines.append(line.split(';'))
+
+    for line in parsed_lines:
+        de = line[0].split('|')
+        for i in range(len(de)):
+            de[i] = de[i].strip("'")
+
+        cat = line[3].split('|')
+        for i in range(len(cat)):
+            cat[i] = cat[i].strip("'")
+
+        dictionary.append(Vokabel(de, line[1], line[2], cat))
+        
+    return dictionary
+
+
+def main(dictionary):
+    system('clear')
     while True:
         print(f'    {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}          {Color.VIOLET}Ersteller{Color.RESET}: Jason Krüger')
         print()
@@ -179,7 +230,7 @@ def main():
         print(f'    {Color.CYAN}0 - Beenden{Color.RESET}')
         auswahl = int(input("\n"+Color.YELLOW))
         print(Color.RESET, end='')
-        os.system('clear')
+        system('clear')
         if auswahl == 1: 
             gefilterte_liste = abfragen_untermenu(dictionary)
             abfragen_en(gefilterte_liste)
@@ -193,4 +244,8 @@ def main():
         elif auswahl == 0:
             break
 
-main()
+
+if __name__ == '__main__':
+    dictionary = load_dictionary()
+    main(dictionary)
+    save_dictionary(dictionary)
