@@ -3,6 +3,7 @@ from os.path import exists
 import pathlib
 from time import sleep
 from collections import namedtuple
+from datetime import date
 
 Vokabel = namedtuple("Vokabel", ["de","en","date","cat"])
 FILENAME = 'vokabeln.dat'
@@ -31,6 +32,53 @@ def print_list(liste):
         print(liste[x], end='')
 
 
+def vokabeln_eingeben(dictionary):
+    char = ''
+    while char == '':
+        de = []
+        en = ' '
+        cat = []
+        i = 1
+        print(f"\t{Color.BLUE}{Color.UNDERLINE}Vokabeln eingeben{Color.RESET}")
+        print()
+        print('-–Drücken Sie <Enter> wenn sie alle Vokabeln Eingegeben haben–-')
+        print()
+        while True:
+            print(i, end='')
+            deutsch = input('. Deutsch: ')
+            if len(deutsch) > 0:
+                de.append(deutsch)
+                i += 1
+            else: break
+        print()
+        i = 1
+        print(f'-–Sie können nur {Color.UNDERLINE}eine{Color.RESET} Englische Vokabel eingeben!–-')
+        print()
+        en = input('Englisch: ')
+        print()
+        #print('-–Dies ist ein Pflichtfeld!–- -–Bitte geben Sie "Kl. ..." für die Klasse an–-')
+        category = input('Klasse: ')
+        cat.append("Kl. " + category)
+        i = 2
+        while True:
+            print(i, end='')
+            category = input('. Kategorie: ')
+            if len(category):
+                cat.append(category)
+                i += 1
+            else:
+                break
+        system('clear')
+        datum = str(date.today())
+        vokabel = Vokabel(de, en, datum, cat)
+        print(vokabel)
+        dictionary.append(vokabel)
+        print()
+        print("<Enter> drücken für weiter")
+        char = input("0+<Enter> Hauptmenü:  ")
+        system('clear')
+
+
 def abfragen_untermenu(dictionary):
     print('1. Alle Vokabeln ')
     print('2. Nach Datum    ')
@@ -43,7 +91,7 @@ def abfragen_untermenu(dictionary):
         return dictionary
     elif auswahl == '2':
         dict_datum = []
-        print('Bitte geben Sie das gewünschte Datum ein:')
+        print('Bitte geben Sie das gewünschte Datum im Format "jjjj-mm-tt" ein:')
         auswahl = input()
         system('clear')
         for vokabel in dictionary:
@@ -238,7 +286,7 @@ def main(dictionary):
             gefilterte_liste = abfragen_untermenu(dictionary)
             abfragen_de(gefilterte_liste)
         elif auswahl == 5:
-            pass
+            vokabeln_eingeben(dictionary)
         elif auswahl == 6:
             pass
         elif auswahl == 0:
