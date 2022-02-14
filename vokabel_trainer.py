@@ -72,8 +72,14 @@ def vokabeln_eingeben(dictionary):
         datum = str(date.today())
         vokabel = Vokabel(de, en, datum, cat)
         print(vokabel)
-        dictionary.append(vokabel)
         print()
+        print('Wollen Sie diese Vokabel Speichern?')
+        wahl = input('Drücken sie n+<Enter> um die Vokabel nicht zu Speichern \nund nur <Enter> um sie zu Speichern: \n')
+        system('clear')
+        if wahl == '':
+            dictionary.append(vokabel)
+            save_dictionary(dictionary)
+        else: pass
         print("<Enter> drücken für weiter")
         char = input("0+<Enter> Hauptmenü:  ")
         system('clear')
@@ -296,4 +302,3 @@ def main(dictionary):
 if __name__ == '__main__':
     dictionary = load_dictionary()
     main(dictionary)
-    save_dictionary(dictionary)
