@@ -134,14 +134,14 @@ def abfragen_en(gefilterte_liste):
         print(f'Englisch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
         auswahl = input(Color.YELLOW)
         print(Color.RESET, end='')
-        if auswahl == vokabel.en:
+        if auswahl.lower() == vokabel.en.lower():
             print(Color.GREEN, end='')
             print('Richtig/Right')
             print(Color.RESET, end='')
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
-        elif auswahl == '':
+        elif auswahl.lower() == '':
             print(Color.GREEN, end='')
             print(vokabel.en, end='')
             print(' wäre Richtig gewesen')
@@ -149,7 +149,7 @@ def abfragen_en(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-        elif auswahl == '0':
+        elif auswahl.lower() == '0':
             system('clear')
             break
         else:
@@ -189,14 +189,14 @@ def abfragen_de(gefilterte_liste):
         print(f'Deutsch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
         auswahl = input(Color.YELLOW)
         print(Color.RESET, end='')
-        if auswahl in vokabel.de:
+        if auswahl.lower() in vokabel.de.lower():
             print(Color.GREEN, end='')
             print('Richtig/Right')
             print(Color.RESET, end='')
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
-        elif auswahl == '':
+        elif auswahl.lower() == '':
             print(Color.GREEN, end='')
             print_list(vokabel.de)
             print(' wäre Richtig gewesen')
@@ -204,7 +204,7 @@ def abfragen_de(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-        elif auswahl == '0':
+        elif auswahl.lower() == '0':
             system('clear')
             break
         else:
