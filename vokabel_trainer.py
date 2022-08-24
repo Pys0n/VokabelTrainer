@@ -5,7 +5,7 @@ from time import sleep
 from collections import namedtuple
 from datetime import date
 
-Vokabel = namedtuple("Vokabel", ["de","en","date","cat",])  # 'stat' hinzufügen
+Vokabel = namedtuple("Vokabel", ["de","en","date","cat"])  # 'stat' hinzufügen
 FILENAME = 'vokabeln.dat'
 PATH = str(pathlib.Path(__file__).parent.absolute())
 FILE = PATH+"/"+FILENAME
