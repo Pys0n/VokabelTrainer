@@ -477,6 +477,7 @@ def stats():
     print('         Kommt bald')
     print()
     input('  Drücke <Enter> um Fortzuahren\n\t\t')
+    system('clear')
 
 
 def info():
@@ -484,19 +485,21 @@ def info():
     print('         INFO')
     print()
     print(f'{Color.VIOLET}Ersteller{Color.RESET}: Jason Krüger\n')
-    print('v1.0.0(Unbekannt):')
+    print('v1.0(Unbekannt):')
     print('- Abfrage EN, DE')
     print('- Vokabeln EN eingeben')
-    print('- Vokabeln werden dauerhaft gespeichert\n')
-    print('v2.0.0(30.11.2022):')
+    print('- Vokabeln werden dauerhaft abgespeichert\n')
+    print('v2.0(30.11.2022):')
     print('- Abfrage FR, DE')
-    print('- Vokabeln FR eingeben')
+    print('- Vokabeln FR eingeben\n')
+    input('  Drücke <Enter> um Fortzuahren\n\t\t')
+    system('clear')
 
 
 def main(dictionary_en, dictionary_fr):
     system('clear')
     while True:
-        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}     v2.0.0')
+        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}     v2.0')
         print()
         print('                Englisch\n')
         print('    1 - Englische Vokabeln abfragen')
