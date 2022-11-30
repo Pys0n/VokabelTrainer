@@ -500,7 +500,7 @@ def info():
 def main(dictionary_en, dictionary_fr):
     system('clear')
     while True:
-        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}     v2.0')
+        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}             v2.0')
         print()
         print('                Englisch\n')
         print('    1 - Englische Vokabeln abfragen')
