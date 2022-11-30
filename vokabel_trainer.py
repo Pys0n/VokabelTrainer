@@ -25,7 +25,7 @@ class Color:
     VIOLET = '\33[35m'
     CYAN   = '\33[36m'
     WHITE  = '\33[37m'
-    RESET  = '\033[0m' #RESET COLOR
+    RESET  = '\033[0m' # RESET COLOR
 
 
 def print_list(liste):
@@ -472,10 +472,31 @@ def load_dictionarys():
     return dictionary_en, dictionary_fr
 
 
+def stats():
+    system('clear')
+    print('         Kommt bald')
+    print()
+    input('  Drücke <Enter> um Fortzuahren\n\t\t')
+
+
+def info():
+    system('clear')
+    print('         INFO')
+    print()
+    print(f'{Color.VIOLET}Ersteller{Color.RESET}: Jason Krüger\n')
+    print('v1.0.0(Unbekannt):')
+    print('- Abfrage EN, DE')
+    print('- Vokabeln EN eingeben')
+    print('- Vokabeln werden dauerhaft gespeichert\n')
+    print('v2.0.0(30.11.2022):')
+    print('- Abfrage FR, DE')
+    print('- Vokabeln FR eingeben')
+
+
 def main(dictionary_en, dictionary_fr):
     system('clear')
     while True:
-        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}          {Color.VIOLET}Ersteller{Color.RESET}: Jason Krüger')
+        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}     v2.0.0')
         print()
         print('                Englisch\n')
         print('    1 - Englische Vokabeln abfragen')
@@ -488,27 +509,34 @@ def main(dictionary_en, dictionary_fr):
         print('    5 - Englische Vokabeln eingeben')
         print('    6 - Französische Vokabeln eingeben')
         print()
+        print('    i - Info')
+        print('    s - Statistik')
+        print()
         print(f'    {Color.CYAN}0 - Beenden{Color.RESET}')
-        auswahl = int(input("\n"+Color.YELLOW))
+        auswahl = input("\n"+Color.YELLOW)
         print(Color.RESET, end='')
         system('clear')
-        if auswahl == 1: 
+        if auswahl == '1': 
             gefilterte_liste = abfragen_untermenu(dictionary_en)
             abfragen_de_en(gefilterte_liste)
-        elif auswahl == 2:
+        elif auswahl == '2':
             gefilterte_liste = abfragen_untermenu(dictionary_en)
             abfragen_en_de(gefilterte_liste)
-        elif auswahl == 3:
+        elif auswahl == '3':
             gefilterte_liste = abfragen_untermenu(dictionary_fr)
             abfragen_de_fr(gefilterte_liste)
-        elif auswahl == 4:
+        elif auswahl == '4':
             gefilterte_liste = abfragen_untermenu(dictionary_fr)
             abfragen_fr_de(gefilterte_liste)
-        elif auswahl == 5:
+        elif auswahl == '5':
             en_vokabeln_eingeben(dictionary_en)
-        elif auswahl == 6:
+        elif auswahl == '6':
             fr_vokabeln_eingeben(dictionary_fr)
-        elif auswahl == 0:
+        elif auswahl.lower() == 'i':
+            info()
+        elif auswahl.lower() == 's':
+            stats()
+        elif auswahl == '0':
             break
 
 
