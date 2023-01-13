@@ -1,3 +1,9 @@
+# EN: Please do not present this programme as yours
+# DE: Bitte gebt dieses Programm nicht als eures aus
+# Danke  ——Pys0n
+# Version: v2.0.1  ——Stand: 13.01.2023
+# bei Fragen, Problemen oder Update-Ideen: jason.krueger2010@web.de
+
 from os import system
 from os.path import exists
 import pathlib
@@ -487,12 +493,14 @@ def info():
     print(f'{Color.VIOLET}Ersteller{Color.RESET}: Jason Krüger\n')
     print('vAlpha(08.01.2022):')
     print('- Abfrage EN, DE\n')
-    print('v1.0(13.02.2022):')
+    print('v1.0.0(13.02.2022):')
     print('- Vokabeln EN eingeben')
     print('- Vokabeln werden dauerhaft abgespeichert\n')
-    print('v2.0(30.11.2022):')
+    print('v2.0.0(30.11.2022):')
     print('- Abfrage FR, DE')
-    print('- Vokabeln FR eingeben\n')
+    print('- Vokabeln FR eingeben')
+    print('v2.0.1(13.01.2023):')
+    print('- 21 neue FR-vokabeln')
     input('  Drücke <Enter> um Fortzuahren\n\t\t')
     system('clear')
 
@@ -500,7 +508,7 @@ def info():
 def main(dictionary_en, dictionary_fr):
     system('clear')
     while True:
-        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}             v2.0')
+        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}             v2.0.1')
         print()
         print('                Englisch\n')
         print('    1 - Englische Vokabeln abfragen')
