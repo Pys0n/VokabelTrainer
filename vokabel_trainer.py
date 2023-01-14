@@ -498,7 +498,6 @@ def info():
     print('- Vokabeln FR eingeben')
     print('v2.0.1(13.01.2023):')
     print('- 21 neue FR-vokabeln')
-    print('- License hinzugefügt')
     input('  Drücke <Enter> um Fortzuahren\n\t\t')
     system('clear')
 
