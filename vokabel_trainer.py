@@ -497,7 +497,7 @@ def info():
     print('- Abfrage FR, DE')
     print('- Vokabeln FR eingeben')
     print('v2.0.1(13.01.2023):')
-    print('- 21 neue FR-vokabeln')
+    print('- 44 neue FR-vokabeln')
     input('  Drücke <Enter> um Fortzuahren\n\t\t')
     system('clear')
 
