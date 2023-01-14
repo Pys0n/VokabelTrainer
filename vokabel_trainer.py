@@ -1,6 +1,3 @@
-# EN: Please do not present this programme as yours
-# DE: Bitte gebt dieses Programm nicht als eures aus
-# Danke  ——Pys0n
 # Version: v2.0.1  ——Stand: 13.01.2023
 # bei Fragen, Problemen oder Update-Ideen: jason.krueger2010@web.de
 
