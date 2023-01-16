@@ -5,14 +5,11 @@ from os import system
 from os.path import exists
 import pathlib
 from time import sleep
-from collections import namedtuple
 from datetime import date
 
-Vokabel_en = namedtuple("Vokabel", ["de","en","date","cat"])  # 'stat' hinzufügen
 FILENAME = 'vokabeln_en.dat'
 PATH = str(pathlib.Path(__file__).parent.absolute())
 FILE_ENGLISCH = PATH+"/"+FILENAME
-Vokabel_fr = namedtuple("Vokabel", ["de","fr","date","cat"])
 FILENAME = 'vokabeln_fr.dat'
 PATH = str(pathlib.Path(__file__).parent.absolute())
 FILE_FRANZOSISCH = PATH+"/"+FILENAME
@@ -77,7 +74,7 @@ def en_vokabeln_eingeben(dictionary_en):
                 break
         system('clear')
         datum = str(date.today())
-        vokabel = Vokabel_en(de, en, datum, cat)
+        vokabel = {'de':de, 'en':en, 'date':datum, 'cat':cat, 'richtig':'0', 'falsch':'0'}
         print(vokabel)
         print()
         print('Wollen Sie diese Vokabel Speichern?')
@@ -130,7 +127,7 @@ def fr_vokabeln_eingeben(dictionary_fr):
                 break
         system('clear')
         datum = str(date.today())
-        vokabel = Vokabel_fr(de, fr, datum, cat)
+        vokabel = {'de':de, 'fr':fr, 'date':datum, 'cat':cat, 'richtig':'0', 'richtig':'0'}
         print(vokabel)
         print()
         print('Wollen Sie diese Vokabel Speichern?')
@@ -161,7 +158,7 @@ def abfragen_untermenu(dictionary):
         auswahl = input()
         system('clear')
         for vokabel in dictionary:
-            if vokabel.date == auswahl:
+            if vokabel['date'] == auswahl:
                 dict_datum.append(vokabel)
         return dict_datum
     elif auswahl == '3':
@@ -170,14 +167,14 @@ def abfragen_untermenu(dictionary):
         auswahl = input()
         system('clear')
         for vokabel in dictionary:
-            if auswahl in vokabel.cat:
+            if auswahl in vokabel['cat']:
                 dict_cat.append(vokabel)
         return dict_cat
         
     assert False, "Es wurde nicht 1,2 oder 3 ausgewählt"
 
 def abfragen_de_en(gefilterte_liste):
-    # Diese Funktion beinhaltet die Abfrage der Deutschen Vokabeln
+    # Diese Funktion beinhaltet die Abfrage der Englischen Vokabeln
     richtig = 0
     falsch = 0
     nichtGewusst = 0
@@ -187,27 +184,29 @@ def abfragen_de_en(gefilterte_liste):
         vokabel = gefilterte_liste[i]
         print('Deutsch: ', end='')
         print(Color.GREEN, end='')
-        print_list(vokabel.de)
+        print_list(vokabel['de'])
         print(Color.RESET, end='')
         print(f'                                {beantwortet}/{len(gefilterte_liste)}')
         print()
         print(f'Englisch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
         auswahl = input(Color.YELLOW)
         print(Color.RESET, end='')
-        if auswahl == vokabel.en:
+        if auswahl == vokabel['en']:
             print(Color.GREEN, end='')
             print('Richtig/Right')
             print(Color.RESET, end='')
             sleep(3)
             richtig = richtig + 1
-            beantwortet = beantwortet + 1 
+            beantwortet = beantwortet + 1
+            vokabel['richtig'] = int(vokabel['richtig']) + 1
         elif auswahl == '':
             print(Color.GREEN, end='')
-            print(vokabel.en, 'wäre Richtig gewesen')
+            print(vokabel['en'], 'wäre Richtig gewesen')
             print(Color.RESET, end='')
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
+            vokabel['falsch'] = int(vokabel['falsch']) + 1
         elif auswahl == '0':
             system('clear')
             break
@@ -215,11 +214,25 @@ def abfragen_de_en(gefilterte_liste):
             print(Color.RED, end='')
             print('Falsch/Wrong:')
             print(Color.GREEN, end='')
-            print(vokabel.en)
+            print(vokabel['en'])
             print(Color.RESET, end='')
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
+            vokabel['falsch'] = int(vokabel['falsch']) + 1
+
+        #print(vokabel)
+        #print(dictionary_en[-1])
+        #input()
+        for x in range(len(dictionary_en)):
+            if vokabel['de'] == dictionary_en[x]['de'] and vokabel['en'] == dictionary_en[x]['en']:
+                dictionary_en[x] = vokabel
+                #print('TRUE')
+
+        #print(vokabel)
+        #print(dictionary_en[-1])
+        #input()
+        save_dictionarys(dictionary_en, dictionary_fr)
         system('clear')
 
     # Auswertung
@@ -232,7 +245,7 @@ def abfragen_de_en(gefilterte_liste):
     
 
 def abfragen_en_de(gefilterte_liste):
-    # Diese Funktion beinhaltet die Abfrage der Englischen Vokabeln
+    # Diese Funktion beinhaltet die Abfrage der Deutschen Vokabeln
     richtig = 0
     falsch = 0
     nichtGewusst = 0
@@ -241,28 +254,30 @@ def abfragen_en_de(gefilterte_liste):
     for vokabel in gefilterte_liste:
         print('Englisch: ', end='')
         print(Color.GREEN, end='')
-        print(f"{vokabel.en:30}",end='')
+        print(f"{vokabel['en']:30}",end='')
         print(Color.RESET, end='')
         print(f"        {beantwortet}/{len(gefilterte_liste)}")
         print()     
         print(f'Deutsch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
         auswahl = input(Color.YELLOW)
         print(Color.RESET, end='')
-        if auswahl in vokabel.de: 
+        if auswahl in vokabel['de']: 
             print(Color.GREEN, end='')
             print('Richtig/Right')
             print(Color.RESET, end='')
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
+            vokabel['richtig'] = int(vokabel['richtig']) + 1
         elif auswahl == '':
             print(Color.GREEN, end='')
-            print_list(vokabel.de)
+            print_list(vokabel['de'])
             print(' wäre Richtig gewesen')
             print(Color.RESET, end='')
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
+            vokabel['falsch'] = int(vokabel['falsch']) + 1
         elif auswahl == '0':
             system('clear')
             break
@@ -275,6 +290,13 @@ def abfragen_en_de(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
+            vokabel['falsch'] = int(vokabel['falsch']) + 1
+        
+        for x in range(len(dictionary_en)):
+            if vokabel['de'] == dictionary_en[x]['de'] and vokabel['en'] == dictionary_en[x]['en']:
+                dictionary_en[x] = vokabel
+
+        save_dictionarys(dictionary_en, dictionary_fr)
         system('clear')
 
     # Auswertung
@@ -296,27 +318,29 @@ def abfragen_de_fr(gefilterte_liste):
     for vokabel in gefilterte_liste:
         print('Deutsch: ', end='')
         print(Color.GREEN, end='')
-        print_list(vokabel.de)
+        print_list(vokabel['de'])
         print(Color.RESET, end='')
         print(f"        {beantwortet}/{len(gefilterte_liste)}")
         print()     
         print(f'Französisch:                                   {Color.CYAN}0 Beenden{Color.RESET}')
         auswahl = input(Color.YELLOW)
         print(Color.RESET, end='')
-        if auswahl == vokabel.fr: 
+        if auswahl == vokabel['fr']: 
             print(Color.GREEN, end='')
             print('Richtig/Correct')
             print(Color.RESET, end='')
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
+            vokabel['richtig'] = int(vokabel['richtig']) + 1
         elif auswahl == '':
             print(Color.GREEN, end='')
-            print(vokabel.fr, 'wäre Richtig gewesen')
+            print(vokabel['fr'], 'wäre Richtig gewesen')
             print(Color.RESET, end='')
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
+            vokabel['falsch'] = int(vokabel['falsch']) + 1
         elif auswahl == '0':
             system('clear')
             break
@@ -324,11 +348,18 @@ def abfragen_de_fr(gefilterte_liste):
             print(Color.RED, end='')
             print('Falsch/Faux:')
             print(Color.GREEN, end='')
-            print(vokabel.fr)
+            print(vokabel['fr'])
             print(Color.RESET, end='')
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
+            vokabel['falsch'] = int(vokabel['falsch']) + 1
+
+        for x in range(len(dictionary_fr)):
+            if vokabel['de'] == dictionary_fr[x]['de'] and vokabel['fr'] == dictionary_fr[x]['fr']:
+                dictionary_fr[x] = vokabel
+
+        save_dictionarys(dictionary_en, dictionary_fr)
         system('clear')
 
     # Auswertung
@@ -350,28 +381,30 @@ def abfragen_fr_de(gefilterte_liste):
     for vokabel in gefilterte_liste:
         print('Französisch: ', end='')
         print(Color.GREEN, end='')
-        print(f"{vokabel.fr:30}",end='')
+        print(f"{vokabel['fr']:30}",end='')
         print(Color.RESET, end='')
         print(f"        {beantwortet}/{len(gefilterte_liste)}")
         print()     
         print(f'Deutsch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
         auswahl = input(Color.YELLOW)
         print(Color.RESET, end='')
-        if auswahl in vokabel.de: 
+        if auswahl in vokabel['de']: 
             print(Color.GREEN, end='')
             print('Richtig/Correct')
             print(Color.RESET, end='')
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
+            vokabel['richtig'] = int(vokabel['richtig']) + 1
         elif auswahl == '':
             print(Color.GREEN, end='')
-            print_list(vokabel.de)
+            print_list(vokabel['de'])
             print(' wäre Richtig gewesen')
             print(Color.RESET, end='')
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
+            vokabel['falsch'] = int(vokabel['falsch']) + 1
         elif auswahl == '0':
             system('clear')
             break
@@ -379,11 +412,18 @@ def abfragen_fr_de(gefilterte_liste):
             print(Color.RED, end='')
             print('Falsch/Faux:')
             print(Color.GREEN, end='')
-            print_list(vokabel.de)
+            print_list(vokabel['de'])
             print(Color.RESET, end='')
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
+            vokabel['falsch'] = int(vokabel['falsch']) + 1
+
+        for x in range(len(dictionary_fr)):
+            if vokabel['de'] == dictionary_fr[x]['de'] and vokabel['fr'] == dictionary_fr[x]['fr']:
+                dictionary_fr[x] = vokabel  
+
+        save_dictionarys(dictionary_en, dictionary_fr)  
         system('clear')
 
     # Auswertung
@@ -399,30 +439,30 @@ def save_dictionarys(dictionary_en, dictionary_fr):
     with open(FILE_ENGLISCH, 'w') as file:
         for vokabel in dictionary_en:
             vokabel_de = ""
-            for w in vokabel.de:
+            for w in vokabel['de']:
                 vokabel_de += w + '|'
             vokabel_de = vokabel_de.rstrip('|')
 
             vokabel_cat = ""
-            for w in vokabel.cat:
+            for w in vokabel['cat']:
                 vokabel_cat += w + '|'
             vokabel_cat = vokabel_cat.rstrip('|')
 
-            file.write(f"{vokabel_de};{vokabel.en};{vokabel.date};{vokabel_cat}\n")
+            file.write(f"{vokabel_de};{vokabel['en']};{vokabel['date']};{vokabel_cat};{vokabel['richtig']};{vokabel['falsch']}\n")
 
     with open(FILE_FRANZOSISCH, 'w') as file:
         for vokabel in dictionary_fr:
             vokabel_de = ""
-            for w in vokabel.de:
+            for w in vokabel['de']:
                 vokabel_de += w + '|'
             vokabel_de = vokabel_de.rstrip('|')
 
             vokabel_cat = ""
-            for w in vokabel.cat:
+            for w in vokabel['cat']:
                 vokabel_cat += w + '|'
             vokabel_cat = vokabel_cat.rstrip('|')
 
-            file.write(f"{vokabel_de};{vokabel.fr};{vokabel.date};{vokabel_cat}\n")
+            file.write(f"{vokabel_de};{vokabel['fr']};{vokabel['date']};{vokabel_cat};{vokabel['richtig']};{vokabel['falsch']}\n")
 
 
 def load_dictionarys():
@@ -430,7 +470,6 @@ def load_dictionarys():
         print("Datei kann nicht geöffnet werden")
         exit()
 
-    Vokabel_en = namedtuple("Vokabel", ["de","en","date","cat"])
     dictionary_en = []
     parsed_lines = []
     with open(FILE_ENGLISCH,'r') as file:
@@ -447,13 +486,12 @@ def load_dictionarys():
         for i in range(len(cat)):
             cat[i] = cat[i].strip("'")
 
-        dictionary_en.append(Vokabel_en(de, line[1], line[2], cat))
+        dictionary_en.append({'de':de, 'en':line[1], 'date':line[2], 'cat':cat, 'richtig':line[4], 'falsch':line[5]})
         
     if not exists(FILE_FRANZOSISCH):
         print("Datei kann nicht geöffnet werden")
         exit()
 
-    Vokabel_fr = namedtuple("Vokabel", ["de","fr","date","cat"])
     dictionary_fr = []
     parsed_lines = []
     with open(FILE_FRANZOSISCH,'r') as file:
@@ -470,7 +508,7 @@ def load_dictionarys():
         for i in range(len(cat)):
             cat[i] = cat[i].strip("'")
 
-        dictionary_fr.append(Vokabel_fr(de, line[1], line[2], cat))
+        dictionary_fr.append({'de':de, 'fr':line[1], 'date':line[2], 'cat':cat, 'richtig':line[4], 'falsch':line[5]})
 
     return dictionary_en, dictionary_fr
 
@@ -497,12 +535,15 @@ def info():
     print('- Abfrage FR, DE')
     print('- Vokabeln FR eingeben')
     print('v2.0.1(13.01.2023):')
-    print('- 44 neue FR-vokabeln')
+    print('- 44 neue FR-vokabeln\n')
+    print('v3.0.0(16.01.2023):')
+    print('- Erkennung und Speicherung von Richtig und Falsch\n')
     input('  Drücke <Enter> um Fortzuahren\n\t\t')
     system('clear')
 
 
 def main(dictionary_en, dictionary_fr):
+    save_dictionarys(dictionary_en, dictionary_fr)
     system('clear')
     while True:
         print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}             v2.0.1')
@@ -552,3 +593,4 @@ def main(dictionary_en, dictionary_fr):
 if __name__ == '__main__':
     dictionary_en, dictionary_fr = load_dictionarys()
     main(dictionary_en, dictionary_fr)
+    save_dictionarys(dictionary_en, dictionary_fr)
