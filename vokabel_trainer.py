@@ -1,4 +1,4 @@
-# Version: v2.0.1  ——Stand: 13.01.2023
+# Version: v3.0.0  ——Stand: 16.01.2023
 # bei Fragen, Problemen oder Update-Ideen: jason.krueger2010@web.de
 
 from os import system
