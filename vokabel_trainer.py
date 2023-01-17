@@ -1,4 +1,4 @@
-# Version: v3.0.0  ——Stand: 16.01.2023
+# Version: v2.2.1  ——Stand: 16.01.2023
 # bei Fragen, Problemen oder Update-Ideen: jason.krueger2010@web.de
 
 from os import system
@@ -623,8 +623,12 @@ def info():
     print('- Vokabeln FR eingeben')
     print('v2.0.1(13.01.2023):')
     print('- 44 neue FR-vokabeln\n')
-    print('v3.0.0(16.01.2023):')
+    print('v2.1.1(16.01.2023):')
     print('- Erkennung und Speicherung von Richtig und Falsch\n')
+    print('v2.2.1(17.01.2023):')
+    print('- num-Funktion für jede Vokael hinzugefügt')
+    print('  -> num = jede Vokabel hat eine eigene Nummer(siehe: vokabeln_en.dat/vokabeln_fr.dat)')
+    print('- Speicherung von Richtig und Falsch in einer Extra-Datei\n')
     input('  Drücke <Enter> um Fortzuahren\n\t\t')
     system('clear')
 
@@ -633,7 +637,7 @@ def main(dictionary_en, dictionary_fr):
     save_dictionarys(dictionary_en, dictionary_fr)
     system('clear')
     while True:
-        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}             v2.0.1')
+        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}             v2.2.1')
         print()
         print('                Englisch\n')
         print('    1 - Englische Vokabeln abfragen')
