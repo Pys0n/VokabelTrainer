@@ -13,6 +13,9 @@ FILE_ENGLISCH = PATH+"/"+FILENAME
 FILENAME = 'vokabeln_fr.dat'
 PATH = str(pathlib.Path(__file__).parent.absolute())
 FILE_FRANZOSISCH = PATH+"/"+FILENAME
+FILENAME = 'statistic.dat'
+PATH = str(pathlib.Path(__file__).parent.absolute())
+FILE_STATISTIC = PATH+"/"+FILENAME
 
 
 class Color:
@@ -74,7 +77,7 @@ def en_vokabeln_eingeben(dictionary_en):
                 break
         system('clear')
         datum = str(date.today())
-        vokabel = {'de':de, 'en':en, 'date':datum, 'cat':cat, 'richtig':'0', 'falsch':'0'}
+        vokabel = {'num':len(dictionary_en)+1, 'de':de, 'en':en, 'date':datum, 'cat':cat}
         print(vokabel)
         print()
         print('Wollen Sie diese Vokabel Speichern?')
@@ -127,7 +130,7 @@ def fr_vokabeln_eingeben(dictionary_fr):
                 break
         system('clear')
         datum = str(date.today())
-        vokabel = {'de':de, 'fr':fr, 'date':datum, 'cat':cat, 'richtig':'0', 'richtig':'0'}
+        vokabel = {'num':len(dictionary_fr)+1, 'de':de, 'fr':fr, 'date':datum, 'cat':cat}
         print(vokabel)
         print()
         print('Wollen Sie diese Vokabel Speichern?')
@@ -198,7 +201,14 @@ def abfragen_de_en(gefilterte_liste):
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1
-            vokabel['richtig'] = int(vokabel['richtig']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'right\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
         elif auswahl == '':
             print(Color.GREEN, end='')
             print(vokabel['en'], 'wäre Richtig gewesen')
@@ -206,7 +216,14 @@ def abfragen_de_en(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-            vokabel['falsch'] = int(vokabel['falsch']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'wrong\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
         elif auswahl == '0':
             system('clear')
             break
@@ -219,7 +236,14 @@ def abfragen_de_en(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-            vokabel['falsch'] = int(vokabel['falsch']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'wrong\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
 
         #print(vokabel)
         #print(dictionary_en[-1])
@@ -268,7 +292,14 @@ def abfragen_en_de(gefilterte_liste):
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
-            vokabel['richtig'] = int(vokabel['richtig']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'right\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
         elif auswahl == '':
             print(Color.GREEN, end='')
             print_list(vokabel['de'])
@@ -277,7 +308,14 @@ def abfragen_en_de(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-            vokabel['falsch'] = int(vokabel['falsch']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'wrong\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
         elif auswahl == '0':
             system('clear')
             break
@@ -290,7 +328,14 @@ def abfragen_en_de(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-            vokabel['falsch'] = int(vokabel['falsch']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'wrong\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
         
         for x in range(len(dictionary_en)):
             if vokabel['de'] == dictionary_en[x]['de'] and vokabel['en'] == dictionary_en[x]['en']:
@@ -332,7 +377,14 @@ def abfragen_de_fr(gefilterte_liste):
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
-            vokabel['richtig'] = int(vokabel['richtig']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'right\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
         elif auswahl == '':
             print(Color.GREEN, end='')
             print(vokabel['fr'], 'wäre Richtig gewesen')
@@ -340,7 +392,14 @@ def abfragen_de_fr(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-            vokabel['falsch'] = int(vokabel['falsch']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'wrong\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
         elif auswahl == '0':
             system('clear')
             break
@@ -353,7 +412,14 @@ def abfragen_de_fr(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-            vokabel['falsch'] = int(vokabel['falsch']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'wrong\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
 
         for x in range(len(dictionary_fr)):
             if vokabel['de'] == dictionary_fr[x]['de'] and vokabel['fr'] == dictionary_fr[x]['fr']:
@@ -395,7 +461,14 @@ def abfragen_fr_de(gefilterte_liste):
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
-            vokabel['richtig'] = int(vokabel['richtig']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'right\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
         elif auswahl == '':
             print(Color.GREEN, end='')
             print_list(vokabel['de'])
@@ -404,7 +477,14 @@ def abfragen_fr_de(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-            vokabel['falsch'] = int(vokabel['falsch']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'wrong\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
         elif auswahl == '0':
             system('clear')
             break
@@ -417,7 +497,14 @@ def abfragen_fr_de(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-            vokabel['falsch'] = int(vokabel['falsch']) + 1
+            lines = []
+            with open(FILE_STATISTIC, 'r') as file:
+                for line in file:
+                    lines.append(line)
+                lines.append(vokabel['num']+';'+'wrong\n')
+            with open(FILE_STATISTIC, 'w') as file:
+                for line in lines:
+                    file.write(line)
 
         for x in range(len(dictionary_fr)):
             if vokabel['de'] == dictionary_fr[x]['de'] and vokabel['fr'] == dictionary_fr[x]['fr']:
@@ -448,7 +535,7 @@ def save_dictionarys(dictionary_en, dictionary_fr):
                 vokabel_cat += w + '|'
             vokabel_cat = vokabel_cat.rstrip('|')
 
-            file.write(f"{vokabel_de};{vokabel['en']};{vokabel['date']};{vokabel_cat};{vokabel['richtig']};{vokabel['falsch']}\n")
+            file.write(f"{vokabel['num']};{vokabel_de};{vokabel['en']};{vokabel['date']};{vokabel_cat}\n")
 
     with open(FILE_FRANZOSISCH, 'w') as file:
         for vokabel in dictionary_fr:
@@ -462,7 +549,7 @@ def save_dictionarys(dictionary_en, dictionary_fr):
                 vokabel_cat += w + '|'
             vokabel_cat = vokabel_cat.rstrip('|')
 
-            file.write(f"{vokabel_de};{vokabel['fr']};{vokabel['date']};{vokabel_cat};{vokabel['richtig']};{vokabel['falsch']}\n")
+            file.write(f"{vokabel['num']};{vokabel_de};{vokabel['fr']};{vokabel['date']};{vokabel_cat}\n")
 
 
 def load_dictionarys():
@@ -478,15 +565,15 @@ def load_dictionarys():
             parsed_lines.append(line.split(';'))
 
     for line in parsed_lines:
-        de = line[0].split('|')
+        de = line[1].split('|')
         for i in range(len(de)):
             de[i] = de[i].strip("'")
 
-        cat = line[3].split('|')
+        cat = line[4].split('|')
         for i in range(len(cat)):
             cat[i] = cat[i].strip("'")
 
-        dictionary_en.append({'de':de, 'en':line[1], 'date':line[2], 'cat':cat, 'richtig':line[4], 'falsch':line[5]})
+        dictionary_en.append({'num':line[0], 'de':de, 'en':line[2], 'date':line[3], 'cat':cat})
         
     if not exists(FILE_FRANZOSISCH):
         print("Datei kann nicht geöffnet werden")
@@ -500,15 +587,15 @@ def load_dictionarys():
             parsed_lines.append(line.split(';'))
 
     for line in parsed_lines:
-        de = line[0].split('|')
+        de = line[1].split('|')
         for i in range(len(de)):
             de[i] = de[i].strip("'")
 
-        cat = line[3].split('|')
+        cat = line[4].split('|')
         for i in range(len(cat)):
             cat[i] = cat[i].strip("'")
 
-        dictionary_fr.append({'de':de, 'fr':line[1], 'date':line[2], 'cat':cat, 'richtig':line[4], 'falsch':line[5]})
+        dictionary_fr.append({'num':line[0], 'de':de, 'fr':line[2], 'date':line[3], 'cat':cat})
 
     return dictionary_en, dictionary_fr
 
