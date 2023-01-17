@@ -202,10 +202,11 @@ def abfragen_de_en(gefilterte_liste):
             richtig = richtig + 1
             beantwortet = beantwortet + 1
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'right\n')
+                lines.append(vokabel['num']+';'+'right;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
@@ -217,10 +218,11 @@ def abfragen_de_en(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong\n')
+                lines.append(vokabel['num']+';'+'wrong;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
@@ -237,26 +239,14 @@ def abfragen_de_en(gefilterte_liste):
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong\n')
+                lines.append(vokabel['num']+';'+'wrong;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
-
-        #print(vokabel)
-        #print(dictionary_en[-1])
-        #input()
-        for x in range(len(dictionary_en)):
-            if vokabel['de'] == dictionary_en[x]['de'] and vokabel['en'] == dictionary_en[x]['en']:
-                dictionary_en[x] = vokabel
-                #print('TRUE')
-
-        #print(vokabel)
-        #print(dictionary_en[-1])
-        #input()
-        save_dictionarys(dictionary_en, dictionary_fr)
         system('clear')
 
     # Auswertung
@@ -293,10 +283,11 @@ def abfragen_en_de(gefilterte_liste):
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'right\n')
+                lines.append(vokabel['num']+';'+'right;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
@@ -309,10 +300,11 @@ def abfragen_en_de(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong\n')
+                lines.append(vokabel['num']+';'+'wrong;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
@@ -329,19 +321,14 @@ def abfragen_en_de(gefilterte_liste):
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong\n')
+                lines.append(vokabel['num']+';'+'wrong;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
-        
-        for x in range(len(dictionary_en)):
-            if vokabel['de'] == dictionary_en[x]['de'] and vokabel['en'] == dictionary_en[x]['en']:
-                dictionary_en[x] = vokabel
-
-        save_dictionarys(dictionary_en, dictionary_fr)
         system('clear')
 
     # Auswertung
@@ -378,10 +365,11 @@ def abfragen_de_fr(gefilterte_liste):
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'right\n')
+                lines.append(vokabel['num']+';'+'right;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
@@ -393,10 +381,11 @@ def abfragen_de_fr(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong\n')
+                lines.append(vokabel['num']+';'+'wrong;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
@@ -413,19 +402,14 @@ def abfragen_de_fr(gefilterte_liste):
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong\n')
+                lines.append(vokabel['num']+';'+'wrong;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
-
-        for x in range(len(dictionary_fr)):
-            if vokabel['de'] == dictionary_fr[x]['de'] and vokabel['fr'] == dictionary_fr[x]['fr']:
-                dictionary_fr[x] = vokabel
-
-        save_dictionarys(dictionary_en, dictionary_fr)
         system('clear')
 
     # Auswertung
@@ -462,10 +446,11 @@ def abfragen_fr_de(gefilterte_liste):
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'right\n')
+                lines.append(vokabel['num']+';'+'right;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
@@ -478,10 +463,11 @@ def abfragen_fr_de(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong\n')
+                lines.append(vokabel['num']+';'+'wrong;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
                     file.write(line)
@@ -498,19 +484,14 @@ def abfragen_fr_de(gefilterte_liste):
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
             lines = []
+            datum = str(date.today())
             with open(FILE_STATISTIC, 'r') as file:
                 for line in file:
                     lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong\n')
+                lines.append(vokabel['num']+';'+'wrong;'+datum)
             with open(FILE_STATISTIC, 'w') as file:
                 for line in lines:
-                    file.write(line)
-
-        for x in range(len(dictionary_fr)):
-            if vokabel['de'] == dictionary_fr[x]['de'] and vokabel['fr'] == dictionary_fr[x]['fr']:
-                dictionary_fr[x] = vokabel  
-
-        save_dictionarys(dictionary_en, dictionary_fr)  
+                    file.write(line) 
         system('clear')
 
     # Auswertung
