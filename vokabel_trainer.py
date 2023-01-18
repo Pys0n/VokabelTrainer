@@ -7,16 +7,15 @@ import pathlib
 from time import sleep
 from datetime import date
 
-FILENAME = 'vokabeln_en.dat'
 PATH = str(pathlib.Path(__file__).parent.absolute())
+FILENAME = 'vokabeln_en.dat'
 FILE_ENGLISCH = PATH+"/"+FILENAME
 FILENAME = 'vokabeln_fr.dat'
-PATH = str(pathlib.Path(__file__).parent.absolute())
 FILE_FRANZOSISCH = PATH+"/"+FILENAME
-FILENAME = 'statistic.dat'
-PATH = str(pathlib.Path(__file__).parent.absolute())
-FILE_STATISTIC = PATH+"/"+FILENAME
-
+FILENAME = 'statistic_en.dat'
+FILE_STATISTIC_EN = PATH+"/"+FILENAME
+FILENAME = 'statistic_fr.dat'
+FILE_STATISTIC_FR = PATH+"/"+FILENAME
 
 class Color:
     UNDERLINE = '\033[4m'
@@ -202,7 +201,7 @@ def abfragen_de_en(gefilterte_liste):
             richtig = richtig + 1
             beantwortet = beantwortet + 1
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_EN, 'a') as file:
                 file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
         elif auswahl == '':
             print(Color.GREEN, end='')
@@ -212,7 +211,7 @@ def abfragen_de_en(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_EN, 'a') as file:
                 file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         elif auswahl == '0':
             system('clear')
@@ -227,7 +226,7 @@ def abfragen_de_en(gefilterte_liste):
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_EN, 'a') as file:
                 file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         system('clear')
 
@@ -265,7 +264,7 @@ def abfragen_en_de(gefilterte_liste):
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_EN, 'a') as file:
                 file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
         elif auswahl == '':
             print(Color.GREEN, end='')
@@ -276,7 +275,7 @@ def abfragen_en_de(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_EN, 'a') as file:
                 file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         elif auswahl == '0':
             system('clear')
@@ -291,7 +290,7 @@ def abfragen_en_de(gefilterte_liste):
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_EN, 'a') as file:
                 file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         system('clear')
 
@@ -329,7 +328,7 @@ def abfragen_de_fr(gefilterte_liste):
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_FR, 'a') as file:
                 file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
         elif auswahl == '':
             print(Color.GREEN, end='')
@@ -339,7 +338,7 @@ def abfragen_de_fr(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_FR, 'a') as file:
                 file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         elif auswahl == '0':
             system('clear')
@@ -354,7 +353,7 @@ def abfragen_de_fr(gefilterte_liste):
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_FR, 'a') as file:
                 file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         system('clear')
 
@@ -392,7 +391,7 @@ def abfragen_fr_de(gefilterte_liste):
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_FR, 'a') as file:
                 file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
         elif auswahl == '':
             print(Color.GREEN, end='')
@@ -403,7 +402,7 @@ def abfragen_fr_de(gefilterte_liste):
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_FR, 'a') as file:
                 file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         elif auswahl == '0':
             system('clear')
@@ -418,7 +417,7 @@ def abfragen_fr_de(gefilterte_liste):
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC_FR, 'a') as file:
                 file.write(vokabel['num']+';'+'1'+';'+datum+'\n') 
         system('clear')
 
