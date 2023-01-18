@@ -201,15 +201,9 @@ def abfragen_de_en(gefilterte_liste):
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'right;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
         elif auswahl == '':
             print(Color.GREEN, end='')
             print(vokabel['en'], 'wäre Richtig gewesen')
@@ -217,15 +211,9 @@ def abfragen_de_en(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         elif auswahl == '0':
             system('clear')
             break
@@ -238,15 +226,9 @@ def abfragen_de_en(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         system('clear')
 
     # Auswertung
@@ -282,15 +264,9 @@ def abfragen_en_de(gefilterte_liste):
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'right;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
         elif auswahl == '':
             print(Color.GREEN, end='')
             print_list(vokabel['de'])
@@ -299,15 +275,9 @@ def abfragen_en_de(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         elif auswahl == '0':
             system('clear')
             break
@@ -320,15 +290,9 @@ def abfragen_en_de(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         system('clear')
 
     # Auswertung
@@ -364,15 +328,9 @@ def abfragen_de_fr(gefilterte_liste):
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'right;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
         elif auswahl == '':
             print(Color.GREEN, end='')
             print(vokabel['fr'], 'wäre Richtig gewesen')
@@ -380,15 +338,9 @@ def abfragen_de_fr(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         elif auswahl == '0':
             system('clear')
             break
@@ -401,15 +353,9 @@ def abfragen_de_fr(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         system('clear')
 
     # Auswertung
@@ -445,15 +391,9 @@ def abfragen_fr_de(gefilterte_liste):
             sleep(3)
             richtig = richtig + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'right;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
         elif auswahl == '':
             print(Color.GREEN, end='')
             print_list(vokabel['de'])
@@ -462,15 +402,9 @@ def abfragen_fr_de(gefilterte_liste):
             sleep(5)
             nichtGewusst = nichtGewusst + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line)
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
         elif auswahl == '0':
             system('clear')
             break
@@ -483,15 +417,9 @@ def abfragen_fr_de(gefilterte_liste):
             sleep(5)
             falsch = falsch + 1
             beantwortet = beantwortet + 1 
-            lines = []
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'r') as file:
-                for line in file:
-                    lines.append(line)
-                lines.append(vokabel['num']+';'+'wrong;'+datum)
-            with open(FILE_STATISTIC, 'w') as file:
-                for line in lines:
-                    file.write(line) 
+            with open(FILE_STATISTIC, 'a') as file:
+                file.write(vokabel['num']+';'+'1'+';'+datum+'\n') 
         system('clear')
 
     # Auswertung
