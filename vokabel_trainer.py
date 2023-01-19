@@ -536,7 +536,7 @@ def info():
     print('- Vokabeln werden dauerhaft abgespeichert\n')
     print('v2.0.0(30.11.2022):')
     print('- Abfrage FR, DE')
-    print('- Vokabeln FR eingeben')
+    print('- Vokabeln FR eingeben\n')
     print('v2.0.1(13.01.2023):')
     print('- 44 neue FR-vokabeln\n')
     print('v2.1.0(16.01.2023):')
