@@ -548,8 +548,10 @@ def info():
     print('v2.3.0(17.01.2023):')
     print('- Speicherung von Richtig und Falsch in einer Extra-Datei überareitet')
     print('  -> für die Statistik\n')
-    print('v2.3.1(17.01.2023):')
+    print('v2.3.1(18.01.2023):')
     print('- kleiner Bug-Fix\n')
+    print('v2.3.2(19.01.2023):')
+    print('- Zufällige Reihnfolge bei der Vokabelabfrage\n')
     input('  Drücke <Enter> um Fortzuahren\n\t\t')
     system('clear')
 
