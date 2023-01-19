@@ -1,6 +1,7 @@
 # Version: v2.3.1  ——Stand: 16.01.2023
 # bei Fragen, Problemen oder Update-Ideen: jason.krueger2010@web.de
 
+import random
 from os import system
 from os.path import exists
 import pathlib
@@ -29,6 +30,9 @@ class Color:
     WHITE  = '\33[37m'
     RESET  = '\033[0m' # RESET COLOR
 
+def muesche_list(list):
+    random.shuffle(list)
+    return list
 
 def print_list(liste):
     # Diese Funktion gibt die Deutsche(n) Vokabel(n) aus
@@ -177,6 +181,7 @@ def abfragen_untermenu(dictionary):
 
 def abfragen_de_en(gefilterte_liste):
     # Diese Funktion beinhaltet die Abfrage der Englischen Vokabeln
+    gefilterte_liste = muesche_list(gefilterte_liste)
     richtig = 0
     falsch = 0
     nichtGewusst = 0
@@ -241,6 +246,7 @@ def abfragen_de_en(gefilterte_liste):
 
 def abfragen_en_de(gefilterte_liste):
     # Diese Funktion beinhaltet die Abfrage der Deutschen Vokabeln
+    gefilterte_liste = muesche_list(gefilterte_liste)
     richtig = 0
     falsch = 0
     nichtGewusst = 0
@@ -305,6 +311,7 @@ def abfragen_en_de(gefilterte_liste):
 
 def abfragen_de_fr(gefilterte_liste):
     # Diese Funktion beinhaltet die Abfrage der Französischen Vokabeln
+    gefilterte_liste = muesche_list(gefilterte_liste)
     richtig = 0
     falsch = 0
     nichtGewusst = 0
@@ -368,6 +375,7 @@ def abfragen_de_fr(gefilterte_liste):
 
 def abfragen_fr_de(gefilterte_liste):
     # Diese Funktion beinhaltet die Abfrage der Deutschen Vokabeln
+    gefilterte_liste = muesche_list(gefilterte_liste)
     richtig = 0
     falsch = 0
     nichtGewusst = 0
