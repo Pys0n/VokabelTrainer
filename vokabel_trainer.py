@@ -290,7 +290,7 @@ def abfragen_en_de(gefilterte_liste):
             print(Color.RED, end='')
             print('Falsch/Wrong:')
             print(Color.GREEN, end='')
-            print_list(vokabel.de)
+            print_list(vokabel['de'])
             print(Color.RESET, end='')
             sleep(5)
             falsch = falsch + 1
