@@ -1,610 +1,322 @@
-# Version: v2.3.1  ——Stand: 16.01.2023
-# bei Fragen, Problemen oder Update-Ideen: jason.krueger2010@web.de
-
-import random
-from os import system
-from os.path import exists
-import pathlib
-from time import sleep
+import sys
+from random import shuffle, randint
 from datetime import date
 
-PATH = str(pathlib.Path(__file__).parent.absolute())
-FILENAME = 'vokabeln_en.dat'
-FILE_ENGLISCH = PATH+"/"+FILENAME
-FILENAME = 'vokabeln_fr.dat'
-FILE_FRANZOSISCH = PATH+"/"+FILENAME
-FILENAME = 'statistic_en.dat'
-FILE_STATISTIC_EN = PATH+"/"+FILENAME
-FILENAME = 'statistic_fr.dat'
-FILE_STATISTIC_FR = PATH+"/"+FILENAME
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5 import *
 
-class Color:
-    UNDERLINE = '\033[4m'
-    BLACK  = '\33[30m'
-    RED    = '\33[31m'
-    GREEN  = '\33[32m'
-    YELLOW = '\33[33m'
-    BLUE   = '\33[34m'
-    VIOLET = '\33[35m'
-    CYAN   = '\33[36m'
-    WHITE  = '\33[37m'
-    RESET  = '\033[0m' # RESET COLOR
+from mainmenu_ui import MainmenuUI
+from statistic_ui import StatisticUI
+from changelog_ui import ChangelogUI
+from languagemenu_ui import LanguagemenuUI
+from vocabularyinput_ui import VocabularyinputUI
+from searchcategory_ui import SearchcategoryUI
+from vocabularyquery_ui import VocabularyqueryUI
+from myFunctions import *
 
-def muesche_list(list):
-    random.shuffle(list)
-    return list
+class Window(QWidget):
+    def __init__(self):
+        super(Window, self).__init__()
 
-def print_list(liste):
-    # Diese Funktion gibt die Deutsche(n) Vokabel(n) aus
-    for x in range(len(liste)):
-        if x > 0:
-            print(', ',end='')
-        print(liste[x], end='')
+        self.mainmenu_ui = MainmenuUI()
+        self.vocabularyquery_ui = VocabularyqueryUI()
+        self.languagemenu_ui = LanguagemenuUI()
+        self.changelog_ui = ChangelogUI()
+        self.searchcategory_ui = SearchcategoryUI()
+        self.vocabularyinput_ui = VocabularyinputUI()
+        self.statistic_ui = StatisticUI()
 
+        self.Stack = QStackedWidget(self)
+        self.Stack.addWidget(self.mainmenu_ui)
+        self.Stack.addWidget(self.vocabularyquery_ui)
+        self.Stack.addWidget(self.languagemenu_ui)
+        self.Stack.addWidget(self.changelog_ui)
+        self.Stack.addWidget(self.searchcategory_ui)
+        self.Stack.addWidget(self.vocabularyinput_ui)
+        self.Stack.addWidget(self.statistic_ui)
 
-def en_vokabeln_eingeben(dictionary_en):
-    char = ''
-    while char == '':
-        de = []
-        en = ' '
-        cat = []
-        i = 1
-        print(f"\t{Color.BLUE}{Color.UNDERLINE}Vokabeln eingeben{Color.RESET}")
-        print()
-        print('-–Drücken Sie <Enter> wenn sie alle Vokabeln Eingegeben haben–-')
-        print()
-        while True:
-            print(i, end='')
-            deutsch = input('. Deutsch: ')
-            if len(deutsch) > 0:
-                de.append(deutsch)
-                i += 1
-            else: break
-        print()
-        i = 1
-        print(f'-–Sie können nur {Color.UNDERLINE}eine{Color.RESET} Englische Vokabel eingeben!–-')
-        print()
-        en = input('Englisch: ')
-        print()
-        #print('-–Dies ist ein Pflichtfeld!–- -–Bitte geben Sie "Kl. ..." für die Klasse an–-')
-        category = input('Klasse: ')
-        cat.append("Kl. " + category)
-        i = 2
-        while True:
-            print(i, end='')
-            category = input('. Kategorie: ')
-            if len(category):
-                cat.append(category)
-                i += 1
-            else:
-                break
-        system('clear')
-        datum = str(date.today())
-        vokabel = {'num':len(dictionary_en)+1, 'de':de, 'en':en, 'date':datum, 'cat':cat}
-        print(vokabel)
-        print()
-        print('Wollen Sie diese Vokabel Speichern?')
-        wahl = input('Drücken sie n+<Enter> um die Vokabel nicht zu Speichern \nund nur <Enter> um sie zu Speichern: \n')
-        system('clear')
-        if wahl == '':
-            dictionary_en.append(vokabel)
-            save_dictionarys(dictionary_en, dictionary_fr)
-        else: pass
-        print("<Enter> drücken für weiter")
-        char = input("0+<Enter> Hauptmenü:  ")
-        system('clear')
+        # statistic_ui
+        self.statistic_ui.next_btn.clicked.connect(self.setMenu)
+        # changelog_ui
+        self.changelog_ui.back_btn.clicked.connect(self.setMAIN)
+        # mainmenu_ui
+        self.mainmenu_ui.en.clicked.connect(self.setEN_MENU)
+        self.mainmenu_ui.fr.clicked.connect(self.setFR_MENU)
+        self.mainmenu_ui.changelog_btn.clicked.connect(self.setCHANGELOG)
+        #self.mainmenu_ui.stat_btn.clicked.connect(self.stat)
+        self.mainmenu_ui.quit_btn.clicked.connect(self.quit)
+        # languagemenu_ui
+        self.languagemenu_ui.back_btn.clicked.connect(self.setMAIN)
+        # vocabularyinput_ui
+        self.vocabularyinput_ui.back_btn.clicked.connect(self.back)
+        # searchcategory_ui
+        self.searchcategory_ui.save_btn.clicked.connect(self.setMenu)
+        # vocabularyquery_ui
+        self.vocabularyquery_ui.back_btn.clicked.connect(self.showSTATS) 
+        self.vocabularyquery_ui.ready_btn.clicked.connect(self.btnNextClicked) 
+        self.vocabularyquery_ui.input.returnPressed.connect(self.btnNextClicked)
 
+        hL = QHBoxLayout()
+        hL.addStretch(1)
+        hL.addWidget(self.Stack)
+        hL.addStretch(1)
 
-def fr_vokabeln_eingeben(dictionary_fr):
-    char = ''
-    while char == '':
-        de = []
-        fr = ' '
-        cat = []
-        i = 1
-        print(f"\t{Color.BLUE}{Color.UNDERLINE}Vokabeln eingeben{Color.RESET}")
-        print()
-        print('-–Drücken Sie <Enter> wenn sie alle Vokabeln Eingegeben haben–-')
-        print()
-        while True:
-            print(i, end='')
-            deutsch = input('. Deutsch: ')
-            if len(deutsch) > 0:
-                de.append(deutsch)
-                i += 1
-            else: break
-        print()
-        i = 1
-        print(f'-–Sie können nur {Color.UNDERLINE}eine{Color.RESET} Französische Vokabel eingeben!–-')
-        print()
-        fr = input('Französisch: ')
-        print()
-        #print('-–Dies ist ein Pflichtfeld!–- -–Bitte geben Sie "Kl. ..." für die Klasse an–-')
-        category = input('Klasse: ')
-        cat.append("Kl. " + category)
-        i = 2
-        while True:
-            print(i, end='')
-            category = input('. Kategorie: ')
-            if len(category):
-                cat.append(category)
-                i += 1
-            else:
-                break
-        system('clear')
-        datum = str(date.today())
-        vokabel = {'num':len(dictionary_fr)+1, 'de':de, 'fr':fr, 'date':datum, 'cat':cat}
-        print(vokabel)
-        print()
-        print('Wollen Sie diese Vokabel Speichern?')
-        wahl = input('Drücken sie n+<Enter> um die Vokabel nicht zu Speichern \nund nur <Enter> um sie zu Speichern: \n')
-        system('clear')
-        if wahl == '':
-            dictionary_fr.append(vokabel)
-            save_dictionarys(dictionary_en, dictionary_fr)
-        else: pass
-        print("<Enter> drücken für weiter")
-        char = input("0+<Enter> Hauptmenü:  ")
-        system('clear')
+        self.setLayout(hL)
 
+        self.setGeometry(100,100,450,500)
+        self.setWindowTitle('Vokabeltrainer')
+        self.setMAIN()
 
-def abfragen_untermenu(dictionary):
-    print('1. Alle Vokabeln ')
-    print('2. Nach Datum    ')
-    print('3. Nach Kategorie')
-    print()
-    auswahl = input(Color.YELLOW)
-    print(Color.RESET, end='')
-    system('clear')
-    if auswahl == '1':
-        return dictionary
-    elif auswahl == '2':
-        dict_datum = []
-        print('Bitte geben Sie das gewünschte Datum im Format "jjjj-mm-tt" ein:')
-        auswahl = input()
-        system('clear')
-        for vokabel in dictionary:
-            if vokabel['date'] == auswahl:
-                dict_datum.append(vokabel)
-        return dict_datum
-    elif auswahl == '3':
-        dict_cat = []
-        print('Bitte geben Sie die gewünschte Kategorie ein:')
-        auswahl = input()
-        system('clear')
-        for vokabel in dictionary:
-            if auswahl in vokabel['cat']:
-                dict_cat.append(vokabel)
-        return dict_cat
-        
-    assert False, "Es wurde nicht 1,2 oder 3 ausgewählt"
+    def setMAIN(self):
+        self.searchcategory_ui.choosedCats = []
+        self.searchcategory_ui.clearCats()
+        self.mainmenu_ui.load()
+        self.Stack.setCurrentIndex(0)
 
-def abfragen_de_en(gefilterte_liste):
-    # Diese Funktion beinhaltet die Abfrage der Englischen Vokabeln
-    gefilterte_liste = muesche_list(gefilterte_liste)
-    richtig = 0
-    falsch = 0
-    nichtGewusst = 0
-    beantwortet = 0
+    def setDE_EN(self):
+        self.dict = load_dictionary_en()
+        if len(self.searchcategory_ui.choosedCats) != 0:
+            self.makeDict()
+        shuffle(self.dict)
+        self.mainLang = 'de'
+        self.mainLangName = 'Deutsch'
+        self.lang = 'en'
+        self.langName = 'Englisch'
+        self.vocabularyquery_ui.load(self.dict, ['de', 'Deutsch', 'en', 'Englisch'], False)
+        self.Stack.setCurrentIndex(1)
 
-    for i in range(0, len(gefilterte_liste)):
-        vokabel = gefilterte_liste[i]
-        print('Deutsch: ', end='')
-        print(Color.GREEN, end='')
-        print_list(vokabel['de'])
-        print(Color.RESET, end='')
-        print(f'                                {beantwortet}/{len(gefilterte_liste)}')
-        print()
-        print(f'Englisch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
-        auswahl = input(Color.YELLOW)
-        print(Color.RESET, end='')
-        if auswahl == vokabel['en']:
-            print(Color.GREEN, end='')
-            print('Richtig/Right')
-            print(Color.RESET, end='')
-            sleep(3)
-            richtig = richtig + 1
-            beantwortet = beantwortet + 1
-            datum = str(date.today())
-            with open(FILE_STATISTIC_EN, 'a') as file:
-                file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
-        elif auswahl == '':
-            print(Color.GREEN, end='')
-            print(vokabel['en'], 'wäre Richtig gewesen')
-            print(Color.RESET, end='')
-            sleep(5)
-            nichtGewusst = nichtGewusst + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_EN, 'a') as file:
-                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
-        elif auswahl == '0':
-            system('clear')
-            break
-        else:
-            print(Color.RED, end='')
-            print('Falsch/Wrong:')
-            print(Color.GREEN, end='')
-            print(vokabel['en'])
-            print(Color.RESET, end='')
-            sleep(5)
-            falsch = falsch + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_EN, 'a') as file:
-                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
-        system('clear')
-
-    # Auswertung
-    print('Fragen richtig beantwortet:', richtig)
-    print('Fragen falsch beantwortet :', falsch)
-    print('Fragen nicht Gewusst      :', nichtGewusst)
-    print('Fragen beantwortet        :', beantwortet,'/',len(gefilterte_liste))
-    input(f"{Color.CYAN}Weiter mit Enter...{Color.RESET}")
-    system('clear')
+    def setEN_MENU(self):
+        self.clearVokInput()
+        self.languagemenu_ui.load('Englisch')
+        self.languagemenu_ui.lang_mainLang.clicked.connect(self.setEN_DE)
+        self.languagemenu_ui.mainLang_lang.clicked.connect(self.setDE_EN)
+        self.languagemenu_ui.vok_eingabe.clicked.connect(self.setVOK_INPUT_EN)
+        self.languagemenu_ui.random_btn.clicked.connect(self.setEN_RANDOM)
+        self.languagemenu_ui.cat_btn.clicked.connect(self.setEN_CATEGORY)
+        self.Stack.setCurrentIndex(2)
     
+    def setEN_DE(self):
+        self.dict = load_dictionary_en()
+        if len(self.searchcategory_ui.choosedCats) != 0:
+            self.makeDict()
+        shuffle(self.dict)
+        self.mainLang = 'en'
+        self.mainLangName = 'Englisch'
+        self.lang = 'de'
+        self.langName = 'Deutsch'
+        self.vocabularyquery_ui.load(self.dict, ['en', 'Englisch', 'de', 'Deutsch'], False)
+        self.Stack.setCurrentIndex(1)
 
-def abfragen_en_de(gefilterte_liste):
-    # Diese Funktion beinhaltet die Abfrage der Deutschen Vokabeln
-    gefilterte_liste = muesche_list(gefilterte_liste)
-    richtig = 0
-    falsch = 0
-    nichtGewusst = 0
-    beantwortet = 0
+    def setEN_RANDOM(self):
+        self.dict = load_dictionary_en()
+        if len(self.searchcategory_ui.choosedCats) != 0:
+            self.makeDict()
+        shuffle(self.dict)
+        self.mainLang = 'en'
+        self.mainLangName = 'Englisch'
+        self.lang = 'de'
+        self.langName = 'Deutsch'
+        self.vocabularyquery_ui.load(self.dict, ['en', 'Englisch', 'de', 'Deutsch'], True)
+        self.Stack.setCurrentIndex(1)
 
-    for vokabel in gefilterte_liste:
-        print('Englisch: ', end='')
-        print(Color.GREEN, end='')
-        print(f"{vokabel['en']:30}",end='')
-        print(Color.RESET, end='')
-        print(f"        {beantwortet}/{len(gefilterte_liste)}")
-        print()     
-        print(f'Deutsch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
-        auswahl = input(Color.YELLOW)
-        print(Color.RESET, end='')
-        if auswahl in vokabel['de']: 
-            print(Color.GREEN, end='')
-            print('Richtig/Right')
-            print(Color.RESET, end='')
-            sleep(3)
-            richtig = richtig + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_EN, 'a') as file:
-                file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
-        elif auswahl == '':
-            print(Color.GREEN, end='')
-            print_list(vokabel['de'])
-            print(' wäre Richtig gewesen')
-            print(Color.RESET, end='')
-            sleep(5)
-            nichtGewusst = nichtGewusst + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_EN, 'a') as file:
-                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
-        elif auswahl == '0':
-            system('clear')
-            break
-        else:
-            print(Color.RED, end='')
-            print('Falsch/Wrong:')
-            print(Color.GREEN, end='')
-            print_list(vokabel['de'])
-            print(Color.RESET, end='')
-            sleep(5)
-            falsch = falsch + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_EN, 'a') as file:
-                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
-        system('clear')
+    def setDE_FR(self):
+        self.dict = load_dictionary_fr()
+        if len(self.searchcategory_ui.choosedCats) != 0:
+            self.makeDict()
+        shuffle(self.dict)
+        self.mainLang = 'de'
+        self.mainLangName = 'Deutsch'
+        self.lang = 'fr'
+        self.langName = 'Französisch'
+        self.vocabularyquery_ui.load(self.dict, ['de', 'Deutsch', 'fr', 'Französisch'], False)
+        self.Stack.setCurrentIndex(1)
 
-    # Auswertung
-    print('Fragen richtig beantwortet:', richtig)
-    print('Fragen falsch beantwortet :', falsch)
-    print('Fragen nicht Gewusst      :', nichtGewusst)
-    print('Fragen beantwortet        :', beantwortet,'/',len(gefilterte_liste))
-    input(f"{Color.CYAN}Weiter mit Enter...{Color.RESET}")
-    system('clear')
+    def setFR_MENU(self):
+        self.clearVokInput()
+        self.languagemenu_ui.load('Französisch')
+        self.languagemenu_ui.lang_mainLang.clicked.connect(self.setFR_DE)
+        self.languagemenu_ui.mainLang_lang.clicked.connect(self.setDE_FR)
+        self.languagemenu_ui.vok_eingabe.clicked.connect(self.setVOK_INPUT_FR)
+        self.languagemenu_ui.random_btn.clicked.connect(self.setFR_RANDOM)
+        self.languagemenu_ui.cat_btn.clicked.connect(self.setFR_CATEGORY)
+        self.Stack.setCurrentIndex(2)
 
+    def setFR_DE(self):
+        self.dict = load_dictionary_fr()
+        if len(self.searchcategory_ui.choosedCats) != 0:
+            self.makeDict()
+        shuffle(self.dict)
+        self.mainLang = 'fr'
+        self.mainLangName = 'Französisch'
+        self.lang = 'de'
+        self.langName = 'Deutsch'
+        self.vocabularyquery_ui.load(self.dict, ['fr', 'Französisch', 'de', 'Deutsch'], False)
+        self.Stack.setCurrentIndex(1)
 
-def abfragen_de_fr(gefilterte_liste):
-    # Diese Funktion beinhaltet die Abfrage der Französischen Vokabeln
-    gefilterte_liste = muesche_list(gefilterte_liste)
-    richtig = 0
-    falsch = 0
-    nichtGewusst = 0
-    beantwortet = 0
+    def setFR_RANDOM(self):
+        self.dict = load_dictionary_fr()
+        if len(self.searchcategory_ui.choosedCats) != 0:
+            self.makeDict()
+        shuffle(self.dict)
+        self.mainLang = 'fr'
+        self.mainLangName = 'Französisch'
+        self.lang = 'de'
+        self.langName = 'Deutsch'
+        self.vocabularyquery_ui.load(self.dict, ['fr', 'Französisch', 'de', 'Deutsch'], True)
+        self.Stack.setCurrentIndex(1)
 
-    for vokabel in gefilterte_liste:
-        print('Deutsch: ', end='')
-        print(Color.GREEN, end='')
-        print_list(vokabel['de'])
-        print(Color.RESET, end='')
-        print(f"        {beantwortet}/{len(gefilterte_liste)}")
-        print()     
-        print(f'Französisch:                                   {Color.CYAN}0 Beenden{Color.RESET}')
-        auswahl = input(Color.YELLOW)
-        print(Color.RESET, end='')
-        if auswahl == vokabel['fr']: 
-            print(Color.GREEN, end='')
-            print('Richtig/Correct')
-            print(Color.RESET, end='')
-            sleep(3)
-            richtig = richtig + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_FR, 'a') as file:
-                file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
-        elif auswahl == '':
-            print(Color.GREEN, end='')
-            print(vokabel['fr'], 'wäre Richtig gewesen')
-            print(Color.RESET, end='')
-            sleep(5)
-            nichtGewusst = nichtGewusst + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_FR, 'a') as file:
-                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
-        elif auswahl == '0':
-            system('clear')
-            break
-        else:
-            print(Color.RED, end='')
-            print('Falsch/Faux:')
-            print(Color.GREEN, end='')
-            print(vokabel['fr'])
-            print(Color.RESET, end='')
-            sleep(5)
-            falsch = falsch + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_FR, 'a') as file:
-                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
-        system('clear')
+    def setCHANGELOG(self):
+        self.changelog_ui.load()
+        self.Stack.setCurrentIndex(3)
 
-    # Auswertung
-    print('Fragen richtig beantwortet:', richtig)
-    print('Fragen falsch beantwortet :', falsch)
-    print('Fragen nicht Gewusst      :', nichtGewusst)
-    print('Fragen beantwortet        :', beantwortet,'/',len(gefilterte_liste))
-    input(f"{Color.CYAN}Weiter mit Enter...{Color.RESET}")
-    system('clear')
+    def setEN_CATEGORY(self):
+        self.dict = load_dictionary_en()
+        self.lang = 'en'
+        self.searchcategory_ui.load(self.lang, self.dict)
+        self.Stack.setCurrentIndex(4)
 
+    def setFR_CATEGORY(self):
+        self.dict = load_dictionary_fr()
+        self.lang = 'fr'
+        self.searchcategory_ui.load(self.lang, self.dict)
+        self.Stack.setCurrentIndex(4)
 
-def abfragen_fr_de(gefilterte_liste):
-    # Diese Funktion beinhaltet die Abfrage der Deutschen Vokabeln
-    gefilterte_liste = muesche_list(gefilterte_liste)
-    richtig = 0
-    falsch = 0
-    nichtGewusst = 0
-    beantwortet = 0
+    def setVOK_INPUT_EN(self):
+        self.dict = load_dictionary_en()
+        self.mainLang = 'Deutsch'
+        self.lang = 'Englisch'
+        self.vocabularyinput_ui.load(self.mainLang, self.lang, self.dict)
+        self.Stack.setCurrentIndex(5)
 
-    for vokabel in gefilterte_liste:
-        print('Französisch: ', end='')
-        print(Color.GREEN, end='')
-        print(f"{vokabel['fr']:30}",end='')
-        print(Color.RESET, end='')
-        print(f"        {beantwortet}/{len(gefilterte_liste)}")
-        print()     
-        print(f'Deutsch:                                        {Color.CYAN}0 Beenden{Color.RESET}')
-        auswahl = input(Color.YELLOW)
-        print(Color.RESET, end='')
-        if auswahl in vokabel['de']: 
-            print(Color.GREEN, end='')
-            print('Richtig/Correct')
-            print(Color.RESET, end='')
-            sleep(3)
-            richtig = richtig + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_FR, 'a') as file:
-                file.write(vokabel['num']+';'+'0'+';'+datum+'\n')
-        elif auswahl == '':
-            print(Color.GREEN, end='')
-            print_list(vokabel['de'])
-            print(' wäre Richtig gewesen')
-            print(Color.RESET, end='')
-            sleep(5)
-            nichtGewusst = nichtGewusst + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_FR, 'a') as file:
-                file.write(vokabel['num']+';'+'1'+';'+datum+'\n')
-        elif auswahl == '0':
-            system('clear')
-            break
-        else:
-            print(Color.RED, end='')
-            print('Falsch/Faux:')
-            print(Color.GREEN, end='')
-            print_list(vokabel['de'])
-            print(Color.RESET, end='')
-            sleep(5)
-            falsch = falsch + 1
-            beantwortet = beantwortet + 1 
-            datum = str(date.today())
-            with open(FILE_STATISTIC_FR, 'a') as file:
-                file.write(vokabel['num']+';'+'1'+';'+datum+'\n') 
-        system('clear')
+    def setVOK_INPUT_FR(self):
+        self.dict = load_dictionary_fr()
+        self.mainLang = 'Deutsch'
+        self.lang = 'Französisch'
+        self.vocabularyinput_ui.load(self.mainLang, self.lang, self.dict)
+        self.Stack.setCurrentIndex(5)
 
-    # Auswertung
-    print('Fragen richtig beantwortet:', richtig)
-    print('Fragen falsch beantwortet :', falsch)
-    print('Fragen nicht Gewusst      :', nichtGewusst)
-    print('Fragen beantwortet        :', beantwortet,'/',len(gefilterte_liste))
-    input(f"{Color.CYAN}Weiter mit Enter...{Color.RESET}")
-    system('clear')
+    def showSTATS(self):
+        self.right = self.vocabularyquery_ui.right
+        self.wrong = self.vocabularyquery_ui.wrong
+        self.answered = self.vocabularyquery_ui.answered
+        self.statistic_ui.setStatistic(self.right, self.wrong, self.answered, len(self.dict))
+        self.Stack.setCurrentIndex(6)
 
-
-def save_dictionarys(dictionary_en, dictionary_fr):
-    with open(FILE_ENGLISCH, 'w') as file:
-        for vokabel in dictionary_en:
-            vokabel_de = ""
-            for w in vokabel['de']:
-                vokabel_de += w + '|'
-            vokabel_de = vokabel_de.rstrip('|')
-
-            vokabel_cat = ""
-            for w in vokabel['cat']:
-                vokabel_cat += w + '|'
-            vokabel_cat = vokabel_cat.rstrip('|')
-
-            file.write(f"{vokabel['num']};{vokabel_de};{vokabel['en']};{vokabel['date']};{vokabel_cat}\n")
-
-    with open(FILE_FRANZOSISCH, 'w') as file:
-        for vokabel in dictionary_fr:
-            vokabel_de = ""
-            for w in vokabel['de']:
-                vokabel_de += w + '|'
-            vokabel_de = vokabel_de.rstrip('|')
-
-            vokabel_cat = ""
-            for w in vokabel['cat']:
-                vokabel_cat += w + '|'
-            vokabel_cat = vokabel_cat.rstrip('|')
-
-            file.write(f"{vokabel['num']};{vokabel_de};{vokabel['fr']};{vokabel['date']};{vokabel_cat}\n")
-
-
-def load_dictionarys():
-    if not exists(FILE_ENGLISCH):
-        print("Datei kann nicht geöffnet werden")
+    def quit(self):
         exit()
 
-    dictionary_en = []
-    parsed_lines = []
-    with open(FILE_ENGLISCH,'r') as file:
-        for line in file:
-            line = line.rstrip()
-            parsed_lines.append(line.split(';'))
+    def btnNextClicked(self):
+        # vocabularyquery_ui.
+        if self.lang == 'en' or self.mainLang == 'en':
+            FILE_STATISTIC = FILE_STATISTIC_EN
+        elif self.lang == 'fr' or self.mainLang == 'fr':
+            FILE_STATISTIC = FILE_STATISTIC_FR
 
-    for line in parsed_lines:
-        de = line[1].split('|')
-        for i in range(len(de)):
-            de[i] = de[i].strip("'")
-
-        cat = line[4].split('|')
-        for i in range(len(cat)):
-            cat[i] = cat[i].strip("'")
-
-        dictionary_en.append({'num':line[0], 'de':de, 'en':line[2], 'date':line[3], 'cat':cat})
+        try:
+            correct = make_string(self.dict[self.vocabularyquery_ui.run][self.lang])
         
-    if not exists(FILE_FRANZOSISCH):
-        print("Datei kann nicht geöffnet werden")
-        exit()
+            word = make_string(self.dict[self.vocabularyquery_ui.run][self.mainLang])
+        
+            datum = str(date.today())
+            with open(FILE_STATISTIC, 'a') as file:
+                if self.vocabularyquery_ui.input.text() in self.dict[self.vocabularyquery_ui.run][self.lang]:
+                    file.write(self.dict[self.vocabularyquery_ui.run]['num']+';'+'0'+';'+datum+'\n')
+                    self.vocabularyquery_ui.last.setText(f'<b style="color: #00ff00">Richtig</b><br>{self.mainLangName}: {word}<br>{self.langName}: {correct}\n')
+                    self.vocabularyquery_ui.right = self.vocabularyquery_ui.right + 1
+                else:
+                    file.write(self.dict[self.vocabularyquery_ui.run]['num']+';'+'1'+';'+datum+'\n')
+                    self.vocabularyquery_ui.last.setText(f'<b style="color: #ff0000">Falsch</b><br>{self.mainLangName}: {word}<br>{self.langName}: {correct}<br>Deine Antwort: {self.vocabularyquery_ui.input.text()}')
+                    self.vocabularyquery_ui.wrong = self.vocabularyquery_ui.wrong + 1
+                self.vocabularyquery_ui.answered = self.vocabularyquery_ui.answered + 1
 
-    dictionary_fr = []
-    parsed_lines = []
-    with open(FILE_FRANZOSISCH,'r') as file:
-        for line in file:
-            line = line.rstrip()
-            parsed_lines.append(line.split(';'))
+        except: pass
 
-    for line in parsed_lines:
-        de = line[1].split('|')
-        for i in range(len(de)):
-            de[i] = de[i].strip("'")
+        if self.vocabularyquery_ui.run < len(self.dict)-1:
+            if self.vocabularyquery_ui.random:
+                shuffleList = [self.mainLang, self.mainLangName, self.lang, self.langName]
+                num = randint(1,2)
+                if num == 1:
+                    self.lang = shuffleList[0]
+                    self.langName = shuffleList[1]
+                    self.mainLang = shuffleList[2]
+                    self.mainLangName = shuffleList[3]
+                elif num == 2:
+                    self.mainLang = shuffleList[0]
+                    self.mainLangName = shuffleList[1]
+                    self.lang = shuffleList[2]
+                    self.langName = shuffleList[3]
+                self.vocabularyquery_ui.mainLangLabel.setText(self.mainLangName+':')
+                self.vocabularyquery_ui.langLabel.setText(self.langName+':')
+            self.vocabularyquery_ui.run += 1
+            try:
+                if make_string(self.dict[self.vocabularyquery_ui.run][self.mainLang]) != correct:
+                    self.vocabularyquery_ui.vok.setText(make_string(self.dict[self.vocabularyquery_ui.run][self.mainLang]))
+                    self.vocabularyquery_ui.input.setText('')
+                else:
+                    if self.vocabularyquery_ui.right != 0 and self.vocabularyquery_ui.wrong != 0:
+                        self.showSTATS()
+            except:
+                self.vocabularyquery_ui.input.setText('')
+        else:
+            if self.vocabularyquery_ui.right != 0 and self.vocabularyquery_ui.wrong != 0:
+                self.showSTATS()
 
-        cat = line[4].split('|')
-        for i in range(len(cat)):
-            cat[i] = cat[i].strip("'")
+    def goMain(self):
+        self.searchcategory_ui.categories.clear()
+        self.searchcategory_ui.categories.addItem('None')
+        self.setMAIN()
 
-        dictionary_fr.append({'num':line[0], 'de':de, 'fr':line[2], 'date':line[3], 'cat':cat})
+    def clearVokInput(self):
+        self.vocabularyinput_ui.new_mainLangList = []
+        while self.vocabularyinput_ui.scrollMainLangLayout.count():
+            child = self.vocabularyinput_ui.scrollMainLangLayout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+        self.vocabularyinput_ui.new_langList = []
+        while self.vocabularyinput_ui.scrollLangLayout.count():
+            child = self.vocabularyinput_ui.scrollLangLayout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+        self.vocabularyinput_ui.new_catList = []
+        while self.vocabularyinput_ui.scrollCatLayout.count():
+            child = self.vocabularyinput_ui.scrollCatLayout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
 
-    return dictionary_en, dictionary_fr
+    def makeDict(self):
+        for cat in self.searchcategory_ui.choosedCats:
+            newDict = []
+            for vok in self.dict:
+                if cat in vok['cat']:
+                    newDict.append(vok)
+            self.dict = newDict
 
+    def setMenu(self):
+        self.makeDict()
+        try:
+            if self.lang == 'en' or self.mainLang == 'en':
+                self.setEN_MENU()
+            elif self.lang == 'fr' or self.mainLang == 'fr':
+                self.setFR_MENU()
+        except:
+            if self.lang == 'en':
+                self.setEN_MENU()
+            elif self.lang == 'fr':
+                self.setFR_MENU()
 
-def stats():
-    system('clear')
-    print('         Kommt bald')
-    print()
-    input('  Drücke <Enter> um Fortzuahren\n\t\t')
-    system('clear')
+    def back(self):
+        if self.lang == 'Englisch' or self.mainLang == 'Englisch':
+            self.setEN_MENU()
+        elif self.lang == 'Französisch' or self.mainLang == 'Französisch':
+            self.setFR_MENU()
 
-
-def info():
-    system('clear')
-    print('         INFO')
-    print()
-    print(f'{Color.VIOLET}Ersteller{Color.RESET}: Jason Krüger\n')
-    print('vAlpha(08.01.2022):')
-    print('- Abfrage EN, DE\n')
-    print('v1.0.0(13.02.2022):')
-    print('- Vokabeln EN eingeben')
-    print('- Vokabeln werden dauerhaft abgespeichert\n')
-    print('v2.0.0(30.11.2022):')
-    print('- Abfrage FR, DE')
-    print('- Vokabeln FR eingeben\n')
-    print('v2.0.1(13.01.2023):')
-    print('- 44 neue FR-vokabeln\n')
-    print('v2.1.0(16.01.2023):')
-    print('- Erkennung und Speicherung von Richtig und Falsch\n')
-    print('v2.2.0(17.01.2023):')
-    print('- num-Funktion für jede Vokael hinzugefügt')
-    print('  -> num = jede Vokabel hat eine eigene Nummer(siehe: vokabeln_en.dat/vokabeln_fr.dat)')
-    print('- Speicherung von Richtig und Falsch in einer Extra-Datei\n')
-    print('v2.3.0(17.01.2023):')
-    print('- Speicherung von Richtig und Falsch in einer Extra-Datei überareitet')
-    print('  -> für die Statistik\n')
-    print('v2.3.1(18.01.2023):')
-    print('- kleiner Bug-Fix\n')
-    print('v2.3.2(19.01.2023):')
-    print('- Zufällige Reihnfolge bei der Vokabelabfrage\n')
-    input('  Drücke <Enter> um Fortzuahren\n\t\t')
-    system('clear')
-
-
-def main(dictionary_en, dictionary_fr):
-    save_dictionarys(dictionary_en, dictionary_fr)
-    system('clear')
-    while True:
-        print(f'         {Color.BLUE}{Color.UNDERLINE}Vokabelprogramm - Study{Color.RESET}             v2.3.1')
-        print()
-        print('                Englisch\n')
-        print('    1 - Englische Vokabeln abfragen')
-        print('    2 - Deutsche Vokabeln abfragen')
-        print()
-        print('              Französisch\n')
-        print('    3 - Französische Vokabeln abfragen')
-        print('    4 - Deutsche Vokabeln abfragen')
-        print()
-        print('    5 - Englische Vokabeln eingeben')
-        print('    6 - Französische Vokabeln eingeben')
-        print()
-        print('    i - Info')
-        print('    s - Statistik')
-        print()
-        print(f'    {Color.CYAN}0 - Beenden{Color.RESET}')
-        auswahl = input("\n"+Color.YELLOW)
-        print(Color.RESET, end='')
-        system('clear')
-        if auswahl == '1': 
-            gefilterte_liste = abfragen_untermenu(dictionary_en)
-            abfragen_de_en(gefilterte_liste)
-        elif auswahl == '2':
-            gefilterte_liste = abfragen_untermenu(dictionary_en)
-            abfragen_en_de(gefilterte_liste)
-        elif auswahl == '3':
-            gefilterte_liste = abfragen_untermenu(dictionary_fr)
-            abfragen_de_fr(gefilterte_liste)
-        elif auswahl == '4':
-            gefilterte_liste = abfragen_untermenu(dictionary_fr)
-            abfragen_fr_de(gefilterte_liste)
-        elif auswahl == '5':
-            en_vokabeln_eingeben(dictionary_en)
-        elif auswahl == '6':
-            fr_vokabeln_eingeben(dictionary_fr)
-        elif auswahl.lower() == 'i':
-            info()
-        elif auswahl.lower() == 's':
-            stats()
-        elif auswahl == '0':
-            break
-
-
+def main():
+    app = QApplication(sys.argv)
+    w = Window()
+    w.show()
+    sys.exit(app.exec_())
+	
 if __name__ == '__main__':
-    dictionary_en, dictionary_fr = load_dictionarys()
-    main(dictionary_en, dictionary_fr)
-    save_dictionarys(dictionary_en, dictionary_fr)
+    main()
