@@ -346,7 +346,7 @@
 346;Ball;ball;2021-12-31;Station 1|Unit 1|Kl. 6
 347;Großvater;grandfather;2021-12-31;Station 1|Unit 1|Kl. 6
 348;gut;well;2021-12-31;Station 1|Unit 1|Kl. 6
-349;(sich) fühlen;feel;2021-12-31;Station 1|Unit 1|Kl. 6
+349;fühlen;feel;2021-12-31;Station 1|Unit 1|Kl. 6
 350;Holly is dran.;It´s Holly´s turn.;2021-12-31;Station 1|Unit 1|Kl. 6
 351;zusammen;everyone;2021-12-31;Station 1|Unit 1|Kl. 6
 352;nehmen;took;2021-12-31;Station 1|Unit 1|Kl. 6
@@ -578,16 +578,16 @@
 578;go to a theme park;in einen Freizeitpark gehen;2022-02-10;birthday activities|Unit 4|Kl. 5
 579;in ein Fastfood-Restaurant gehen;go to a fast food restaurant;2022-02-10;birthday activities|Unit 4|Kl. 5
 580;have a favourite meal;ein lieblingsessen genießen;2022-02-10;birthday activities|Unit 4|Kl. 5
-581;erste;first;2022-02-10;ordinal numbers|Unit 4|Kl. 5
-582;zweite;second;2022-02-10;ordinal numbers|Unit 4|Kl. 5
-583;dritte;third;2022-02-10;ordinal numbers|Unit 4|Kl. 5
-584;vierte;fourth;2022-02-10;ordinal numbers|Unit 4|Kl. 5
-585;fünfte;fifth;2022-02-10;ordinal numbers|Unit 4|Kl. 5
-586;sechste;sixth;2022-02-10;ordinal numbers|Unit 4|Kl. 5
-587;siebente;seventh;2022-02-10;ordinal numbers|Unit 4|Kl. 5
-588;achte;eighth;2022-02-10;ordinal numbers|Unit 4|Kl. 5
-589;neunte;ninth;2022-02-10;ordinal numbers|Unit 4|Kl. 5
-590;zehnte;tenth;2022-02-10;ordinal numbers|Unit 4|Kl. 5
+581;erste;first;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
+582;zweite;second;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
+583;dritte;third;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
+584;vierte;fourth;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
+585;fünfte;fifth;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
+586;sechste;sixth;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
+587;siebente;seventh;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
+588;achte;eighth;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
+589;neunte;ninth;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
+590;zehnte;tenth;2022-02-10;ordinal numbers|Unit 4|Kl. 5|Kl. 4
 591;elfte;eleventh;2022-02-10;ordinal numbers|Unit 4|Kl. 5
 592;zwölfte;twelfth;2022-02-10;ordinal numbers|Unit 4|Kl. 5
 593;dreizehnte;thirteenth;2022-02-10;ordinal numbers|Unit 4|Kl. 5
@@ -801,7 +801,7 @@
 801;Meile;mile;2022-05-23;Kl. 6|Unit 5|Reading corner
 802;Führer|Führerin;guide;2022-05-23;Kl. 6|Unit 5|Reading corner
 803;schwer|schwierig;hard;2022-05-23;Kl. 6|Unit 5|Reading corner
-804;schwimmmen;swim;2022-05-23;Kl. 6|Unit 5|Reading corner
+804;schwimmen;swim;2022-05-23;Kl. 6|Unit 5|Reading corner
 805;Text;text;2022-05-23;Kl. 6|Unit 5|Reading corner
 806;Radio;radio;2022-05-23;Kl. 6|Unit 5|Reading corner
 807;Zuhörer|Zuhörerin;listner;2022-05-23;Kl. 6|Unit 5|Reading corner
@@ -1176,18 +1176,18 @@
 1176;Spaß|Freude;fun;2022-08-24;Kl. 5|Unit 4|Station 1
 1177;Datum;date;2022-08-24;Kl. 5|Unit 4|Station 1
 1178;so|auf diese Weise;like this;2022-08-24;Kl. 5|Unit 4|Station 1
-1179;Januar;January;2022-08-24;Kl. 5|Unit 4|months
-1180;Februar;February;2022-08-24;Kl. 5|Unit 4|months
-1181;März;March;2022-08-24;Kl. 5|Unit 4|months
-1182;April;April;2022-08-24;Kl. 5|Unit 4|months
-1183;Mai;May;2022-08-24;Kl. 5|Unit 4|months
-1184;Juni;June;2022-08-24;Kl. 5|Unit 4|months
-1185;Juli;July;2022-08-24;Kl. 5|Unit 4|months
-1186;August;August;2022-08-24;Kl. 5|Unit 4|months
-1187;September;September;2022-08-24;Kl. 5|Unit 4|months
-1188;Oktober;October;2022-08-24;Kl. 5|Unit 4|months
-1189;November;November;2022-08-24;Kl. 5|Unit 4|months
-1190;Dezember;December;2022-08-24;Kl. 5|Unit 4|months
+1179;Januar;January;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1180;Februar;February;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1181;März;March;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1182;April;April;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1183;Mai;May;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1184;Juni;June;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1185;Juli;July;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1186;August;August;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1187;September;September;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1188;Oktober;October;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1189;November;November;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
+1190;Dezember;December;2022-08-24;Kl. 3|Kl. 5|Unit 4|months
 1191;feiern;celebrate;2022-08-24;Kl. 5|Unit 4|Way in
 1192;Süßes oder Saures!;Trick or treat!;2022-08-24;Kl. 5|Unit 4|Way in
 1193;im August;in August;2022-08-24;Kl. 5|Unit 4|Way in
@@ -1245,3 +1245,614 @@
 1245;Smalltalk;small talk;2022-11-30;Kl. 7|Unit 1|Part A
 1246;Kultur;culture;2022-11-30;Kl. 7|Unit 1|Part A
 1247;etwas erwarten;expect;2022-11-30;Kl. 7|Unit 1|Part A
+1248;Attraktion|Anziehungspunkt;attraction;2023-03-29;Kl. 7|Unit 1|Part B
+1249;Naturkunde;natural history;2023-03-29;Kl. 7|Unit 1|Part B
+1250;Eintritt|Zutritt;entry;2023-03-29;Kl. 7|Unit 1|Part B
+1251;eigentlich|in Wirklichkeit;in fact;2023-03-29;Kl. 7|Unit 1|Part B
+1252;Tatsache|Fakt;fact;2023-03-29;Kl. 7|Unit 1|Part B
+1253;das Vereinigte Königreich;the UK;2023-03-29;Kl. 7|Unit 1|Part B
+1254;reservieren|buchen;reserve;2023-03-29;Kl. 7|Unit 1|Part B
+1255;Stufe;step;2023-03-29;Kl. 7|Unit 1|Part B
+1256;Gelegenheit|Möglichkeit|Chance;chance;2023-03-29;Kl. 7|Unit 1|Part B
+1257;Zahl|Ziffer;figure;2023-03-29;Kl. 7|Unit 1|Part B
+1258;weniger|weniger als;less|less than;2023-03-29;Kl. 7|Unit 1|Part B
+1259;Landschildkröte|Schildkröte;tortoise;2023-03-29;Kl. 7|Unit 1|Part B
+1260;übereinander|aufeinander;on top of each other;2023-03-29;Kl. 7|Unit 1|Part B
+1261;Parlament;parliament;2023-03-29;Kl. 7|Unit 1|Part B
+1262;zur selben Zeit|gleichzeitig;at one time;2023-03-29;Kl. 7|Unit 1|Part B
+1263;Weihnachten;Christmas;2023-03-29;Kl. 7|Unit 1|Part B
+1264;Fahrkartenschalter|Kasse;ticket office;2023-03-29;Kl. 7|Unit 1|Part B
+1265;Detail|Einzelheit;detail;2023-03-29;Kl. 7|Unit 1|Part B
+1266;Erwachsene|Erwachsener;adult;2023-03-29;Kl. 7|Unit 1|Part B
+1267;eine vierköpfige Familie;a family of four;2023-03-29;Kl. 7|Unit 1|Part B
+1268;während;during;2023-03-29;Kl. 7|Unit 1|Part B
+1269;bewachen;guard;2023-03-29;Kl. 7|Unit 1|Part B
+1270;Rabe;raven;2023-03-29;Kl. 7|Unit 1|Part B
+1271;Blut;blood;2023-03-29;Kl. 7|Unit 1|Part B
+1272;Heimat sein für etwas|etwas beheimaten;be home to;2023-03-29;Kl. 7|Unit 1|Part B
+1273;Juwelen;jewels;2023-03-29;Kl. 7|Unit 1|Part B
+1274;Schulausbildung|Ausbildung|Bildung|Erziehung;education;2023-03-29;Kl. 7|Unit 1|Part B
+1275;anstelle von|statt;instead of;2023-03-29;Kl. 7|Unit 1|Part B
+1276;genau;exact;2023-03-29;Kl. 7|Unit 1|Part B
+1277;Bindewort;linking word;2023-03-29;Kl. 7|Unit 1|Part B
+1278;verbinden|verknüpfen;link;2023-03-29;Kl. 7|Unit 1|Part B
+1279;Schlange|Reihe;queue;2023-03-29;Kl. 7|Unit 1|Part B
+1280;wert;worth;2023-03-29;Kl. 7|Unit 1|Part B
+1281;brüllen;roar;2023-03-29;Kl. 7|Unit 1|Part B
+1282;voller Menschen|überfüllt;crowded;2023-03-29;Kl. 7|Unit 1|Part B
+1283;Rückmeldung|Feedback;feedback;2023-03-29;Kl. 7|Unit 1|Part B
+1284;verbessern|sich verbessern;improve;2023-03-29;Kl. 7|Unit 1|Part B
+1285;reagieren|reagieren auf;react|react to;2023-03-29;Kl. 7|Unit 1|Part B
+1286;Inhalt;content;2023-03-29;Kl. 7|Unit 1|Part B
+1287;auf etwas hinweisen;point out;2023-03-29;Kl. 7|Unit 1|Part B
+1288;Rechtschreibung|Schreibweise;spelling;2023-03-29;Kl. 7|Unit 1|Part B
+1289;Linie|U-Bahnlinie;line;2023-03-29;Kl. 7|Unit 1|Part B
+1290;Richtung Norden;northbound;2023-03-29;Kl. 7|Unit 1|Part B
+1291;umsteigen;change;2023-03-29;Kl. 7|Unit 1|Part B
+1292;nachgehen;be slow;2023-03-29;Kl. 7|Unit 1|Part B
+1293;funktionieren;work;2023-03-29;Kl. 7|Unit 1|Part B
+1294;auf etwas zugehen|auf etwas zusteuern|auf etwas zufahren;head for;2023-03-29;Kl. 7|Unit 1|Part B
+1295;Durchsage|Ansage;announcement;2023-03-29;Kl. 7|Unit 1|Part B
+1296;Botschaft|Aussage;message;2023-03-29;Kl. 7|Unit 1|Part B
+1297;Bahnsteig|Gleis;platform;2023-03-29;Kl. 7|Unit 1|Part B
+1298;eingeschaltet sein|an sein|laufen|übertragen werden;be on;2023-03-29;Kl. 7|Unit 1|Part C
+1299;Auf keinen Fall!|Kommt nicht in Frage!;No way!;2023-03-29;Kl. 7|Unit 1|Part C
+1300;seit Stunden;for hours;2023-03-29;Kl. 7|Unit 1|Part C
+1301;seit 10 Uhr;since 10 o´clock;2023-03-29;Kl. 7|Unit 1|Part C
+1302;Und überhaupt, ...;And anyway, ...;2023-03-29;Kl. 7|Unit 1|Part C
+1303;Versuch;try;2023-03-29;Kl. 7|Unit 1|Part C
+1304;Fernbedienung;remote control;2023-03-29;Kl. 7|Unit 1|Part C
+1305;etwas lauter stellen|etwas leiser stellen;turn up|turn down;2023-03-29;Kl. 7|Unit 1|Part C
+1306;sich gegenseitig|einander;each other;2023-03-29;Kl. 7|Unit 1|Part C
+1307;Kneipe|Lokal;pub;2023-03-29;Kl. 7|Unit 1|Part C
+1308;eine Weile|einige Zeit;a while;2023-03-29;Kl. 7|Unit 1|Part C
+1309;leichtes Klopfen|Klopfen;tap;2023-03-29;Kl. 7|Unit 1|Part C
+1310;Ab mit euch jetzt!|Los mit euch jetzt!;Off you go now.;2023-03-29;Kl. 7|Unit 1|Part C
+1311;auf den Bahnhof zu|in Richtung Bahnhof;towards|towards the station;2023-03-29;Kl. 7|Unit 1|Part C
+1312;Zeit|grammatische Zeit|Tempus;tense;2023-03-29;Kl. 7|Unit 1|Part C
+1313;im Gang sein|andauern;go on;2023-03-29;Kl. 7|Unit 1|Part C
+1314;Situation;situation;2023-03-29;Kl. 7|Unit 1|Part C
+1315;Strecke|Route;route;2023-03-29;Kl. 7|Unit 1|Part C
+1316;Geschwindigkeit;speed;2023-03-29;Kl. 7|Unit 1|Part C
+1317;Es war schade, dass ...;It was a pity that ...;2023-03-29;Kl. 7|Unit 1|Part C
+1318;sich an etwas festhalten;hold onto;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1319;etwas absuchen|nach etwas absuchen ;scan|scan for;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1320;füllen;fill;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1321;Gehweg|Bürgersteig;pavement;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1322;erhältlich|verfügbar|erreichbar;available;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1323;überall um sie herum;all around|all around her;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1324;Pfeife|Trillerpfeife;whistle;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1325;pfeifen;blow the whistle;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1326;in Panik geraten;panic;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1327;genau;exactly;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1328;sich herunterbeugen|sich bücken;bend down;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1329;Seil;rope;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1330;Flügel;wing;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1331;Regenbogen;rainbow;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1332;schwindlig;dizzy;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1333;Hüfte;hip;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1334;man;you;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1335;Rhythmus;rhythm;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1336;erschrecken|Angst machen;scare;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1337;etwas dagegen haben;mind;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1338;ruhen|sich ausruhen;rest;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1339;keine Spur von ...;no sign of ...;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1340;..., sagte er flüsternd|..., murmelte er;..., he said under his breath;2023-03-29;Kl. 7|Unit 1|The Notting Hill Carnival Parade
+1341;leer;empty;2023-03-30;Kl. 7|Unit 2|Part A
+1342;Naturwissenschaftler|Naturwissenschaftlerin;scientist;2023-03-30;Kl. 7|Unit 2|Part A
+1343;studieren|untersuchen|beobachten|lernen;study;2023-03-30;Kl. 7|Unit 2|Part A
+1344;Werkstatt;workshop;2023-03-30;Kl. 7|Unit 2|Part A
+1345;Tischler|Tischlerin|Zimmerer|Zimmerin;carpenter;2023-03-30;Kl. 7|Unit 2|Part A
+1346;Möbel;furniture;2023-03-30;Kl. 7|Unit 2|Part A
+1347;Öl;oil;2023-03-30;Kl. 7|Unit 2|Part A
+1348;ein Stück ...;a piece of ...;2023-03-30;Kl. 7|Unit 2|Part A
+1349;Hammer;hammer;2023-03-30;Kl. 7|Unit 2|Part A
+1350;herüberkommen|vorbeikommen;come over;2023-03-30;Kl. 7|Unit 2|Part A
+1351;wahrscheinlich;probably;2023-03-30;Kl. 7|Unit 2|Part A
+1352;sich über etwas lustig machen;make fun of something;2023-03-30;Kl. 7|Unit 2|Part A
+1353;aufgeben;give up;2023-03-30;Kl. 7|Unit 2|Part A
+1354;heute Nacht|heute Abend;tonight;2023-03-30;Kl. 7|Unit 2|Part A
+1355;Architekt|Architektin;architect;2023-03-30;Kl. 7|Unit 2|Part A
+1356;Astronaut|Astronautin;astronaut;2023-03-30;Kl. 7|Unit 2|Part A
+1357;Friseur|Friseurin;hairdresser;2023-03-30;Kl. 7|Unit 2|Part A
+1358;Musiker|Musikerin;musician;2023-03-30;Kl. 7|Unit 2|Part A
+1359;Maler|Malerin;painter;2023-03-30;Kl. 7|Unit 2|Part A
+1360;natürlich;natural;2023-03-30;Kl. 7|Unit 2|Part A
+1361;Stichwort;headword;2023-03-30;Kl. 7|Unit 2|Part A
+1362;Wortart;part of speech;2023-03-30;Kl. 7|Unit 2|Part A
+1363;Übersetzung;translation;2023-03-30;Kl. 7|Unit 2|Part A
+1364;Kohle;coal;2023-03-30;Kl. 7|Unit 2|Part A
+1365;unterirdisch|unter der Erde;underground;2023-03-30;Kl. 7|Unit 2|Part A
+1366;Hausarrest erteilen|Ausgehverbot erteilen;ground;2023-03-30;Kl. 7|Unit 2|Part A
+1367;amtlich|Amts-|Beamte|Beamter|Beamtin;official;2023-03-30;Kl. 7|Unit 2|Part A
+1368;Polizei;police;2023-03-30;Kl. 7|Unit 2|Part A
+1369;aufpassen auf|sich kümmern um;look after;2023-03-30;Kl. 7|Unit 2|Part A|(to) look after/around/for/...
+1370;sich umsehen;look around;2023-03-30;Kl. 7|Unit 2|Part A|(to) look after/around/for/...
+1371;suchen;look for;2023-03-30;Kl. 7|Unit 2|Part A|(to) look after/around/for/...
+1372;sich freuen auf;look forward to;2023-03-30;Kl. 7|Unit 2|Part A|(to) look after/around/for/...
+1373;untersuchen|prüfen;look into;2023-03-30;Kl. 7|Unit 2|Part A|(to) look after/around/for/...
+1374;hochsehen|aufschauen;look up;2023-03-30;Kl. 7|Unit 2|Part A|(to) look after/around/for/...
+1375;nachschlagen;look something up;2023-03-30;Kl. 7|Unit 2|Part A|(to) look after/around/for/...
+1376;stoßen auf|treffen|zufällig treffen;come across;2023-03-30;Kl. 7|Unit 2|Part A|(to) come across/down/over/...
+1377;bekommen|erkranken an;come down with;2023-03-30;Kl. 7|Unit 2|Part A|(to) come across/down/over/...
+1378;herüberkommen|vorbeikommen;come over;2023-03-30;Kl. 7|Unit 2|Part A|(to) come across/down/over/...
+1379;haben|kommen auf;come up with;2023-03-30;Kl. 7|Unit 2|Part A|(to) come across/down/over/...
+1380;hören;hear;2023-03-30;Kl. 2
+1381;Zunge;tongue;2023-03-30;Kl. 2
+1382;schmecken;taste;2023-03-30;Kl. 2
+1383;traurig;sad;2023-03-30;Kl. 2
+1384;müde;tired;2023-03-30;Kl. 2
+1385;Karte;card;2023-03-30;Kl. 2
+1386;Rentier;reindeer;2023-03-30;Kl. 2
+1387;Geschenk;present;2023-03-30;Kl. 2
+1388;Kuchen;cake;2023-03-30;Kl. 2
+1389;springen;jumping;2023-03-30;Kl. 2
+1390;glücklich|fröhlich;happy;2023-03-30;Kl. 2
+1391;Krone;crown;2023-03-30;Kl. 2
+1392;Kerze;candle;2023-03-30;Kl. 2
+1393;sauer|wütend;angry;2023-03-30;Kl. 2
+1394;Fußball spielen;playing football;2023-03-30;Kl. 2
+1395;anfassen|berühren;touch;2023-03-30;Kl. 2
+1396;sehen;see;2023-03-30;Kl. 2
+1397;Schildkröte;turtle;2023-03-30;Kl. 2
+1398;Schaf;sheep;2023-03-30;Kl. 2
+1399;Ziege;goat;2023-03-30;Kl. 2
+1400;Pony;pony;2023-03-30;Kl. 2
+1401;Ente;duck;2023-03-30;Kl. 2
+1402;Esel;donkey;2023-03-30;Kl. 2
+1403;Meerschweinchen;guinea pig;2023-03-30;Kl. 2
+1404;Hase;rabbit;2023-03-30;Kl. 2
+1405;Regenjacke;raincoat;2023-03-30;Kl. 2
+1406;Pullover|Sweatshirt;sweatshirt;2023-03-30;Kl. 2
+1407;Jeans;jeans;2023-03-30;Kl. 2
+1408;T-Shirt;T-shirt;2023-03-30;Kl. 2
+1409;kurze Hose|Shorts;shorts;2023-03-30;Kl. 2
+1410;sauer;sour;2023-03-30;Kl. 2
+1411;süß;sweet;2023-03-30;Kl. 2
+1412;riechen;smell;2023-03-30;Kl. 2
+1413;Fahrradfahren|Radfahren|Fahrrad fahren|Rad fahren;riding a bike;2023-03-30;Kl. 2
+1414;Busch;bush;2023-03-30;Kl. 2
+1415;Blume;flower;2023-03-30;Kl. 2
+1416;Gras;grass;2023-03-30;Kl. 2
+1417;Baum;tree;2023-03-30;Kl. 2
+1418;Tante;aunt;2023-03-30;Kl. 2
+1419;Cousin;cousin;2023-03-30;Kl. 2
+1420;Onkel;uncle;2023-03-30;Kl. 2
+1421;Ei;egg;2023-03-30;Kl. 2
+1422;Muffin;muffin;2023-03-30;Kl. 2
+1423;Sandwich;sandwich;2023-03-30;Kl. 2
+1424;Wurst;sausage;2023-03-30;Kl. 2
+1425;Wasser;water;2023-03-30;Kl. 2
+1426;Schüler;pupil;2023-03-30;Kl. 2
+1427;Lehrer;teacher;2023-03-30;Kl. 2
+1428;Tafel;board;2023-03-30;Kl. 2
+1429;Stuhl;chair;2023-03-30;Kl. 2
+1430;Tür;door;2023-03-30;Kl. 2
+1431;Tisch;table;2023-03-30;Kl. 2
+1432;Fenster;Window;2023-03-30;Kl. 2
+1433;rot;red;2023-03-30;Kl. 3|Colours
+1434;blau;blue;2023-03-30;Kl. 3|Colours
+1435;gelb;yellow;2023-03-30;Kl. 3|Colours
+1436;grün;green;2023-03-30;Kl. 3|Colours
+1437;pink;pink;2023-03-30;Kl. 3|Colours
+1438;orange;orange;2023-03-30;Kl. 3|Colours
+1439;braun;brown;2023-03-30;Kl. 3|Colours
+1440;lila;purple;2023-03-30;Kl. 3|Colours
+1441;schwarz;black;2023-03-30;Kl. 3|Colours
+1442;weiß;white;2023-03-30;Kl. 3|Colours
+1443;eins;one;2023-03-30;Kl. 3|Numbers
+1444;zwei;two;2023-03-30;Kl. 3|Numbers
+1445;drei;three;2023-03-30;Kl. 3|Numbers
+1446;vier;four;2023-03-30;Kl. 3|Numbers
+1447;fünf;five;2023-03-30;Kl. 3|Numbers
+1448;sechs;six;2023-03-30;Kl. 3|Numbers
+1449;sieben;seven;2023-03-30;Kl. 3|Numbers
+1450;acht;eight;2023-03-30;Kl. 3|Numbers
+1451;neun;nine;2023-03-30;Kl. 3|Numbers
+1452;zehn;ten;2023-03-30;Kl. 3|Numbers
+1453;elf;eleven;2023-03-30;Kl. 3|Numbers
+1454;zwölf;twelve;2023-03-30;Kl. 3|Numbers
+1455;dreizehn;thirteen;2023-03-30;Kl. 3|Numbers
+1456;vierzehn;fourteen;2023-03-30;Kl. 3|Numbers
+1457;fünfzehn;fifteen;2023-03-30;Kl. 3|Numbers
+1458;sechzehn;sixteen;2023-03-30;Kl. 3|Numbers
+1459;siebzehn;seventeen;2023-03-30;Kl. 3|Numbers
+1460;achtzehn;eighteen;2023-03-30;Kl. 3|Numbers
+1461;neunzehn;nineteen;2023-03-30;Kl. 3|Numbers
+1462;zwanzig;twenty;2023-03-30;Kl. 3|Numbers
+1463;dreißig;thirty;2023-03-30;Kl. 3|Numbers
+1464;vierzig;forty;2023-03-30;Kl. 3|Numbers
+1465;fünfzig;fifty;2023-03-30;Kl. 3|Numbers
+1466;sechzig;sixty;2023-03-30;Kl. 3|Numbers
+1467;siebzig;seventy;2023-03-30;Kl. 3|Numbers
+1468;achzig;eighty;2023-03-30;Kl. 3|Numbers
+1469;neunzig;ninety;2023-03-30;Kl. 3|Numbers
+1470;ein hundert;one hundred;2023-03-30;Kl. 3|Numbers
+1471;Vater;father;2023-03-30;Kl. 3|Family
+1472;Mutter;mother;2023-03-30;Kl. 3|Family
+1473;Schwester;sister;2023-03-30;Kl. 3|Family
+1474;Bruder;brother;2023-03-30;Kl. 3|Family
+1475;Großmutter;grandma;2023-03-30;Kl. 3|Family
+1476;Großvater;grandpa;2023-03-30;Kl. 3|Family
+1477;Tafel;board;2023-03-30;Kl. 3|School and school things
+1478;Klassenraum;classroom;2023-03-30;Kl. 3|School and school things
+1479;Schreibtisch;desk;2023-03-30;Kl. 3|School and school things
+1480;Tür;door;2023-03-30;Kl. 3|School and school things
+1481;Fenster;window;2023-03-30;Kl. 3|School and school things
+1482;Schüler;pupil;2023-03-30;Kl. 3|School and school things
+1483;Lehrer;teacher;2023-03-30;Kl. 3|School and school things
+1484;Buch;book;2023-03-30;Kl. 3|School and school things
+1485;Filzstift;felt-pen;2023-03-30;Kl. 3|School and school things
+1486;Hefter;folder;2023-03-30;Kl. 3|School and school things
+1487;Kleber;glue stick;2023-03-30;Kl. 3|School and school things
+1488;Füller;pen;2023-03-30;Kl. 3|School and school things
+1489;Bleistift;pencil;2023-03-30;Kl. 3|School and school things
+1490;roter Buntstift;red coloured pencil;2023-03-30;Kl. 3|School and school things
+1491;Federtasche|Federmappe;pencil case;2023-03-30;Kl. 3|School and school things
+1492;Radierer|Radiergummi;rubber;2023-03-30;Kl. 3|School and school things
+1493;Lineal;ruler;2023-03-30;Kl. 3|School and school things
+1494;Schultasche|Mappe|Rucksack;school bag;2023-03-30;Kl. 3|School and school things
+1495;Schere;scissors;2023-03-30;Kl. 3|School and school things
+1496;Anspitzer;sharpener;2023-03-30;Kl. 3|School and school things
+1497;Kopf;head;2023-03-30;Kl. 3|Body
+1498;Ohr;ear;2023-03-30;Kl. 3|Body
+1499;Auge;eye;2023-03-30;Kl. 3|Body
+1500;Mund;mouth;2023-03-30;Kl. 3|Body
+1501;Nase;nose;2023-03-30;Kl. 3|Body
+1502;Körper;body;2023-03-30;Kl. 3|Body
+1503;Schultern;shoulders;2023-03-30;Kl. 3|Body
+1504;Arm;arm;2023-03-30;Kl. 3|Body
+1505;Hand;hand;2023-03-30;Kl. 3|Body
+1506;Finger;finger;2023-03-30;Kl. 3|Body
+1507;Bein;leg;2023-03-30;Kl. 3|Body
+1508;Knie;knee;2023-03-30;Kl. 3|Body
+1509;Fuß;foot;2023-03-30;Kl. 3|Body
+1510;Zeh;toe;2023-03-30;Kl. 3|Body
+1511;Anorak;anorak;2023-03-30;Kl. 3|clothes
+1512;Bluse|Hemd;blouse;2023-03-30;Kl. 3|clothes
+1513;Stiefel;boots;2023-03-30;Kl. 3|clothes
+1514;Kappe;cap;2023-03-30;Kl. 3|clothes
+1515;Kleid;dress;2023-03-30;Kl. 3|clothes
+1516;Flip-Flops;flip-flops;2023-03-30;Kl. 3|clothes
+1517;Handschuhe;gloves;2023-03-30;Kl. 3|clothes
+1518;Hut;hat;2023-03-30;Kl. 3|clothes
+1519;Jeans;jeans;2023-03-30;Kl. 3|clothes
+1520;Pullover;pullover;2023-03-30;Kl. 3|clothes
+1521;Sandalen;sandals;2023-03-30;Kl. 3|clothes
+1522;Schal;scarf;2023-03-30;Kl. 3|clothes
+1523;Schuhe;shoes;2023-03-30;Kl. 3|clothes
+1524;kurze Hose|Shorts;shorts;2023-03-30;Kl. 3|clothes
+1525;Rock;skirt;2023-03-30;Kl. 3|clothes
+1526;Socken;socks;2023-03-30;Kl. 3|clothes
+1527;Sportschuhe;trainers;2023-03-30;Kl. 3|clothes
+1528;Hose;trousers;2023-03-30;Kl. 3|clothes
+1529;T-Shirt;T-shirt;2023-03-30;Kl. 3|clothes
+1530;Regenschirm;umbrella;2023-03-30;Kl. 3|clothes
+1531;Ball;ball;2023-03-30;Kl. 3|Toys
+1532;Steine;bricks;2023-03-30;Kl. 3|Toys
+1533;Karten;cards;2023-03-30;Kl. 3|Toys
+1534;Computerspiel;computer game;2023-03-30;Kl. 3|Toys
+1535;Puppe;doll;2023-03-30;Kl. 3|Toys
+1536;Fußball;football;2023-03-30;Kl. 3|Toys
+1537;Puzzel;puzzle;2023-03-30;Kl. 3|Toys
+1538;Murmeln;marbels;2023-03-30;Kl. 3|Toys
+1539;Buch;book;2023-03-30;Kl. 3|Toys
+1540;Teddy|Teddy Bär;teddy bear;2023-03-30;Kl. 3|Toys
+1541;Spielzeugboot;toy boat;2023-03-30;Kl. 3|Toys
+1542;Spielzeugauto;toy car;2023-03-30;Kl. 3|Toys
+1543;Spielzeugflugzeug;toy plane;2023-03-30;Kl. 3|Toys
+1544;Spielzeugzug;toy train;2023-03-30;Kl. 3|Toys
+1545;Spielzeugtruck;toy truck;2023-03-30;Kl. 3|Toys
+1546;Inline-Skates;in-line skates;2023-03-30;Kl. 3|Toys
+1547;Mountain Bike;mountain bike;2023-03-30;Kl. 3|Toys
+1548;Radio;music player;2023-03-30;Kl. 3|Toys
+1549;Skateboard;skateboard;2023-03-30;Kl. 3|Toys
+1550;Springseil;skipping rope;2023-03-30;Kl. 3|Toys
+1551;Computerspiele spielen;playing a computer game;2023-03-30;Kl. 3|Hobbies
+1552;tanzen;dancing;2023-03-30;Kl. 3|Hobbies
+1553;Fußball spielen;playing football;2023-03-30;Kl. 3|Hobbies
+1554;Inliner fahren;in-line skating;2023-03-30;Kl. 3|Hobbies
+1555;Musikhören;listening to music;2023-03-30;Kl. 3|Hobbies
+1556;lesen;reading;2023-03-30;Kl. 3|Hobbies
+1557;Fahrradfahren|Radfahren;riding a bike;2023-03-30;Kl. 3|Hobbies
+1558;rennen;running;2023-03-30;Kl. 3|Hobbies
+1559;singen;singing;2023-03-30;Kl. 3|Hobbies
+1560;Skateboard fahren;skateboarding;2023-03-30;Kl. 3|Hobbies
+1561;Ski fahren;skiing;2023-03-30;Kl. 3|Hobbies
+1562;Seilspringen|springen;skipping;2023-03-30;Kl. 3|Hobbies
+1563;schwimmen;swimming;2023-03-30;Kl. 3|Hobbies
+1564;Tischtennis spielen;playing table tennis;2023-03-30;Kl. 3|Hobbies
+1565;wandern|laufen;walking;2023-03-30;Kl. 3|Hobbies
+1566;regnerisch;rainy;2023-03-31;Kl. 3|Weather and season
+1567;verschneit;snowy;2023-03-31;Kl. 3|Weather and season
+1568;sonnig;sunny;2023-03-31;Kl. 3|Weather and season
+1569;windig;windy;2023-03-31;Kl. 3|Weather and season
+1570;heiß;hot;2023-03-31;Kl. 3|Weather and season
+1571;kalt;cold;2023-03-31;Kl. 3|Weather and season
+1572;Frühling;spring;2023-03-31;Kl. 3|Weather and season
+1573;Sommer;summer;2023-03-31;Kl. 3|Weather and season
+1574;Herbst;autumn;2023-03-31;Kl. 3|Weather and season
+1575;Winter;winter;2023-03-31;Kl. 3|Weather and season
+1576;Montag;Monday;2023-03-31;Kl. 3|The days of the week
+1577;Dienstag;Tuesday;2023-03-31;Kl. 3|The days of the week
+1578;Mittwoch;Wednesday;2023-03-31;Kl. 3|The days of the week
+1579;Donnerstag;Thursday;2023-03-31;Kl. 3|The days of the week
+1580;Freitag;Friday;2023-03-31;Kl. 3|The days of the week
+1581;Samstag;Saturday;2023-03-31;Kl. 3|The days of the week
+1582;Sonntag;Sunday;2023-03-31;Kl. 3|The days of the week
+1583;gestern;yesterday;2023-03-31;Kl. 3|The days of the week
+1584;heute;today;2023-03-31;Kl. 3|The days of the week
+1585;morgen;tomorrow;2023-03-31;Kl. 3|The days of the week
+1586;Bad|Badezimmer;bathroom;2023-03-31;Kl. 3|Rooms and furniture
+1587;Schlafzimmer;bedroom;2023-03-31;Kl. 3|Rooms and furniture
+1588;Kinderzimmer;children´s room;2023-03-31;Kl. 3|Rooms and furniture
+1589;Flur;hall;2023-03-31;Kl. 3|Rooms and furniture
+1590;Küche;kitchen;2023-03-31;Kl. 3|Rooms and furniture
+1591;Wohnzimmer;living room;2023-03-31;Kl. 3|Rooms and furniture
+1592;Sessel;armchair;2023-03-31;Kl. 3|Rooms and furniture
+1593;Bett;bed;2023-03-31;Kl. 3|Rooms and furniture
+1594;Stuhl;chair;2023-03-31;Kl. 3|Rooms and furniture
+1595;Schrank;cupboard;2023-03-31;Kl. 3|Rooms and furniture
+1596;Kühlschrank;fridge;2023-03-31;Kl. 3|Rooms and furniture
+1597;Lampe;lamp;2023-03-31;Kl. 3|Rooms and furniture
+1598;Ofen;oven;2023-03-31;Kl. 3|Rooms and furniture
+1599;Bild;picture;2023-03-31;Kl. 3|Rooms and furniture
+1600;Regal;shelf;2023-03-31;Kl. 3|Rooms and furniture
+1601;Sofa;sofa;2023-03-31;Kl. 3|Rooms and furniture
+1602;Tisch;table;2023-03-31;Kl. 3|Rooms and furniture
+1603;TV|Fernseher;TV;2023-03-31;Kl. 3|Rooms and furniture
+1604;Kleiderschrank;wardrobe;2023-03-31;Kl. 3|Rooms and furniture
+1605;Badewanne;bathtub;2023-03-31;Kl. 3|Rooms and furniture
+1606;Dusche;shower;2023-03-31;Kl. 3|Rooms and furniture
+1607;Toilette;toilet;2023-03-31;Kl. 3|Rooms and furniture
+1608;Waschbecken;washbasin;2023-03-31;Kl. 3|Rooms and furniture
+1609;Apfel;apple;2023-03-31;Kl. 3|Food and drink
+1610;Banane;banana;2023-03-31;Kl. 3|Food and drink
+1611;Zitrone;lemon;2023-03-31;Kl. 3|Food and drink
+1612;Orange;orange;2023-03-31;Kl. 3|Food and drink
+1613;Erdbeere;strawberry;2023-03-31;Kl. 3|Food and drink
+1614;Tomate;tomato;2023-03-31;Kl. 3|Food and drink
+1615;Brot;bread;2023-03-31;Kl. 3|Food and drink
+1616;Butter;butter;2023-03-31;Kl. 3|Food and drink
+1617;Käse;cheese;2023-03-31;Kl. 3|Food and drink
+1618;Cornflakes;cornflakes;2023-03-31;Kl. 3|Food and drink
+1619;Ei;egg;2023-03-31;Kl. 3|Food and drink
+1620;Fisch und Pommes frites|Fisch und Pommes;fish and chips;2023-03-31;Kl. 3|Food and drink
+1621;Schinken;ham;2023-03-31;Kl. 3|Food and drink
+1622;Hamburger;hamburger;2023-03-31;Kl. 3|Food and drink
+1623;Marmelade;jam;2023-03-31;Kl. 3|Food and drink
+1624;Saft;juice;2023-03-31;Kl. 3|Food and drink
+1625;Milch;milk;2023-03-31;Kl. 3|Food and drink
+1626;Müsli;muesli;2023-03-31;Kl. 3|Food and drink
+1627;Pizza;pizza;2023-03-31;Kl. 3|Food and drink
+1628;Salat;salad;2023-03-31;Kl. 3|Food and drink
+1629;Würste;sausages;2023-03-31;Kl. 3|Food and drink
+1630;Spaghetti;spaghetti;2023-03-31;Kl. 3|Food and drink
+1631;Tee;tea;2023-03-31;Kl. 3|Food and drink
+1632;Toast;toast;2023-03-31;Kl. 3|Food and drink
+1633;Jughurt;yoghurt;2023-03-31;Kl. 3|Food and drink
+1634;Kaugummi;chewing gum;2023-03-31;Kl. 3|Sweets
+1635;Schokolade;chocolate;2023-03-31;Kl. 3|Sweets
+1636;Kekse;cookies;2023-03-31;Kl. 3|Sweets
+1637;Eis|Eiscreme;ice-cream;2023-03-31;Kl. 3|Sweets
+1638;Gummibärchen;jelly bears;2023-03-31;Kl. 3|Sweets
+1639;Lolly|Lutscher;lolly;2023-03-31;Kl. 3|Sweets
+1640;Wellensittich;budgie;2023-03-31;Kl. 3|Pets
+1641;Katze;cat;2023-03-31;Kl. 3|Pets
+1642;Hund;dog;2023-03-31;Kl. 3|Pets
+1643;Fisch;fish;2023-03-31;Kl. 3|Pets
+1644;Meerschweinchen;guinea pig;2023-03-31;Kl. 3|Pets
+1645;Hamster;hamster;2023-03-31;Kl. 3|Pets
+1646;Maus;mouse;2023-03-31;Kl. 3|Pets
+1647;Hase;rabbit;2023-03-31;Kl. 3|Pets
+1648;Ratte;rat;2023-03-31;Kl. 3|Pets
+1649;Schildkröte;turtle;2023-03-31;Kl. 3|Pets
+1650;Fledermaus;bat;2023-03-31;Kl. 3|Animals
+1651;Vogel;bird;2023-03-31;Kl. 3|Animals
+1652;Küken;chick;2023-03-31;Kl. 3|Animals
+1653;Kuh;cow;2023-03-31;Kl. 3|Animals
+1654;Ente;duck;2023-03-31;Kl. 3|Animals
+1655;Frosch;frog;2023-03-31;Kl. 3|Animals
+1656;Ziege;goat;2023-03-31;Kl. 3|Animals
+1657;Huhn;hen;2023-03-31;Kl. 3|Animals
+1658;Pferd;horse;2023-03-31;Kl. 3|Animals
+1659;Schwein;pig;2023-03-31;Kl. 3|Animals
+1660;Schaf;sheep;2023-03-31;Kl. 3|Animals
+1661;Spinne;spider;2023-03-31;Kl. 3|Animals
+1662;Bär;bear;2023-03-31;Kl. 3|Animals
+1663;Affe;monkey;2023-03-31;Kl. 3|Animals
+1664;Tiger;tiger;2023-03-31;Kl. 3|Animals
+1665;Fahrrad;bike;2023-03-31;Kl. 3|Vehicles
+1666;Auto;car;2023-03-31;Kl. 3|Vehicles
+1667;Flugzeug;plane;2023-03-31;Kl. 3|Vehicles
+1668;Schiff;ship;2023-03-31;Kl. 3|Vehicles
+1669;Zug;train;2023-03-31;Kl. 3|Vehicles
+1670;Burg|Schloss;castle;2023-03-31;Kl. 3|Destinations
+1671;Stadt;city;2023-03-31;Kl. 3|Destinations
+1672;Wald;forest;2023-03-31;Kl. 3|Destinations
+1673;See;lake;2023-03-31;Kl. 3|Destinations
+1674;Berge;mountains;2023-03-31;Kl. 3|Destinations
+1675;Museum;museum;2023-03-31;Kl. 3|Destinations
+1676;Park;park;2023-03-31;Kl. 3|Destinations
+1677;Meer;sea;2023-03-31;Kl. 3|Destinations
+1678;Pool;swimming pool;2023-03-31;Kl. 3|Destinations
+1679;Zoo;zoo;2023-03-31;Kl. 3|Destinations
+1680;Europa;Europe;2023-03-31;Kl. 3|Europe
+1681;Frankreich;France;2023-03-31;Kl. 3|Europe
+1682;Deutschland;Germany;2023-03-31;Kl. 3|Europe
+1683;Groß Britanien;Great Britain;2023-03-31;Kl. 3|Europe
+1684;Irland;Ireland;2023-03-31;Kl. 3|Europe
+1685;Steine|Ziegelsteine;bricks;2023-03-31;Kl. 3|The three little pigs
+1686;Farmer|Bauer;farmer;2023-03-31;Kl. 3|The three little pigs
+1687;Stroh;straw;2023-03-31;Kl. 3|The three little pigs
+1688;Zweige;twings;2023-03-31;Kl. 3|The three little pigs
+1689;Wolf;wolf;2023-03-31;Kl. 3|The three little pigs
+1690;Geist;ghost;2023-03-31;Kl. 3|Halloween
+1691;Monster;monster;2023-03-31;Kl. 3|Halloween
+1692;Mond;moon;2023-03-31;Kl. 3|Halloween
+1693;Kürbis;pumpkin;2023-03-31;Kl. 3|Halloween
+1694;Spinnennetz;spider´s web;2023-03-31;Kl. 3|Halloween
+1695;Süßigkeiten;sweets;2023-03-31;Kl. 3|Halloween
+1696;Vampir;vampire;2023-03-31;Kl. 3|Halloween
+1697;Besen;broom;2023-03-31;Kl. 3|Halloween
+1698;Hut;hat;2023-03-31;Kl. 3|Halloween
+1699;Hexe;witch;2023-03-31;Kl. 3|Halloween
+1700;Glocke;bell;2023-03-31;Kl. 3|Christmas
+1701;Schornstein;chimney;2023-03-31;Kl. 3|Christmas
+1702;Weihnachtskarte;Christmas card;2023-03-31;Kl. 3|Christmas
+1703;Knallbonbon|Weihnachtsknaller;Christmas cracker;2023-03-31;Kl. 3|Christmas
+1704;Weihnachtsgeschenk;Christmas present;2023-03-31;Kl. 3|Christmas
+1705;Weihnachtssocke|Weihnachtsstrumpf;Christmas stocking;2023-03-31;Kl. 3|Christmas
+1706;Weihnachtsbaum;Christmas tree;2023-03-31;Kl. 3|Christmas
+1707;Weihnachtsmann;Father Christmas;2023-03-31;Kl. 3|Christmas
+1708;Kamin;fireplace;2023-03-31;Kl. 3|Christmas
+1709;Rentier;reindeer;2023-03-31;Kl. 3|Christmas
+1710;Pfanne;pan;2023-03-31;Kl. 3|Pancake Day
+1711;Pfannkuchen;pancake;2023-03-31;Kl. 3|Pancake Day
+1712;Mehl;flour;2023-03-31;Kl. 3|Pancake Day
+1713;Salz;salt;2023-03-31;Kl. 3|Pancake Day
+1714;Zucker;sugar;2023-03-31;Kl. 3|Pancake Day
+1715;Korb;basket;2023-03-31;Kl. 3|Easter
+1716;Osterhase;Easter bunny;2023-03-31;Kl. 3|Easter
+1717;Osterei;Easter egg;2023-03-31;Kl. 3|Easter
+1718;Osternest;Easter nest;2023-03-31;Kl. 3|Easter
+1719;Rosinenbrötchen|Brötchen;hot cross bun;2023-03-31;Kl. 3|Easter
+1720;Osterglocke|Narzisse;daffodil;2023-03-31;Kl. 3|Easter
+1721;Gänseblümchen;daisy;2023-03-31;Kl. 3|Easter
+1722;Schneeglöckchen;snowdrop;2023-03-31;Kl. 3|Easter
+1723;Tulpe;tulip;2023-03-31;Kl. 3|Easter
+1724;Marienkäfer;ladybird;2023-03-31;Kl. 3|Easter
+1725;Ballon;balloon;2023-03-31;Kl. 3|Birthday
+1726;Geburtstagskuchen;birthday cake;2023-03-31;Kl. 3|Birthday
+1727;Geburtstagskarte;birthday card;2023-03-31;Kl. 3|Birthday
+1728;Geburtstagsfeier;birthday party;2023-03-31;Kl. 3|Birthday
+1729;hellblau;light blue;2023-03-31;Kl. 4|Colours
+1730;dunkelblau;dark blue;2023-03-31;Kl. 4|Colours
+1731;grau;grey;2023-03-31;Kl. 4|Colours
+1732;gepunktet;dotted;2023-03-31;Kl. 4|Colours
+1733;gestreift;striped;2023-03-31;Kl. 4|Colours
+1734;Freunde;friends;2023-03-31;Kl. 4|Friends and family
+1735;Familie;family;2023-03-31;Kl. 4|Friends and family
+1736;Schwester|Tochter;sister|daughter;2023-03-31;Kl. 4|Friends and family
+1737;Bruder|Sohn;brother|son;2023-03-31;Kl. 4|Friends and family
+1738;Eltern;parents;2023-03-31;Kl. 4|Friends and family
+1739;Tante;aunt;2023-03-31;Kl. 4|Friends and family
+1740;Cousin;cousin;2023-03-31;Kl. 4|Friends and family
+1741;Großmutter;grandmother;2023-03-31;Kl. 4|Friends and family
+1742;Großvater;grandfather;2023-03-31;Kl. 4|Friends and family
+1743;Onkel;uncle;2023-03-31;Kl. 4|Friends and family
+1744;Park;park;2023-03-31;Kl. 4|Picnic
+1745;Picknick;picnic;2023-03-31;Kl. 4|Picnic
+1746;Schatten;shadow;2023-03-31;Kl. 4|Picnic
+1747;Bank;bench;2023-03-31;Kl. 4|Picnic
+1748;Decke;blanket;2023-03-31;Kl. 4|Picnic
+1749;Donut;doughnut;2023-03-31;Kl. 4|Picnic
+1750;Muffin;muffin;2023-03-31;Kl. 4|Picnic
+1751;Sandwich;sandwich;2023-03-31;Kl. 4|Picnic
+1752;Fußballspiel;football match;2023-03-31;Kl. 4|Picnic
+1753;Tor;goal;2023-03-31;Kl. 4|Picnic
+1754;Rücken;back;2023-03-31;Kl. 4|Body
+1755;Po;bottom;2023-03-31;Kl. 4|Body
+1756;Ellenbogen;elbow;2023-03-31;Kl. 4|Body
+1757;Hüfte;hip;2023-03-31;Kl. 4|Body
+1758;Bauch;tummy;2023-03-31;Kl. 4|Body
+1759;Gesicht;face;2023-03-31;Kl. 4|Body
+1760;Haare;hair;2023-03-31;Kl. 4|Body
+1761;Lippen;lips;2023-03-31;Kl. 4|Body
+1762;Hals;neck;2023-03-31;Kl. 4|Body
+1763;Zähne;teeth;2023-03-31;Kl. 4|Body
+1764;Daumen;thumb;2023-03-31;Kl. 4|Body
+1765;Zeigefinger;forefinger;2023-03-31;Kl. 4|Body
+1766;Mittelfinger;middle finger;2023-03-31;Kl. 4|Body
+1767;Ringfinger;ring finger;2023-03-31;Kl. 4|Body
+1768;kleiner Finger;little finger;2023-03-31;Kl. 4|Body
+1769;turnen;doing gymnastics;2023-03-31;Kl. 4|Hobbies
+1770;Judo;doing judo;2023-03-31;Kl. 4|Hobbies
+1771;malen;drawing;2023-03-31;Kl. 4|Hobbies
+1772;reiten;horseback riding;2023-03-31;Kl. 4|Hobbies
+1773;Tennis spielen;playing tennis;2023-03-31;Kl. 4|Hobbies
+1774;Gitarre spielen;playing the guitare;2023-03-31;Kl. 4|Hobbies
+1775;Piano spielen|Klavier spielen;playing the piano;2023-03-31;Kl. 4|Hobbies
+1776;Fotos machen;taking photos;2023-03-31;Kl. 4|Hobbies
+1777;Dachboden;attic;2023-03-31;Kl. 4|House
+1778;Keller;cellar;2023-03-31;Kl. 4|House
+1779;Dach;roof;2023-03-31;Kl. 4|House
+1780;lernen;study;2023-03-31;Kl. 4|House
+1781;Mauer|Wand;wall;2023-03-31;Kl. 4|House
+1782;Kunst;Art;2023-03-31;Kl. 4|School subjects
+1783;Englisch;English;2023-03-31;Kl. 4|School subjects
+1784;Deutsch;German;2023-03-31;Kl. 4|School subjects
+1785;Mathe|Mathematik;Maths;2023-03-31;Kl. 4|School subjects
+1786;Musik;Music;2023-03-31;Kl. 4|School subjects
+1787;Sport;PE|physical education;2023-03-31;Kl. 4|School subjects
+1788;Religion;RE|religious education;2023-03-31;Kl. 4|School subjects
+1789;Wissenschaft;Science;2023-03-31;Kl. 4|School subjects
+1790;Schwimmen|Schwimmunterricht;Swimming;2023-03-31;Kl. 4|School subjects
+1791;national|National-;national;2023-03-31;Kl. 7|Unit 2|Part B
+1792;insgesamt|alles in allem;altogether;2023-03-31;Kl. 7|Unit 2|Part B
+1793;Herberge|Wohnheim;hostel;2023-03-31;Kl. 7|Unit 2|Part B
+1794;sich fragen|gern wissen wollen;wonder;2023-03-31;Kl. 7|Unit 2|Part B
+1795;so tun|als ob;predent;2023-03-31;Kl. 7|Unit 2|Part B
+1796;Ich auch nicht.;Me neither.;2023-03-31;Kl. 7|Unit 2|Part B
+1797;vergehen|vorübergehen;go by;2023-03-31;Kl. 7|Unit 2|Part B
+1798;dumm|blöd;stupid;2023-03-31;Kl. 7|Unit 2|Part B
+1799;flussabwärts;downstream;2023-03-31;Kl. 7|Unit 2|Part B
+1800;Rand|Kante;edge;2023-03-31;Kl. 7|Unit 2|Part B
+1801;erreichen;reach;2023-03-31;Kl. 7|Unit 2|Part B
+1802;Stock;stick;2023-03-31;Kl. 7|Unit 2|Part B
+1803;schnappen|packen;grab;2023-03-31;Kl. 7|Unit 2|Part B
+1804;steil;steep;2023-03-31;Kl. 7|Unit 2|Part B
+1805;mitsingen;sing along;2023-03-31;Kl. 7|Unit 2|Part B
+1806;mitmachen;join in;2023-03-31;Kl. 7|Unit 2|Part B
+1807;schon bald;before long;2023-03-31;Kl. 7|Unit 2|Part B
+1808;jemanden auffordern, etwas zu tun|jemandem sagen, dass er etwas tun soll;tell somebody to do something;2023-03-31;Kl. 7|Unit 2|Part B
+1809;Warnung;warning;2023-03-31;Kl. 7|Unit 2|Part B
+1810;Film;movie;2023-03-31;Kl. 7|Unit 2|Part B
+1811;Schulleiter|Schulleiterin;head teacher;2023-03-31;Kl. 7|Unit 2|Part B
+1812;erlauben|zulassen;allow;2023-03-31;Kl. 7|Unit 2|Part B
+1813;verbunden sein;be connected;2023-03-31;Kl. 7|Unit 2|Part B
+1814;Aufstieg|Anstieg;climb;2023-03-31;Kl. 7|Unit 2|Part B
+1815;Gipfel;summit;2023-03-31;Kl. 7|Unit 2|Part B
+1816;etwas schaffen|etwas zustande bringen;manage something|manage;2023-03-31;Kl. 7|Unit 2|Part B
+1817;etwas fortsetzen;continue something;2023-03-31;Kl. 7|Unit 2|Part B
+1818;bergab;downhill;2023-03-31;Kl. 7|Unit 2|Part B
+1819;Energie|Kraft;energy;2023-03-31;Kl. 7|Unit 2|Part B
+1820;eine Gesamtsumme von ...|insgesamt;a total of ...;2023-03-31;Kl. 7|Unit 2|Part B
+1821;Riegel|Tafel;bar;2023-03-31;Kl. 7|Unit 2|Part B
+1822;Held|Heldin;hero;2023-03-31;Kl. 7|Unit 2|Part B
+1823;überarbeiten|wiederholen;revise;2023-03-31;Kl. 7|Unit 2|Part B
+1824;organisieren|ordnen;organize;2023-03-31;Kl. 7|Unit 2|Part B
+1825;hinzufügen|addieren|addieren zu;add|add to;2023-03-31;Kl. 7|Unit 2|Part B
+1826;schwierig|schwer;difficult;2023-03-31;Kl. 7|Unit 2|Part B
+1827;Möhre|Karotte;carrot;2023-03-31;Kl. 7|Unit 2|Part B
+1828;drücken;press;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1829;endlich|schließlich;finally;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1830;etwas tun können|fähig sein, etwas zu tun|in der Lage sein, etwas zu tun;be able to do something;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1831;Mahlzeit|Essen;meal;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1832;etwas immer wieder tun|etwas immer weiter tun|etwas ständig tun;keep doing;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1833;lautlos|schweigend;silently;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1834;Gang|Korridor;corridor;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1835;Stern;star;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1836;zauberhaft|wundervoll|magisch;magical;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1837;sich hinlegen;lie down;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1838;belebt|geschäftig|hektisch;busy;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1839;Brise;breeze;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1840;räumen|abräumen;clear;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1841;nachschauen|einen Blick auf etwas werfen;have a look|have a look at something;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1842;sich aufsetzen;sit up;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1843;hölzern|Holz-;wooden;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1844;weit|breit;wide;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1845;Figur|Gestalt;figure;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1846;Note;note;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1847;so ein ...|so eine ...|solch ein ...|solch eine ...;such a ...;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1848;sich etwas ausdenken;make something up;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1849;streiten|sich streiten;argue;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1850;Biss|Bissen;bite;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1851;Leiter|Leiterin;director;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1852;Büro;office;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1853;wie man etwas macht|wie man etwas machen kann|wie man etwas machen soll;how to do;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1854;sich verhalten|sich benehmen;behave;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1855;Wischmopp;mop;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1856;jemanden nass spritzen;splash somebody;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1857;Bestrafung|Strafe;punishment;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
+1858;Standpunkt;point of view;2023-03-31;Kl. 7|Unit 2|Snowdonia at night
