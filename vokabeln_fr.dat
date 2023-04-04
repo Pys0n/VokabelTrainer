@@ -2,13 +2,13 @@
 2;Hallo!|Tschüss!;Salut!;2022-11-29;Kl. 7|C´est parti!
 3;Wie heißt du?;Tu t´appelles comment?;2022-11-29;Kl. 7|C´est parti!
 4;ich heiße;je m´appelle;2022-11-29;Kl. 7|C´est parti!
-5;Und du?;Et toi?;2022-11-29;Kl. 7|C´est parti!
+5;Und du?|Und dir?;Et toi?;2022-11-29;Kl. 7|C´est parti!
 6;und;et;2022-11-29;Kl. 7|C´est parti!
 7;du;toi;2022-11-29;Kl. 7|C´est parti!
 8;Bis später!;À plus!;2022-11-29;Kl. 7|C´est parti!
 9;Wie geht´s?|Geht´s dir gut?;Ca va?;2022-11-29;Kl. 7|C´est parti!
 10;Naja.|Geht so.;bof;2022-11-29;Kl. 7|C´est parti!
-11;Und dir?;Et toi?;2022-11-29;Kl. 7|C´est parti!
+11;Woher kommst du?;Tu es d´où?;2023-01-14;Kl. 7|Unité 1|Volet 2
 12;Es geht mir gut.;Ca va.;2022-11-29;Kl. 7|C´est parti!
 13;super|toll;super;2022-11-29;Kl. 7|C´est parti!
 14;ach|ach so;ah;2022-11-29;Kl. 7|C´est parti!
@@ -43,7 +43,7 @@
 43;dreizehn;treize;2022-11-29;Kl. 7|Les nombres de 0 à 20
 44;vierzehn;quatorze;2022-11-29;Kl. 7|Les nombres de 0 à 20
 45;fünfzehn;quinze;2022-11-29;Kl. 7|Les nombres de 0 à 20
-46;sechszehn;seize;2022-11-29;Kl. 7|Les nombres de 0 à 20
+46;sechzehn;seize;2022-11-29;Kl. 7|Les nombres de 0 à 20
 47;siebzehn;dix-sept;2022-11-29;Kl. 7|Les nombres de 0 à 20
 48;achtzehn;dix-huit;2022-11-29;Kl. 7|Les nombres de 0 à 20
 49;neunzehn;dix-neuf;2022-11-29;Kl. 7|Les nombres de 0 à 20
@@ -103,10 +103,10 @@
 103;hier ist|hier sind;voilà;2023-01-13;Kl. 7|Unité 1
 104;das Mädchen;la fille;2023-01-13;Kl. 7|Unité 1|Se présenter et présenter les autres
 105;der Junge;le garcon;2023-01-13;Kl. 7|Unité 1|Se présenter et présenter les autres
-106;der Freund/die Freundin;l´ami/l´amie;2023-01-13;Kl. 7|Unité 1|Se présenter et présenter les autres
-107;von;de;2023-01-13;Kl. Unité 1|Se présenter et présenter les autres
-108;mein Freund/meine Freundin;mon ami/mon amie;2023-01-13;Kl. 7|Unité 1|Se présenter et présenter les autres
-109;er/sie heißt;il/elle s´appelle;2023-01-13;Kl. 7|Unité 1|Se présenter et présenter les autres
+106;der Freund|die Freundin;l´ami|l´amie;2023-01-13;Kl. 7|Unité 1|Se présenter et présenter les autres
+107;von;de;2023-01-13;Kl. 7|Unité 1|Se présenter et présenter les autres
+108;mein Freund|meine Freundin;mon ami|mon amie;2023-01-13;Kl. 7|Unité 1|Se présenter et présenter les autres
+109;er heißt|sie heißt;il s´appelle|elle s´appelle;2023-01-13;Kl. 7|Unité 1|Se présenter et présenter les autres
 110;mit;avec;2023-01-13;Kl. 7|Unité 1|Volet 1
 111;einverstanden|okay;d´accord;2023-01-13;Kl. 7|Unité 1|Volet 1
 112;Ich weiß es nicht.;Je ne sais pas.;2023-01-13;Kl. 7|Unité 1|Volet 1
@@ -139,4 +139,273 @@
 139;oft;souvent;2023-01-14;Kl. 7|Unité 1|Volet 2
 140;zu spät|mit Verspätung;en retard;2023-01-14;Kl. 7|Unité 1|Volet 2
 141;das ist etwas kompliziert|es ist etwas kompliziert;c´est un peu compliqué;2023-01-14;Kl. 7|Unité 1|Volet 2
-142;Woher kommst du?;Tu es d´où?;2023-01-14;Kl. 7|Unité 1|Volet 2
+142;Was gibt es ...?;Qu´est-ce qu´li y a ...?;2023-03-29;Kl. 7|Unité 1|Volet 3
+143;es gibt;il y a;2023-03-29;Kl. 7|Unité 1|Volet 3
+144;die Frage;la question;2023-03-29;Kl. 7|Unité 1|Volet 3
+145;die Antwort;la réponse;2023-03-29;Kl. 7|Unité 1|Volet 3
+146;die Kathedrale|der Dom;la cathédrale;2023-03-29;Kl. 7|Unité 1|Volet 3
+147;wie|wie z.B.;comme;2023-03-29;Kl. 7|Unité 1|Volet 3
+148;;la gare;2023-03-29;Kl. 7|Unité 1|Volet 3
+149;zum Beispiel|z.B.;par exemple|p. ex.;2023-03-29;Kl. 7|Unité 1|Volet 3
+150;für;pour;2023-03-29;Kl. 7|Unité 1|Volet 3
+151;der Fan;la fan|le fan;2023-03-29;Kl. 7|Unité 1|Volet 3
+152;die Wissenschaft;la science;2023-03-29;Kl. 7|Unité 1|Volet 3
+153;der Wissenschaftsfan;le fan de sciences|la fan de sciences;2023-03-29;Kl. 7|Unité 1|Volet 3
+154;das Geschäft|der Laden;le magasin;2023-03-29;Kl. 7|Unité 1|Volet 3
+155;das Einkaufszentrum;le centre commercial;2023-03-29;Kl. 7|Unité 1|Volet 3
+156;die Bäckerei;la boulangerie;2023-03-29;Kl. 7|Unité 1|Volet 3
+157;außerdem;en plus;2023-03-29;Kl. 7|Unité 1|Volet 3
+158;zwischen;entre;2023-03-29;Kl. 7|Unité 1|Volet 3
+159;im Unterricht;en course;2023-03-29;Kl. 7|Module 1
+160;Französisch|die französische Sprache;le francais;2023-03-29;Kl. 7|Module 1
+161;Was ist das?;Qu´est-ce que c´est?;2023-03-29;Kl. 7|Module 1
+162;ein Alphabet;un alphabet;2023-03-29;Kl. 7|Module 1
+163;Das war´s!|Es ist beendet!;C´est terminé!;2023-03-29;Kl. 7|Module 1
+164;Wie sagt man ...?;Comment on dit ...?;2023-03-29;Kl. 7|Module 1
+165;Man sagt ...;On dit ...;2023-03-29;Kl. 7|Module 1
+166;Wie schreibt man ...?;Comment on écrit ...?;2023-03-29;Kl. 7|Module 1
+167;Man schreibt ...;On écrit ...;2023-03-29;Kl. 7|Module 1
+168;auf Französisch;en francais;2023-03-29;Kl. 7|Module 1
+169;auf Deutsch;en allemand;2023-03-29;Kl. 7|Module 1
+170;Deutsch|die deutsche Sprache;l´allemand;2023-03-29;Kl. 7|Module 1
+171;das Heft;le cahier;2023-03-29;Kl. 7|Module 1
+172;der Stift|der Kugelschreiber;le stylo;2023-03-29;Kl. 7|Module 1
+173;das Blatt;la feuille;2023-03-29;Kl. 7|Module 1
+174;mein|meine;mon|ma|mes;2023-03-29;Kl. 7|Unité 2
+175;die Familie;la famille;2023-03-29;Kl. 7|Unité 2
+176;die Eltern;les parents;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+177;der Vater;le père;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+178;die Mutter;la mère;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+179;die Großeltern;les grands-parents;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+180;der Großvater;le grand-père;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+181;die Großmutter;la grand-mère;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+182;die Geschwister;les frères et soeurs;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+183;der Bruder;le frère;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+184;die Schwester;la soeur;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+185;der Halbbruder;le demi-frère;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+186;die Halbschwester;la demi-soeur;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+187;ein Onkel;un oncle;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+188;die Tante;la tante;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+189;der Cousin|die Cousine;le cousin|la cousine;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+190;ein Kind;un enfant|une enfant;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+191;der Sohn;le fils;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+192;die Tochter;la fille;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+193;der Freund|die Freundin|der Kumpel;le copain|la copine;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+194;ein Tier|ein Haustier;un animal;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+195;das Kaninchen;le lapin;2023-03-30;Kl. 7|Unité 2|Vocabulaire thématique
+196;haben;avoir;2023-03-30;Kl. 7|Unité 2|Volet 1
+197;... Jahre alt sein;avoir ... ans;2023-03-30;Kl. 7|Unité 2|Volet 1
+198;Ich habe keine Geschwister.;Je n´ai pas de frères et soeurs.;2023-03-30;Kl. 7|Unité 2|Volet 1
+199;das Motorrad;la moto;2023-03-30;Kl. 7|Unité 2|Volet 1
+200;Fan von jemandem sein|Fan von etwas sein;être fan de quelqu´un|être fan de quelque chose;2023-03-30;Kl. 7|Unité 2|Volet 1
+201;wie ich;comme moi;2023-03-30;Kl. 7|Unité 2|Volet 1
+202;zu Hause|daheim;à la maison;2023-03-30;Kl. 7|Unité 2|Volet 1
+203;sie heißen;ils s´appellent|elles s´appellent;2023-03-30;Kl. 7|Unité 2|Volet 1
+204;das stimmt|das ist wahr;c´est vrai;2023-03-30;Kl. 7|Unité 2|Volet 1
+205;das ist lustig;c´est drôle;2023-03-30;Kl. 7|Unité 2|Volet 1
+206;bei;chez;2023-03-30;Kl. 7|Unité 2|Volet 1
+207;ich auch;moi aussi;2023-03-30;Kl. 7|Unité 2|Volet 1
+208;ich möchte;je voudrais;2023-03-30;Kl. 7|Unité 2|Volet 1
+209;der Stiefvater;le beau-père;2023-03-30;Kl. 7|Unité 2|Volet 1
+210;die Stiefmutter;la belle-mère;2023-03-30;Kl. 7|Unité 2|Volet 1
+211;dagegen sein;être contre;2023-03-30;Kl. 7|Unité 2|Volet 1
+212;eine Allergie;une allergie;2023-03-30;Kl. 7|Unité 2|Volet 1
+213;das ist doof;c´est nul;2023-03-30;Kl. 7|Unité 2|Volet 1
+214;ja und nein|teils teils;oui et non;2023-03-30;Kl. 7|Unité 2|Volet 1
+215;Ich habe kein Haustier.;Je n´ai pas d´animal.;2023-03-30;Kl. 7|Unité 2|Volet 1
+216;süß;chou;2023-03-30;Kl. 7|Unité 2|Volet 1
+217;noch|wieder;encore;2023-03-30;Kl. 7|Unité 2|Volet 1
+218;das ist schade;c´est dommage;2023-03-30;Kl. 7|Unité 2|Volet 1
+219;Wer ...?;Qui ...?;2023-03-30;Kl. 7|Unité 2|Volet 2
+220;dein|deine;ton|ta|tes;2023-03-30;Kl. 7|Unité 2|Volet 2
+221;sein|seine|ihr|ihre;son|sa|ses;2023-03-30;Kl. 7|Unité 2|Volet 2
+222;das Wochenende|am Wochenende;le week-end;2023-03-30;Kl. 7|Unité 2|Volet 2
+223;er nervt|sie nervt;il m´énerve|elle m´énerve;2023-03-30;Kl. 7|Unité 2|Volet 2
+224;eine Urgroßmutter;une arrière-grand-mère;2023-03-30;Kl. 7|Unité 2|Volet 2
+225;ein Urgroßvater;un arrière-grand-père;2023-03-30;Kl. 7|Unité 2|Volet 2
+226;er wohnt|sie wohnt;il habite|elle habite;2023-03-30;Kl. 7|Unité 2|Volet 2
+227;sie wohnen;ils habitent|elles habitent;2023-03-30;Kl. 7|Unité 2|Volet 2
+228;nah|in der Nähe;près;2023-03-30;Kl. 7|Unité 2|Volet 2
+229;bei|in der Nähe von;près de;2023-03-30;Kl. 7|Unité 2|Volet 2
+230;die Konditorei|das Gebäck;la pâtisserie;2023-03-30;Kl. 7|Unité 2|Volet 2
+231;Meine Eltern sind getrennt.;Mes parents sont séparés.;2023-03-30;Kl. 7|Unité 2|Volet 2
+232;Guadeloupe;la Guadeloupe;2023-03-30;Kl. 7|Unité 2|Volet 2
+233;manchmal;parfois;2023-03-30;Kl. 7|Unité 2|Volet 2
+234;ein bisschen;un peu;2023-03-30;Kl. 7|Unité 2|Volet 2
+235;trotzdem|dennoch;quand même;2023-03-30;Kl. 7|Unité 2|Volet 2
+236;das Zimmer|das Schlafzimmer;la chambre;2023-03-30;Kl. 7|Unité 2|Volet 2
+237;jedes zweite Wochende;un week-end sur deux;2023-03-30;Kl. 7|Unité 2|Volet 2
+238;das Problem;le problème;2023-03-30;Kl. 7|Unité 2|Volet 2
+239;Das ist der Horror!;C´est l´horreur!;2023-03-30;Kl. 7|Unité 2|Volet 2
+240;für mich;pour moi;2023-03-30;Kl. 7|Unité 2|Volet 2
+241;während;pendant;2023-03-30;Kl. 7|Unité 2|Volet 2
+242;die Ferien;les vacances;2023-03-30;Kl. 7|Unité 2|Volet 2
+243;die Bretagne;la Bretagne;2023-03-30;Kl. 7|Unité 2|Volet 2
+244;Was machst du?;Qu´est-ce que tu fais?;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+245;Was ...?;Qu´est-ce que ...?;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+246;arbeiten|lernen;travailler;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+247;zuhören|hören|anhören;écouter;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+248;Musik hören ;écouter de la musique;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+249;ansehen|anschauen;regarder;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+250;das Video;la vidéo;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+251;erzählen;raconter;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+252;zeichnen;dessiner;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+253;das Manga|der Manga;le manga;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+254;lachen;rigoler;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+255;mögen|lieben;aimer;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+256;Fußball|das Fußballspielen;le foot|le football;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+257;spielen;jouer;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+258;etwas spielen;jouer à;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+259;sprechen;parler;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+260;über alles Mögliche sprechen;parler de tout et de rien;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+261;chatten;chatter;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+262;das Internet;Internet;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+263;im Internet|ins Internet;sur Internet;2023-03-30;Kl. 7|Unité 2|Volet 3|Parler de ses activités
+264;eine Schule;une école;2023-03-30;Kl. 7|Unité 2|Volet 3
+265;immer;toujours;2023-03-30;Kl. 7|Unité 2|Volet 3
+266;die Woche;la semaine;2023-03-30;Kl. 7|Unité 2|Volet 3
+267;sehr|viel;beaucoup;2023-03-30;Kl. 7|Unité 2|Volet 3
+268;wohnen;habiter;2023-03-30;Kl. 7|Unité 2|Volet 3
+269;weit|weit weg;loin;2023-03-30;Kl. 7|Unité 2|Volet 3
+270;der Lehrer|die Lehrerin;le prof|la prof|le professeur|la professeure;2023-03-30;Kl. 7|Module 2
+271;ein Schüler|eine Schülerin;un élève|une élève;2023-03-30;Kl. 7|Module 2
+272;gut;bien;2023-03-30;Kl. 7|Module 2
+273;Wiederhole!|Wiederholt!|Wiederholen Sie!;Répète!|Répètez!;2023-03-30;Kl. 7|Module 2
+274;Versteht ihr?|Verstehen Sie?;Vous comprenez?;2023-03-30;Kl. 7|Module 2
+275;der Satz;la phrase;2023-03-30;Kl. 7|Module 2
+276;lauter;plus fort;2023-03-30;Kl. 7|Module 2
+277;bitte;s´il te plaît|s´il vous plaît;2023-03-30;Kl. 7|Module 2
+278;noch einmal;encore une fois;2023-03-30;Kl. 7|Module 2
+279;bravo;bravo;2023-03-30;Kl. 7|Module 2
+280;weitermachen|fortführen;continuer;2023-03-30;Kl. 7|Module 2
+281;Ich verstehe nicht.;Je ne comprends pas.;2023-03-30;Kl. 7|Module 2
+282;Könnt ihr wiederholen?|Können Sie wiederholen?;Vous pouvez répéter?;2023-03-30;Kl. 7|Module 2
+283;Nimm!|Nehmt!|Nehmen Sie!;Prends!|Prenez!;2023-03-30;Kl. 7|Module 2
+284;Lies!|Lest!|Lesen Sie!;Lis!|Lisez!;2023-03-30;Kl. 7|Module 2
+285;der Text;le texte;2023-03-30;Kl. 7|Module 2
+286;Antworte!|Antwortet!|Antworten Sie!;Réponds!|Répondez!;2023-03-30;Kl. 7|Module 2
+287;suchen;chercher;2023-03-30;Kl. 7|Module 2
+288;das Wort;le mot;2023-03-30;Kl. 7|Module 2
+289;finden;trouver;2023-03-30;Kl. 7|Module 2
+290;Schreibe!|Schreibt!|Schreiben Sie!;Écris!|Écrivez!;2023-03-30;Kl. 7|Module 2
+291;schließen|zumachen;fermer;2023-03-30;Kl. 7|Module 2
+292;das Buch;le livre;2023-03-30;Kl. 7|Module 2
+293;jetzt;maintenant;2023-03-30;Kl. 7|Module 2
+294;die Hausaufgaben;les devoirs;2023-03-30;Kl. 7|Module 2
+295;das Fenster;la fenêtre;2023-03-30;Kl. 7|Module 2
+296;die Tür;la porte;2023-03-30;Kl. 7|Module 2
+297;der Tisch;la table;2023-03-30;Kl. 7|Module 2
+298;der Stuhl;la chaise;2023-03-30;Kl. 7|Module 2
+299;die Tafel;le tableau;2023-03-30;Kl. 7|Module 2
+300;der Schreibtisch;le bureau;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+301;ein Regal;une étagère;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+302;ein Schrank;une armoire;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+303;das Bett;le lit;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+304;die Ecke;le coin;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+305;das Foto|die Fotografie;la photo;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+306;die Fotoecke;le coin photo;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+307;die Mauer|die Wand;le mur;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+308;ein Computer;un ordinateur;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+309;die Pflanze;la plante;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+310;die Gitarre;la guitare;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+311;die Konsole;la console;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+312;eine Lautsprecherbox;une enceinte;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+313;das Poster;le poster;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+314;auf|an;sur;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+315;unter;sous;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+316;vor;devant;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+317;hinter;derrière;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+318;links|links von;à gauche |à gauche de;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+319;rechts|rechts von;à droite|à droite de;2023-03-31;Kl. 7|Unité 3|Vocabulaire thématique
+320;ein Eingang|eine Diele;une entrée;2023-03-31;Kl. 7|Unité 3|Volet 1|un appartement
+321;der Flur;le couloir;2023-03-31;Kl. 7|Unité 3|Volet 1|un appartement
+322;das Badezimmer;la salle de bains;2023-03-31;Kl. 7|Unité 3|Volet 1|un appartement
+323;die Toilette;les toilettes;2023-03-31;Kl. 7|Unité 3|Volet 1|un appartement
+324;die Küche;la cuisine;2023-03-31;Kl. 7|Unité 3|Volet 1|un appartement
+325;das Zimmer|das Schlafzimmer;la chambre;2023-03-31;Kl. 7|Unité 3|Volet 1|un appartement
+326;das Wohnzimmer;le salon;2023-03-31;Kl. 7|Unité 3|Volet 1|un appartement
+327;heute;aujourd´hui;2023-03-31;Kl. 7|Unité 3|Volet 1
+328;besichtigen;visiter;2023-03-31;Kl. 7|Unité 3|Volet 1
+329;eine Wohnung;un appartement;2023-03-31;Kl. 7|Unité 3|Volet 1
+330;bei mir|bei mir zu Hause;chez moi;2023-03-31;Kl. 7|Unité 3|Volet 1
+331;natürlich|selbstverständlich;bien sûr;2023-03-31;Kl. 7|Unité 3|Volet 1
+332;das Durcheinander;le bazar;2023-03-31;Kl. 7|Unité 3|Volet 1
+333;ein Ort|eine Stelle;un endroit;2023-03-31;Kl. 7|Unité 3|Volet 1
+334;ein Lieblingsort;un endroit préféré;2023-03-31;Kl. 7|Unité 3|Volet 1
+335;um etwas zu tun|zum ...;pour;2023-03-31;Kl. 7|Unité 3|Volet 1
+336;träumen;rêver;2023-03-31;Kl. 7|Unité 3|Volet 1
+337;die Aussicht;la vue;2023-03-31;Kl. 7|Unité 3|Volet 1
+338;der Fernseher;la télé|la télévision;2023-03-31;Kl. 7|Unité 3|Volet 1
+339;Pst!;Chut!;2023-03-31;Kl. 7|Unité 3|Volet 1
+340;das ist nicht mein Ding;ce n´est pas mon truc;2023-03-31;Kl. 7|Unité 3|Volet 1
+341;sehr lieben;adorer;2023-03-31;Kl. 7|Unité 3|Volet 1
+342;das;ca|cela;2023-03-31;Kl. 7|Unité 3|Volet 1
+343;gegenüber von;en face de;2023-03-31;Kl. 7|Unité 3|Volet 1
+344;neben;à côté de;2023-03-31;Kl. 7|Unité 3|Volet 1
+345;die Dusche;la douche;2023-03-31;Kl. 7|Unité 3|Volet 1
+346;sehr;très;2023-03-31;Kl. 7|Unité 3|Volet 1
+347;stylish;design;2023-03-31;Kl. 7|Unité 3|Volet 1
+348;das Ding|die Sache;le truc;2023-03-31;Kl. 7|Unité 3|Volet 2
+349;es mögen, etwas zu tun;aimer;2023-03-31;Kl. 7|Unité 3|Volet 2
+350;gern mögen|gern zu tun mögen;aimer bien;2023-03-31;Kl. 7|Unité 3|Volet 2
+351;hassen|zu tun hassen;détester;2023-03-31;Kl. 7|Unité 3|Volet 2
+352;der Spieler|die Spielerin;le joueur|la joueuse;2023-03-31;Kl. 7|Unité 3|Volet 2
+353;der Lieblingsspieler|die Lieblingsspielerin;le joueur préféré|la joueuse préféré;2023-03-31;Kl. 7|Unité 3|Volet 2
+354;der Sänger|die Sängerin;le chanteur|la chanteuse;2023-03-31;Kl. 7|Unité 3|Volet 2
+355;der Lieblingssänger|die Lieblingssängerin;le chanteur préféré|la chanteuse préféré;2023-03-31;Kl. 7|Unité 3|Volet 2
+356;die Gruppe|die Band;le groupe;2023-03-31;Kl. 7|Unité 3|Volet 2
+357;die Lieblingsband;le groupe préféré;2023-03-31;Kl. 7|Unité 3|Volet 2
+358;machen|tun;faire;2023-03-31;Kl. 7|Unité 3|Volet 2
+359;etwas als Hobby ausüben;faire du|faire de la|faire de l´|faire des;2023-03-31;Kl. 7|Unité 3|Volet 2
+360;das Klavier;le piano;2023-03-31;Kl. 7|Unité 3|Volet 2
+361;der Comic;la bédé|BD|bande dessinée;2023-03-31;Kl. 7|Unité 3|Volet 2
+362;der Kampfsport;les arts martiaux;2023-03-31;Kl. 7|Unité 3|Volet 2
+363;ich nicht;moi non;2023-03-31;Kl. 7|Unité 3|Volet 2
+364;ich auch nicht;moi non plus;2023-03-31;Kl. 7|Unité 3|Volet 2
+365;doch, ich schon;moi si;2023-03-31;Kl. 7|Unité 3|Volet 2
+366;das Klettern;l´escalade;2023-03-31;Kl. 7|Unité 3|Volet 2
+367;weil;parce que;2023-03-31;Kl. 7|Unité 3|Volet 2
+368;eine Freizeitaktivität;une activité;2023-03-31;Kl. 7|Unité 3|Volet 2
+369;der Rap;le rap;2023-03-31;Kl. 7|Unité 3|Volet 2
+370;der Look|das Outfit;le look;2023-03-31;Kl. 7|Unité 3|Volet 2
+371;schwarz;noir|noire;2023-03-31;Kl. 7|Unité 3|Volet 3|Les couleurs
+372;weiß;blanc|blanche;2023-03-31;Kl. 7|Unité 3|Volet 3|Les couleurs
+373;blau;bleu|bleue;2023-03-31;Kl. 7|Unité 3|Volet 3|Les couleurs
+374;rot;rouge;2023-03-31;Kl. 7|Unité 3|Volet 3|Les couleurs
+375;gelb;jaune;2023-03-31;Kl. 7|Unité 3|Volet 3|Les couleurs
+376;grün;vert|verte;2023-03-31;Kl. 7|Unité 3|Volet 3|Les couleurs
+377;das Leben;la vie;2023-03-31;Kl. 7|Unité 3|Volet 3
+378;klein;petit|petite;2023-03-31;Kl. 7|Unité 3|Volet 3
+379;groß;grand|grande;2023-03-31;Kl. 7|Unité 3|Volet 3
+380;ein Instrument;un instrument;2023-03-31;Kl. 7|Unité 3|Volet 3
+381;der Star;la star;2023-03-31;Kl. 7|Unité 3|Volet 3
+382;Lieblings-;préféré|préférée;2023-03-31;Kl. 7|Unité 3|Volet 3
+383;hübsch;joli|jolie;2023-03-31;Kl. 7|Unité 3|Volet 3
+384;hässlich;moche;2023-03-31;Kl. 7|Unité 3|Volet 3
+385;blau;bleu|bleue;2023-03-31;Kl. 7|Unité 3|Volet 3
+386;nicht;ne ... pas;2023-03-31;Kl. 7|Unité 3|Volet 3
+387;nicht mehr;ne ... plus;2023-03-31;Kl. 7|Unité 3|Volet 3
+388;die Sachen;les affaires;2023-03-31;Kl. 7|Unité 3|Volet 3
+389;zu|zu sehr;trop;2023-03-31;Kl. 7|Unité 3|Volet 3
+390;wirklich;vraiment;2023-03-31;Kl. 7|Unité 3|Volet 3
+391;lustig|spaßig;drôle;2023-03-31;Kl. 7|Unité 3|Volet 3
+392;Hausaufgaben machen;faire les devoirs;2023-03-31;Kl. 7|Unité 3|Volet 3
+393;surfen|im Internet surfen;surfer|surfer sur Internet;2023-03-31;Kl. 7|Unité 3|Volet 3
+394;das Schild;la pancarte;2023-03-31;Kl. 7|Unité 3|Volet 3
+395;hineingehen|etwas betreten|hereinkommen;entrer;2023-03-31;Kl. 7|Unité 3|Volet 3
+396;eine Stunde|eine Uhr|eine Uhrzeit;une heure;2023-03-31;Kl. 7|Module 3
+397;Wie viel Uhr ist es?|Wie spät ist es?;Il est quelle heure?;2023-03-31;Kl. 7|Module 3
+398;Hallo?;Allô?;2023-03-31;Kl. 7|Module 3
+399;vorbeikommen|vorbeigehen;passer;2023-03-31;Kl. 7|Module 3
+400;morgen;demain;2023-03-31;Kl. 7|Module 3
+401;Um wie viel Uhr?;À quelle heure?;2023-03-31;Kl. 7|Module 3
+402;um ... Uhr;à ... heure|à ... heures;2023-03-31;Kl. 7|Module 3
+403;wir könnten|man könnte;on pourrait;2023-03-31;Kl. 7|Module 3
+404;Geht klar!|Das klappt!|O.k.!;Ca marche!;2023-03-31;Kl. 7|Module 3
+405;Montag|am Montag;lundi;2023-03-31;Kl. 7|Unité 4|Vocabulaire thématique|Les jours de la semaine
+406;Dienstag|am Dienstag;mardi;2023-03-31;Kl. 7|Unité 4|Vocabulaire thématique|Les jours de la semaine
+407;Mittwoch|am Mittwoch;mercredi;2023-03-31;Kl. 7|Unité 4|Vocabulaire thématique|Les jours de la semaine
+408;Donnerstag|am Donnerstag;jeudi;2023-03-31;Kl. 7|Unité 4|Vocabulaire thématique|Les jours de la semaine
+409;Freitag|am Freitag;vendredi;2023-03-31;Kl. 7|Unité 4|Vocabulaire thématique|Les jours de la semaine
+410;Samstag|am Samstag;samedi;2023-03-31;Kl. 7|Unité 4|Vocabulaire thématique|Les jours de la semaine
+411;Sonntag|am Sonntag;dimanche;2023-03-31;Kl. 7|Unité 4|Vocabulaire thématique|Les jours de la semaine
