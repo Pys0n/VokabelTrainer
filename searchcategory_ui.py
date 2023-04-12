@@ -73,6 +73,16 @@ class SearchcategoryUI(QWidget):
             if child.widget():
                 child.widget().deleteLater()
 
+
+    def deleteButton(self, button, way, label):
+        if way == 'vokInputMainLang':
+            self.new_mainLangList.remove(label)
+        elif way == 'vokInputLang':
+            self.new_langList.remove(label)
+        elif way == 'vokInputCat':
+            self.new_catList.remove(label)
+        button.close()
+
     def showEvent(self, event):
         pass
 
