@@ -68,6 +68,10 @@ class ChangelogUI(QWidget):
                   -> Kl. 2, Kl. 3 komplett
                   -> Kl. 4, Kl. 7 angefangen 
                 - 269 neue Französische Vokabeln
+
+                v3.1.0(22.04.2023):
+                - Statistik Heute hinzugefügt
+                - .gitignore aktualisiert
         ''')
 
         self.back_btn = QPushButton('Zurück')
