@@ -3,6 +3,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5 import *
 
+from myFunctions import get_statistic_today
 
 class StatisticUI(QWidget):
 
@@ -60,17 +61,15 @@ class StatisticUI(QWidget):
         self.rightLabel.setText('Richtig beantwortet: '+str(self.right))
         self.wrongLabel.setText('Falsch beantwortet: '+str(self.wrong))
         self.allLabel.setText('Beantwortet: '+str(self.answered)+'/'+str(self.len))
-      
-        #self.todayRightLabel.setText('Richtig beantwortet: '+str(self.right))
-        #self.todayWrongLabel.setText('Falsch beantwortet: '+str(self.wrong))
-        #self.todayAllLabel.setText('Beantwortet: '+str(self.answered))
+        
+        stats_today = get_statistic_today(self.lang)
+        self.todayRightLabel.setText('Richtig beantwortet: '+str(stats_today['right']))
+        self.todayWrongLabel.setText('Falsch beantwortet: '+str(stats_today['wrong']))
+        self.todayAllLabel.setText('Beantwortet: '+str(stats_today['answered']))
 
-        self.todayRightLabel.setText('Richtig beantwortet: Kommt bald')
-        self.todayWrongLabel.setText('Falsch beantwortet: Kommt bald')
-        self.todayAllLabel.setText('Beantwortet: Kommt bald')
-
-    def setStatistic(self, right, wrong, answered, len):
+    def setStatistic(self, right, wrong, answered, len, lang):
         self.right = right
         self.wrong = wrong
         self.answered = answered
         self.len = len
+        self.lang = lang

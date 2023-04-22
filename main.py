@@ -201,7 +201,8 @@ class Window(QWidget):
         self.right = self.vocabularyquery_ui.right
         self.wrong = self.vocabularyquery_ui.wrong
         self.answered = self.vocabularyquery_ui.answered
-        self.statistic_ui.setStatistic(self.right, self.wrong, self.answered, len(self.dict))
+        self.lang = [self.vocabularyquery_ui.lang, self.vocabularyquery_ui.mainLang]
+        self.statistic_ui.setStatistic(self.right, self.wrong, self.answered, len(self.dict), self.lang)
         self.Stack.setCurrentIndex(6)
 
     def quit(self):

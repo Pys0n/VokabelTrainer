@@ -1,5 +1,6 @@
 import pathlib
 from os.path import exists
+from datetime import date
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
@@ -139,3 +140,38 @@ class FlatButton(QPushButton):
     def btn_clicked(self):
         self.catTab.deleteButton(self, self.way, self.label)
         self.close()
+
+def get_statistic_today(lang):
+    parsed_lines = []
+    statistics = {'right':0,'wrong':0,'answered':0}
+    try:
+        if lang[0] == 'en' or lang[1] == 'en':
+            with open(PATH+'/'+'statistic_en.dat', 'r') as file:
+                for line in file:
+                    line = line.rstrip()
+                    parsed_lines.append(line.split(';'))
+
+            for line in parsed_lines:
+                if line[2] == str(date.today()):
+                    if line[1] == '0':
+                        statistics['right'] += 1
+                    elif line[1] == '1':
+                        statistics['wrong'] += 1
+                    statistics['answered'] += 1
+    except: pass
+    try:
+        if lang[0] == 'fr' or lang[1] == 'fr':
+            with open(PATH+'/'+'statistic_fr.dat', 'r') as file:
+                for line in file:
+                    line = line.rstrip()
+                    parsed_lines.append(line.split(';'))
+
+            for line in parsed_lines:
+                if line[2] == str(date.today()):
+                    if line[1] == '0':
+                        statistics['right'] += 1
+                    elif line[1] == '1':
+                        statistics['wrong'] += 1
+                    statistics['answered'] += 1    
+    except:pass
+    return statistics
