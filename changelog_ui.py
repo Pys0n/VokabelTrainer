@@ -72,6 +72,10 @@ class ChangelogUI(QWidget):
                 v3.1.0(22.04.2023):
                 - Statistik Heute hinzugefügt
                 - .gitignore aktualisiert
+              
+                v3.1.1(29.04.2023):
+                - encoding = 'utf-8' hinzugefügt
+                  -> Windowsproblem behoben
         ''')
 
         self.back_btn = QPushButton('Zurück')

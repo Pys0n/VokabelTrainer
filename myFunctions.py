@@ -19,7 +19,7 @@ FILE_STATISTIC_FR = PATH+"/"+FILENAME
 
 
 def save_dictionary_en(vokabel):
-    with open(FILE_ENGLISCH, 'a') as file:
+    with open(FILE_ENGLISCH, 'a', encoding='utf-8') as file:
         vokabel_de = ""
         for w in vokabel['de']:
             vokabel_de += w + '|'
@@ -38,7 +38,7 @@ def save_dictionary_en(vokabel):
         file.write(f"{vokabel['num']};{vokabel_de};{vokabel_en};{vokabel['date']};{vokabel_cat}\n")
 
 def save_dictionary_fr(vokabel):
-    with open(FILE_FRANZOSISCH, 'a') as file:
+    with open(FILE_FRANZOSISCH, 'a', encoding='utf-8') as file:
         vokabel_de = ""
         for w in vokabel['de']:
             vokabel_de += w + '|'
@@ -64,7 +64,7 @@ def load_dictionary_en():
 
     dictionary_en = []
     parsed_lines = []
-    with open(FILE_ENGLISCH,'r') as file:
+    with open(FILE_ENGLISCH, 'r', encoding='utf-8') as file:
         for line in file:
             line = line.rstrip()
             parsed_lines.append(line.split(';'))
@@ -94,7 +94,7 @@ def load_dictionary_fr():
 
     dictionary_fr = []
     parsed_lines = []
-    with open(FILE_FRANZOSISCH,'r') as file:
+    with open(FILE_FRANZOSISCH, 'r', encoding='utf-8') as file:
         for line in file:
             line = line.rstrip()
             parsed_lines.append(line.split(';'))
@@ -146,7 +146,7 @@ def get_statistic_today(lang):
     statistics = {'right':0,'wrong':0,'answered':0}
     try:
         if lang[0] == 'en' or lang[1] == 'en':
-            with open(PATH+'/'+'statistic_en.dat', 'r') as file:
+            with open(PATH+'/'+'statistic_en.dat', 'r', encoding='utf-8') as file:
                 for line in file:
                     line = line.rstrip()
                     parsed_lines.append(line.split(';'))
@@ -161,7 +161,7 @@ def get_statistic_today(lang):
     except: pass
     try:
         if lang[0] == 'fr' or lang[1] == 'fr':
-            with open(PATH+'/'+'statistic_fr.dat', 'r') as file:
+            with open(PATH+'/'+'statistic_fr.dat', 'r', encoding='utf-8') as file:
                 for line in file:
                     line = line.rstrip()
                     parsed_lines.append(line.split(';'))

@@ -221,7 +221,7 @@ class Window(QWidget):
             word = make_string(self.dict[self.vocabularyquery_ui.run][self.mainLang])
         
             datum = str(date.today())
-            with open(FILE_STATISTIC, 'a') as file:
+            with open(FILE_STATISTIC, 'a', encoding='utf-8') as file:
                 if self.vocabularyquery_ui.input.text() in self.dict[self.vocabularyquery_ui.run][self.lang]:
                     file.write(self.dict[self.vocabularyquery_ui.run]['num']+';'+'0'+';'+datum+'\n')
                     self.vocabularyquery_ui.last.setText(f'<b style="color: #00ff00">Richtig</b><br>{self.mainLangName}: {word}<br>{self.langName}: {correct}\n')
