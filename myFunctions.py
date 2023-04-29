@@ -17,45 +17,36 @@ FILE_STATISTIC_EN = PATH+"/"+FILENAME
 FILENAME = 'statistic_fr.dat'
 FILE_STATISTIC_FR = PATH+"/"+FILENAME
 
+def save_dictionary(lang, vokabel):
+    if lang == 'en':
+        file = FILE_ENGLISCH
+        try:
+            vokabel_lang = vokabel['en']
+        except: print('pass')
 
-def save_dictionary_en(vokabel):
-    with open(FILE_ENGLISCH, 'a', encoding='utf-8') as file:
+    if lang == 'fr':
+        file = FILE_FRANZOSISCH
+        try:
+            vokabel_lang = vokabel['fr']
+        except: print('pass')
+
+    with open(file, 'a', encoding='utf-8') as file:
         vokabel_de = ""
         for w in vokabel['de']:
             vokabel_de += w + '|'
         vokabel_de = vokabel_de.rstrip('|')
 
-        vokabel_en = ""
-        for w in vokabel['en']:
-            vokabel_en += w + '|'
-        vokabel_en = vokabel_en.rstrip('|')
+        new_vokabel_lang = ""
+        for w in vokabel_lang:
+            new_vokabel_lang += w + '|'
+        new_vokabel_lang = new_vokabel_lang.rstrip('|')
 
         vokabel_cat = ""
         for w in vokabel['cat']:
             vokabel_cat += w + '|'
         vokabel_cat = vokabel_cat.rstrip('|')
 
-        file.write(f"{vokabel['num']};{vokabel_de};{vokabel_en};{vokabel['date']};{vokabel_cat}\n")
-
-def save_dictionary_fr(vokabel):
-    with open(FILE_FRANZOSISCH, 'a', encoding='utf-8') as file:
-        vokabel_de = ""
-        for w in vokabel['de']:
-            vokabel_de += w + '|'
-        vokabel_de = vokabel_de.rstrip('|')
-
-        vokabel_fr = ""
-        for w in vokabel['fr']:
-            vokabel_fr += w + '|'
-        vokabel_fr = vokabel_fr.rstrip('|')
-
-        vokabel_cat = ""
-        for w in vokabel['cat']:
-            vokabel_cat += w + '|'
-        vokabel_cat = vokabel_cat.rstrip('|')
-
-        file.write(f"{vokabel['num']};{vokabel_de};{vokabel_fr};{vokabel['date']};{vokabel_cat}\n")
-
+        file.write(f"{vokabel['num']};{vokabel_de};{new_vokabel_lang};{vokabel['date']};{vokabel_cat}\n")
 
 def load_dictionary_en():
     if not exists(FILE_ENGLISCH):

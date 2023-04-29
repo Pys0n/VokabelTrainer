@@ -295,17 +295,14 @@ class Window(QWidget):
             self.dict = newDict
 
     def setMenu(self):
+        print('funk')
+        print(self.lang)
         self.makeDict()
-        try:
-            if self.lang == 'en' or self.mainLang == 'en':
-                self.setEN_MENU()
-            elif self.lang == 'fr' or self.mainLang == 'fr':
-                self.setFR_MENU()
-        except:
-            if self.lang == 'en':
-                self.setEN_MENU()
-            elif self.lang == 'fr':
-                self.setFR_MENU()
+        if 'en' in self.lang:
+            self.setEN_MENU()
+        elif 'fr' in self.lang:
+            self.setFR_MENU()
+        print('end')
 
     def back(self):
         if self.lang == 'Englisch' or self.mainLang == 'Englisch':

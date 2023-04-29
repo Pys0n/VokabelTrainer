@@ -126,9 +126,9 @@ class VocabularyinputUI(QWidget):
                 vokabel = {'num':len(self.dict)+1, 'de':self.new_mainLangList, 'fr':self.new_langList, 'date':datum, 'cat':self.new_catList}
             self.dict.append(vokabel)
             if self.lang == 'Englisch':
-                save_dictionary_en(vokabel)
+                save_dictionary('en',vokabel)
             elif self.lang == 'Französisch':
-                save_dictionary_fr(vokabel)
+                save_dictionary('fr', vokabel)
             self.clearLayout()
             self.createCat_comboBox.clear()
             self.createCat_comboBox.addItem('None')
