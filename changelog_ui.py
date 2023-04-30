@@ -82,6 +82,7 @@ class ChangelogUI(QWidget):
                 v3.1.2(30.04.2023):
                 - load_dictionary-Funktionen zusammengefasst
                 - Debug Ausgaben entfernt
+                - Bug-Fix
         ''')
 
         self.back_btn = QPushButton('Zurück')

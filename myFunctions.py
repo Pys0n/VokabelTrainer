@@ -71,16 +71,19 @@ def load_dictionary(lang):
         for i in range(len(de)):
             de[i] = de[i].strip("'")
 
-        lang = line[2].split('|')
-        for i in range(len(lang)):
-            lang[i] = lang[i].strip("'")
+        sec_lang = line[2].split('|')
+        for i in range(len(sec_lang)):
+            sec_lang[i] = sec_lang[i].strip("'")
 
         cat = line[4].split('|')
         for i in range(len(cat)):
             cat[i] = cat[i].strip("'")
 
-        dictionary.append({'num':line[0], 'de':de, 'en':lang, 'date':line[3], 'cat':cat})
-        
+        if lang == 'en':
+            dictionary.append({'num':line[0], 'de':de, 'en':sec_lang, 'date':line[3], 'cat':cat})
+        if lang == 'fr':
+            dictionary.append({'num':line[0], 'de':de, 'fr':sec_lang, 'date':line[3], 'cat':cat})  
+
     return dictionary
 
 def make_string(liste):
