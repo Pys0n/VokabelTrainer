@@ -76,7 +76,7 @@ class Window(QWidget):
         self.Stack.setCurrentIndex(0)
 
     def setDE_EN(self):
-        self.dict = load_dictionary_en()
+        self.dict = load_dictionary('en')
         if len(self.searchcategory_ui.choosedCats) != 0:
             self.makeDict()
         shuffle(self.dict)
@@ -98,7 +98,7 @@ class Window(QWidget):
         self.Stack.setCurrentIndex(2)
     
     def setEN_DE(self):
-        self.dict = load_dictionary_en()
+        self.dict = load_dictionary('en')
         if len(self.searchcategory_ui.choosedCats) != 0:
             self.makeDict()
         shuffle(self.dict)
@@ -110,7 +110,7 @@ class Window(QWidget):
         self.Stack.setCurrentIndex(1)
 
     def setEN_RANDOM(self):
-        self.dict = load_dictionary_en()
+        self.dict = load_dictionary('en')
         if len(self.searchcategory_ui.choosedCats) != 0:
             self.makeDict()
         shuffle(self.dict)
@@ -122,7 +122,7 @@ class Window(QWidget):
         self.Stack.setCurrentIndex(1)
 
     def setDE_FR(self):
-        self.dict = load_dictionary_fr()
+        self.dict = load_dictionary('fr')
         if len(self.searchcategory_ui.choosedCats) != 0:
             self.makeDict()
         shuffle(self.dict)
@@ -144,7 +144,7 @@ class Window(QWidget):
         self.Stack.setCurrentIndex(2)
 
     def setFR_DE(self):
-        self.dict = load_dictionary_fr()
+        self.dict = load_dictionary('fr')
         if len(self.searchcategory_ui.choosedCats) != 0:
             self.makeDict()
         shuffle(self.dict)
@@ -156,7 +156,7 @@ class Window(QWidget):
         self.Stack.setCurrentIndex(1)
 
     def setFR_RANDOM(self):
-        self.dict = load_dictionary_fr()
+        self.dict = load_dictionary('fr')
         if len(self.searchcategory_ui.choosedCats) != 0:
             self.makeDict()
         shuffle(self.dict)
@@ -172,26 +172,26 @@ class Window(QWidget):
         self.Stack.setCurrentIndex(3)
 
     def setEN_CATEGORY(self):
-        self.dict = load_dictionary_en()
+        self.dict = load_dictionary('en')
         self.lang = 'en'
         self.searchcategory_ui.load(self.lang, self.dict)
         self.Stack.setCurrentIndex(4)
 
     def setFR_CATEGORY(self):
-        self.dict = load_dictionary_fr()
+        self.dict = load_dictionary('fr')
         self.lang = 'fr'
         self.searchcategory_ui.load(self.lang, self.dict)
         self.Stack.setCurrentIndex(4)
 
     def setVOK_INPUT_EN(self):
-        self.dict = load_dictionary_en()
+        self.dict = load_dictionary('en')
         self.mainLang = 'Deutsch'
         self.lang = 'Englisch'
         self.vocabularyinput_ui.load(self.mainLang, self.lang, self.dict)
         self.Stack.setCurrentIndex(5)
 
     def setVOK_INPUT_FR(self):
-        self.dict = load_dictionary_fr()
+        self.dict = load_dictionary('fr')
         self.mainLang = 'Deutsch'
         self.lang = 'Französisch'
         self.vocabularyinput_ui.load(self.mainLang, self.lang, self.dict)
@@ -295,14 +295,11 @@ class Window(QWidget):
             self.dict = newDict
 
     def setMenu(self):
-        print('funk')
-        print(self.lang)
         self.makeDict()
         if 'en' in self.lang:
             self.setEN_MENU()
         elif 'fr' in self.lang:
             self.setFR_MENU()
-        print('end')
 
     def back(self):
         if self.lang == 'Englisch' or self.mainLang == 'Englisch':

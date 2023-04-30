@@ -78,6 +78,10 @@ class ChangelogUI(QWidget):
                   -> Windowsproblem behoben
                 - save_dictionary-Funktionen zusammengefasst
                 - Bug-Fix
+
+                v3.1.2(30.04.2023):
+                - load_dictionary-Funktionen zusammengefasst
+                - Debug Ausgaben entfernt
         ''')
 
         self.back_btn = QPushButton('Zurück')

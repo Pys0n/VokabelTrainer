@@ -22,14 +22,13 @@ def save_dictionary(lang, vokabel):
         file = FILE_ENGLISCH
         try:
             vokabel_lang = vokabel['en']
-        except: print('pass')
-
-    if lang == 'fr':
+        except: pass
+    elif lang == 'fr':
         file = FILE_FRANZOSISCH
         try:
             vokabel_lang = vokabel['fr']
-        except: print('pass')
-
+        except: pass
+        
     with open(file, 'a', encoding='utf-8') as file:
         vokabel_de = ""
         for w in vokabel['de']:
@@ -48,14 +47,21 @@ def save_dictionary(lang, vokabel):
 
         file.write(f"{vokabel['num']};{vokabel_de};{new_vokabel_lang};{vokabel['date']};{vokabel_cat}\n")
 
-def load_dictionary_en():
-    if not exists(FILE_ENGLISCH):
-        print("Datei kann nicht geöffnet werden")
-        exit()
+def load_dictionary(lang):
+    if lang == 'en':
+        if not exists(FILE_ENGLISCH):
+            print("Datei kann nicht geöffnet werden")
+            exit()
+        file = FILE_ENGLISCH
+    elif lang == 'fr':
+        if not exists(FILE_FRANZOSISCH):
+            print("Datei kann nicht geöffnet werden")
+            exit()
+        file = FILE_FRANZOSISCH
 
-    dictionary_en = []
+    dictionary = []
     parsed_lines = []
-    with open(FILE_ENGLISCH, 'r', encoding='utf-8') as file:
+    with open(file, 'r', encoding='utf-8') as file:
         for line in file:
             line = line.rstrip()
             parsed_lines.append(line.split(';'))
@@ -65,47 +71,17 @@ def load_dictionary_en():
         for i in range(len(de)):
             de[i] = de[i].strip("'")
 
-        en = line[2].split('|')
-        for i in range(len(en)):
-            en[i] = en[i].strip("'")
+        lang = line[2].split('|')
+        for i in range(len(lang)):
+            lang[i] = lang[i].strip("'")
 
         cat = line[4].split('|')
         for i in range(len(cat)):
             cat[i] = cat[i].strip("'")
 
-        dictionary_en.append({'num':line[0], 'de':de, 'en':en, 'date':line[3], 'cat':cat})
+        dictionary.append({'num':line[0], 'de':de, 'en':lang, 'date':line[3], 'cat':cat})
         
-    return dictionary_en
-
-def load_dictionary_fr():
-
-    if not exists(FILE_FRANZOSISCH):
-        print("Datei kann nicht geöffnet werden")
-        exit()
-
-    dictionary_fr = []
-    parsed_lines = []
-    with open(FILE_FRANZOSISCH, 'r', encoding='utf-8') as file:
-        for line in file:
-            line = line.rstrip()
-            parsed_lines.append(line.split(';'))
-
-    for line in parsed_lines:
-        de = line[1].split('|')
-        for i in range(len(de)):
-            de[i] = de[i].strip("'")
-
-        fr = line[2].split('|')
-        for i in range(len(fr)):
-            fr[i] = fr[i].strip("'")
-
-        cat = line[4].split('|')
-        for i in range(len(cat)):
-            cat[i] = cat[i].strip("'")
-
-        dictionary_fr.append({'num':line[0], 'de':de, 'fr':fr, 'date':line[3], 'cat':cat})
-
-    return dictionary_fr
+    return dictionary
 
 def make_string(liste):
     if len(liste) != 1:
