@@ -64,6 +64,7 @@ class SearchcategoryUI(QWidget):
         if self.categories.currentText() not in self.choosedCats and self.categories.currentText() != 'None':
             self.choosedCats.append(self.categories.currentText())
             self.scrollLayout.addWidget(FlatButton(self, 'catSearch',str(self.categories.currentText())))
+            self.kickOldCategories()
         self.categories.setCurrentText('None')
 
     def clearCats(self):
@@ -73,14 +74,40 @@ class SearchcategoryUI(QWidget):
             if child.widget():
                 child.widget().deleteLater()
 
+    def kickOldCategories(self):
+        if len(self.choosedCats) != 0:
+            for cat in self.choosedCats:
+                newDict = []
+                for vok in self.catdict:
+                    if cat in vok['cat']:
+                        newDict.append(vok)
+                self.catdict = newDict
+            newDict = []
+            for vok in self.catdict:
+                for cat in vok['cat']:
+                    if cat not in newDict and cat not in self.choosedCats:
+                        newDict.append(cat)
+            self.categories.clear()
+            self.categories.addItem('None')
+            self.categories.addItems(sorted(newDict))
+            self.categories.setCurrentText('None')
+        else:
+            self.cat_list = []
+            for vok in self.catdict:
+                for cat in vok['cat']:
+                    if cat not in self.cat_list:
+                        self.cat_list.append(cat)
+            self.categories.clear()
+            self.cat_list = sorted(self.cat_list)
+            self.categories.addItem('None')
+            self.categories.addItems(self.cat_list)
+            self.categories.setCurrentText('None')
+        self.catdict = self.dict
 
     def deleteButton(self, button, way, label):
-        if way == 'vokInputMainLang':
-            self.new_mainLangList.remove(label)
-        elif way == 'vokInputLang':
-            self.new_langList.remove(label)
-        elif way == 'vokInputCat':
-            self.new_catList.remove(label)
+        if way == 'catSearch':
+            self.choosedCats.remove(label)
+            self.kickOldCategories()
         button.close()
 
     def showEvent(self, event):
@@ -89,14 +116,13 @@ class SearchcategoryUI(QWidget):
     def load(self, lang, dict):
         self.lang = lang
         self.dict = dict
+        self.catdict = dict 
         self.categories.clear()
         self.categories.addItem('None')
-        try:
-            self.cat_list = []
-            for vok in self.dict:
-                for cat in vok['cat']:
-                    if cat not in self.cat_list:
-                        self.cat_list.append(cat)
-            self.cat_list = sorted(self.cat_list)
-            self.categories.addItems(self.cat_list)
-        except: pass
+        self.cat_list = []
+        for vok in self.dict:
+            for cat in vok['cat']:
+                if cat not in self.cat_list:
+                    self.cat_list.append(cat)
+        self.cat_list = sorted(self.cat_list)
+        self.categories.addItems(self.cat_list)

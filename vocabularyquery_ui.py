@@ -11,12 +11,6 @@ from PyQt5 import *
 from statistic_ui import StatisticUI
 from myFunctions import *
 
-#PATH = str(pathlib.Path(__file__).parent.absolute())
-#FILENAME = 'statistic_en.dat'
-#FILE_STATISTIC_EN = PATH+"/"+FILENAME
-#FILENAME = 'statistic_fr.dat'
-#FILE_STATISTIC_FR = PATH+"/"+FILENAME
-
 class VocabularyqueryUI(QWidget):
 
     def __init__(self):
