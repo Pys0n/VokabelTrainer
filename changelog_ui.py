@@ -84,7 +84,7 @@ class ChangelogUI(QWidget):
                 - Debug Ausgaben entfernt
                 - Bug-Fix
 
-                v3.2.0(03.05.2023):
+                v3.1.3(03.05.2023):
                 - nicht wählbare Kategorien gelöscht
                   -> searchCategory: gewählt: Kl. 6; gelöscht: Kl. 2, Kl. 3, ...
                 - Vokabeln 'months': Kl. 3 und Kl. 5 getrennt
