@@ -261,9 +261,8 @@ class Window(QWidget):
             except:
                 self.vocabularyquery_ui.input.setText('')
         else:
-            if self.vocabularyquery_ui.right != 0 and self.vocabularyquery_ui.wrong != 0:
-                self.vocabularyquery_ui.input.setText('')
-                self.showSTATS()
+            self.vocabularyquery_ui.input.setText('')
+            self.showSTATS()
 
     def goMain(self):
         self.searchcategory_ui.categories.clear()
