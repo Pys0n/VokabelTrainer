@@ -88,6 +88,12 @@ class ChangelogUI(QWidget):
                 - nicht wählbare Kategorien gelöscht
                   -> searchCategory: gewählt: Kl. 6; gelöscht: Kl. 2, Kl. 3, ...
                 - Vokabeln 'months': Kl. 3 und Kl. 5 getrennt
+
+                v3.2.0(05.06.2023):
+                - Untermenüs überarbeitet
+                - Untermenüs weiter aufgeteielt
+                - 49 neue Französisch Vokabeln
+                - 45 neue Englisch Vokabeln
                 
         ''')
 

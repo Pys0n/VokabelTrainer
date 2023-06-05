@@ -73,36 +73,39 @@ class SearchcategoryUI(QWidget):
             child = self.scrollLayout.takeAt(0)
             if child.widget():
                 child.widget().deleteLater()
+        self.kickOldCategories()
 
     def kickOldCategories(self):
-        if len(self.choosedCats) != 0:
-            for cat in self.choosedCats:
+        try:
+            if len(self.choosedCats) != 0:
+                for cat in self.choosedCats:
+                    newDict = []
+                    for vok in self.catdict:
+                        if cat in vok['cat']:
+                            newDict.append(vok)
+                    self.catdict = newDict
                 newDict = []
                 for vok in self.catdict:
-                    if cat in vok['cat']:
-                        newDict.append(vok)
-                self.catdict = newDict
-            newDict = []
-            for vok in self.catdict:
-                for cat in vok['cat']:
-                    if cat not in newDict and cat not in self.choosedCats:
-                        newDict.append(cat)
-            self.categories.clear()
-            self.categories.addItem('None')
-            self.categories.addItems(sorted(newDict))
-            self.categories.setCurrentText('None')
-        else:
-            self.cat_list = []
-            for vok in self.catdict:
-                for cat in vok['cat']:
-                    if cat not in self.cat_list:
-                        self.cat_list.append(cat)
-            self.categories.clear()
-            self.cat_list = sorted(self.cat_list)
-            self.categories.addItem('None')
-            self.categories.addItems(self.cat_list)
-            self.categories.setCurrentText('None')
-        self.catdict = self.dict
+                    for cat in vok['cat']:
+                        if cat not in newDict and cat not in self.choosedCats:
+                            newDict.append(cat)
+                self.categories.clear()
+                self.categories.addItem('None')
+                self.categories.addItems(sorted(newDict))
+                self.categories.setCurrentText('None')
+            else:
+                self.cat_list = []
+                for vok in self.catdict:
+                    for cat in vok['cat']:
+                        if cat not in self.cat_list:
+                            self.cat_list.append(cat)
+                self.categories.clear()
+                self.cat_list = sorted(self.cat_list)
+                self.categories.addItem('None')
+                self.categories.addItems(self.cat_list)
+                self.categories.setCurrentText('None')
+            self.catdict = self.dict
+        except: pass
 
     def deleteButton(self, button, way, label):
         if way == 'catSearch':

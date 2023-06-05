@@ -14,6 +14,8 @@ from languagemenu_ui import LanguagemenuUI
 from vocabularyinput_ui import VocabularyinputUI
 from searchcategory_ui import SearchcategoryUI
 from vocabularyquery_ui import VocabularyqueryUI
+from vocabularyquery_menu_ui import VocabularyqueryMenuUI
+from vocabularyinput_edit_menu_ui import VocabularyinputEditMenuUI
 from myFunctions import *
 
 class Window(QWidget):
@@ -27,6 +29,8 @@ class Window(QWidget):
         self.searchcategory_ui = SearchcategoryUI()
         self.vocabularyinput_ui = VocabularyinputUI()
         self.statistic_ui = StatisticUI()
+        self.vocabularyquery_menu_ui = VocabularyqueryMenuUI()
+        self.vocabularyinput_edit_menu_ui = VocabularyinputEditMenuUI()
 
         self.Stack = QStackedWidget(self)
         self.Stack.addWidget(self.mainmenu_ui)
@@ -36,6 +40,8 @@ class Window(QWidget):
         self.Stack.addWidget(self.searchcategory_ui)
         self.Stack.addWidget(self.vocabularyinput_ui)
         self.Stack.addWidget(self.statistic_ui)
+        self.Stack.addWidget(self.vocabularyquery_menu_ui)
+        self.Stack.addWidget(self.vocabularyinput_edit_menu_ui)
 
         # statistic_ui
         self.statistic_ui.next_btn.clicked.connect(self.setMenu)
@@ -50,13 +56,17 @@ class Window(QWidget):
         # languagemenu_ui
         self.languagemenu_ui.back_btn.clicked.connect(self.setMAIN)
         # vocabularyinput_ui
-        self.vocabularyinput_ui.back_btn.clicked.connect(self.back)
+        self.vocabularyinput_ui.back_btn.clicked.connect(self.setVOC_INPUT_EDIT_MENU)
         # searchcategory_ui
-        self.searchcategory_ui.save_btn.clicked.connect(self.setMenu)
+        self.searchcategory_ui.save_btn.clicked.connect(self.setVOC_QUERY_MENU)
         # vocabularyquery_ui
         self.vocabularyquery_ui.back_btn.clicked.connect(self.showSTATS) 
         self.vocabularyquery_ui.ready_btn.clicked.connect(self.btnNextClicked) 
         self.vocabularyquery_ui.input.returnPressed.connect(self.btnNextClicked)
+        # vocabularyquery_menu_ui
+        self.vocabularyquery_menu_ui.back_btn.clicked.connect(self.setMenu)
+        # vocabularyinput_edit_menu_ui
+        self.vocabularyinput_edit_menu_ui.back_btn.clicked.connect(self.setMenu)
 
         hL = QHBoxLayout()
         hL.addStretch(1)
@@ -90,11 +100,13 @@ class Window(QWidget):
     def setEN_MENU(self):
         self.clearVokInput()
         self.languagemenu_ui.load('Englisch')
-        self.languagemenu_ui.lang_mainLang.clicked.connect(self.setEN_DE)
-        self.languagemenu_ui.mainLang_lang.clicked.connect(self.setDE_EN)
-        self.languagemenu_ui.vok_eingabe.clicked.connect(self.setVOK_INPUT_EN)
-        self.languagemenu_ui.random_btn.clicked.connect(self.setEN_RANDOM)
-        self.languagemenu_ui.cat_btn.clicked.connect(self.setEN_CATEGORY)
+        self.languagemenu_ui.voc_query.clicked.connect(self.setVOK_QUERY_MENU_EN)
+        self.languagemenu_ui.voc_edit.clicked.connect(self.setVOC_INPUT_EDIT_MENU_EN)
+        #self.languagemenu_ui.lang_mainLang.clicked.connect(self.setEN_DE)
+        #self.languagemenu_ui.mainLang_lang.clicked.connect(self.setDE_EN)
+        #self.languagemenu_ui.vok_eingabe.clicked.connect(self.setVOK_INPUT_EN)
+        #self.languagemenu_ui.random_btn.clicked.connect(self.setEN_RANDOM)
+        #self.languagemenu_ui.cat_btn.clicked.connect(self.setEN_CATEGORY)
         self.Stack.setCurrentIndex(2)
     
     def setEN_DE(self):
@@ -135,12 +147,9 @@ class Window(QWidget):
 
     def setFR_MENU(self):
         self.clearVokInput()
+        self.languagemenu_ui.voc_query.clicked.connect(self.setVOK_QUERY_MENU_FR)
+        self.languagemenu_ui.voc_edit.clicked.connect(self.setVOC_INPUT_EDIT_MENU_FR)
         self.languagemenu_ui.load('Französisch')
-        self.languagemenu_ui.lang_mainLang.clicked.connect(self.setFR_DE)
-        self.languagemenu_ui.mainLang_lang.clicked.connect(self.setDE_FR)
-        self.languagemenu_ui.vok_eingabe.clicked.connect(self.setVOK_INPUT_FR)
-        self.languagemenu_ui.random_btn.clicked.connect(self.setFR_RANDOM)
-        self.languagemenu_ui.cat_btn.clicked.connect(self.setFR_CATEGORY)
         self.Stack.setCurrentIndex(2)
 
     def setFR_DE(self):
@@ -205,8 +214,54 @@ class Window(QWidget):
         self.statistic_ui.setStatistic(self.right, self.wrong, self.answered, len(self.dict), self.lang)
         self.Stack.setCurrentIndex(6)
 
+    def setVOK_QUERY_MENU_EN(self):
+        self.lang = 'en'
+        self.langName = 'Englisch'
+        self.vocabularyquery_menu_ui.load(self.langName)
+        self.vocabularyquery_menu_ui.lang_mainLang.clicked.connect(self.setEN_DE)
+        self.vocabularyquery_menu_ui.mainLang_lang.clicked.connect(self.setDE_EN)
+        self.vocabularyquery_menu_ui.random_btn.clicked.connect(self.setEN_RANDOM)
+        self.vocabularyquery_menu_ui.cat_btn.clicked.connect(self.setEN_CATEGORY)
+        self.Stack.setCurrentIndex(7)
+
+    def setVOK_QUERY_MENU_FR(self):
+        self.lang = 'fr'
+        self.langName = 'Französisch'
+        self.vocabularyquery_menu_ui.load(self.langName)
+        self.vocabularyquery_menu_ui.lang_mainLang.clicked.connect(self.setFR_DE)
+        self.vocabularyquery_menu_ui.mainLang_lang.clicked.connect(self.setDE_FR)
+        self.vocabularyquery_menu_ui.random_btn.clicked.connect(self.setFR_RANDOM)
+        self.vocabularyquery_menu_ui.cat_btn.clicked.connect(self.setFR_CATEGORY)
+        self.Stack.setCurrentIndex(7)
+
+    def setVOC_INPUT_EDIT_MENU_EN(self):
+        self.lang = 'en'
+        self.langName = 'Englisch'
+        self.vocabularyinput_edit_menu_ui.load(self.langName)
+        self.vocabularyinput_edit_menu_ui.voc_input.clicked.connect(self.setVOK_INPUT_EN)
+        self.Stack.setCurrentIndex(8)
+
+    def setVOC_INPUT_EDIT_MENU_FR(self):
+        self.lang = 'fr'
+        self.langName = 'Französisch'
+        self.vocabularyinput_edit_menu_ui.load(self.langName)
+        self.vocabularyinput_edit_menu_ui.voc_input.clicked.connect(self.setVOK_INPUT_FR)
+        self.Stack.setCurrentIndex(8)
+
     def quit(self):
         exit()
+
+    def setVOC_INPUT_EDIT_MENU(self):
+        if self.langName == 'Französisch':
+            self.setVOC_INPUT_EDIT_MENU_FR()
+        elif self.langName == 'Englisch':
+            self.setVOC_INPUT_EDIT_MENU_EN()
+
+    def setVOC_QUERY_MENU(self):
+        if self.lang in 'en':
+            self.setVOK_QUERY_MENU_EN()
+        elif self.lang in 'fr':
+            self.setVOK_QUERY_MENU_FR()
 
     def btnNextClicked(self):
         # vocabularyquery_ui.
@@ -299,12 +354,6 @@ class Window(QWidget):
         if 'en' in self.lang:
             self.setEN_MENU()
         elif 'fr' in self.lang:
-            self.setFR_MENU()
-
-    def back(self):
-        if self.lang == 'Englisch' or self.mainLang == 'Englisch':
-            self.setEN_MENU()
-        elif self.lang == 'Französisch' or self.mainLang == 'Französisch':
             self.setFR_MENU()
 
 def main():
